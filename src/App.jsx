@@ -1,8 +1,13 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Hero from './components/Hero'
 import Ecosystem from './components/Ecosystem'
 import Pillars from './components/Pillars'
+import FXDashboard from './fx-engine/pages/Dashboard'
+import RevealViewer from './fx-engine/components/RevealViewer'
+import { Sparkles } from 'lucide-react';
 
-function App() {
+function LandingPage() {
   return (
     <div className="bg-black min-h-screen text-white">
       {/* Navigation - Ultra Minimal */}
@@ -13,11 +18,20 @@ function App() {
             FNX GROUP
           </div>
 
-          <div className="hidden md:flex space-x-12 text-sm font-semibold text-white/80">
+          <div className="hidden md:flex space-x-12 text-sm font-semibold text-white/80 items-center">
             <a href="#" className="hover:text-white transition-colors">Surface</a>
             <a href="#" className="hover:text-white transition-colors">Parts</a>
             <a href="#" className="hover:text-white transition-colors">Lab</a>
             <a href="#" className="hover:text-white transition-colors">Careers</a>
+            
+            {/* Link to FX-Engine */}
+            <Link 
+              to="/fx-engine" 
+              className="ml-8 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-full flex items-center gap-2 transition-all"
+            >
+              <Sparkles className="w-4 h-4" />
+              FX-Engine
+            </Link>
           </div>
 
         </div>
@@ -36,4 +50,16 @@ function App() {
   )
 }
 
-export default App
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/fx-engine" element={<FXDashboard />} />
+        <Route path="/fx-engine/view" element={<RevealViewer />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
