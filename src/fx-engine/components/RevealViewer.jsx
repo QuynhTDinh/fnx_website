@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Reveal from 'reveal.js';
-import 'reveal.js/dist/reveal.css';
-import 'reveal.js/dist/theme/black.css'; // You can change this to a custom FNX theme later
+import 'reveal.js/reveal.css';
+import 'reveal.js/theme/black.css'; // You can change this to a custom FNX theme later
 import usePresentationStore from '../store/usePresentationStore';
 import { ArrowLeft } from 'lucide-react';
 
