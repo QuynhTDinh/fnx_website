@@ -23,15 +23,6 @@ function LandingPage() {
             <a href="#" className="hover:text-white transition-colors">Parts</a>
             <a href="#" className="hover:text-white transition-colors">Lab</a>
             <a href="#" className="hover:text-white transition-colors">Careers</a>
-            
-            {/* Link to FX-Engine */}
-            <Link 
-              to="/fx-engine" 
-              className="ml-8 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-full flex items-center gap-2 transition-all"
-            >
-              <Sparkles className="w-4 h-4" />
-              FX-Engine
-            </Link>
           </div>
 
         </div>

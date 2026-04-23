@@ -3,17 +3,15 @@ export async function onRequestPost(context) {
     // 1. Nhận request từ Client
     const { request, env } = context;
     const body = await request.json();
-    const { rawInput, framework } = body;
+    const { objective, audience, brief, logicLayer, framework } = body;
 
-    if (!rawInput || !framework) {
-      return new Response(JSON.stringify({ error: "Thiếu dữ liệu rawInput hoặc framework" }), {
+    if (!brief || !framework) {
+      return new Response(JSON.stringify({ error: "Thiếu dữ liệu brief hoặc framework" }), {
         status: 400,
         headers: { "Content-Type": "application/json" }
       });
     }
 
-    // 2. Lấy API Key từ biến môi trường của Cloudflare
-    // Lưu ý: ENV variable phải được cài đặt trên Cloudflare Dashboard tên là GEMINI_API_KEY
     const apiKey = env.GEMINI_API_KEY;
     if (!apiKey) {
       return new Response(JSON.stringify({ error: "Lỗi cấu hình server: Chưa có API Key" }), {
@@ -22,36 +20,52 @@ export async function onRequestPost(context) {
       });
     }
 
-    // 3. Chuẩn bị Prompt cho Gemini để ép cấu trúc JSON
+    // Biến đổi JSON brief thành dạng chuỗi dễ đọc cho Prompt
+    const formattedBrief = Object.entries(brief)
+      .map(([key, value]) => `- ${key.toUpperCase()}: ${value}`)
+      .join('\n      ');
+
+    // 3. Chuẩn bị Prompt cho Gemini theo chuẩn McKinsey & 3-Layer Architecture
     const systemPrompt = `
-      Bạn là một chuyên gia tư vấn chiến lược cấp cao của FNX Group.
-      Nhiệm vụ của bạn là phân tích dữ liệu thô (raw input) và trích xuất thành cấu trúc JSON chặt chẽ dựa trên Framework yêu cầu: ${framework}.
+      Bạn là một Partner cấp cao của hãng tư vấn chiến lược McKinsey & Company.
+      Nhiệm vụ của bạn là xây dựng cấu trúc bài thuyết trình dựa trên dữ liệu người dùng cung cấp.
       
-      YÊU CẦU TRẢ VỀ CHÍNH XÁC ĐỊNH DẠNG JSON SAU (không giải thích thêm):
+      THÔNG TIN ĐẦU VÀO:
+      - Khán giả (Audience): ${audience || "Ban Giám Đốc (BOD)"}
+      - Mục tiêu (Objective): ${objective || "Báo cáo chiến lược"}
+      - Loại hình (Layer): ${logicLayer}
+      - Framework/Template yêu cầu: ${framework}
+      
+      DỮ LIỆU ĐƯỢC CUNG CẤP TỪ NGƯỜI DÙNG (DYNAMIC BRIEF):
+      ${formattedBrief}
+
+      YÊU CẦU TRẢ VỀ CHÍNH XÁC ĐỊNH DẠNG JSON SAU (không giải thích thêm, không markdown \`\`\`json):
       {
         "framework": "${framework}",
-        "title": "Tiêu đề bài thuyết trình",
+        "title": "VIẾT 1 TIÊU ĐỀ NGẮN GỌN DƯỚI 10 CHỮ",
         "slides": [
           {
             "id": 1,
             "layout": "TITLE",
             "data": {
-              "title": "Tiêu đề chính",
-              "subtitle": "Phụ đề hoặc tóm tắt",
-              "author": "Được tạo bởi AI"
+              "title": "TIÊU ĐỀ SLIDE (dưới 10 chữ, không dùng câu dài)",
+              "subtitle": "Phụ đề hoặc tóm tắt ý chính (tối đa 2 dòng)",
+              "author": "Trình bày cho: ${audience}"
             }
           },
           {
             "id": 2,
             "layout": "BULLET_POINTS",
             "data": {
-              "title": "Tiêu đề slide",
-              "items": ["Ý chính 1", "Ý chính 2", "Ý chính 3"]
+              "title": "Tiêu đề slide (dưới 8 chữ)",
+              "items": ["Ý chính 1 (Ngắn gọn, đi thẳng vào vấn đề)", "Ý chính 2", "Ý chính 3"]
             }
           }
         ]
       }
-      Lưu ý: Bạn có thể tự thêm các slide layout BULLET_POINTS hoặc MECE_TREE tùy thuộc vào độ dài của raw input. MECE_TREE có cấu trúc: "data": { "title": "...", "nodes": [ {"title": "...", "details": ["..."]} ] }
+      Lưu ý: Bạn có quyền tự động tạo ra từ 3 đến 6 slide tùy thuộc vào lượng data. 
+      Bạn có thể sử dụng layout BULLET_POINTS hoặc MECE_TREE. 
+      ĐẶC BIỆT LƯU Ý: Tuyệt đối không copy y nguyên 1 câu dài của người dùng làm tiêu đề chính. Tiêu đề phải được RÚT GỌN (Ví dụ: "Báo cáo tiến độ tháng 10" thay vì "Hôm nay tôi xin báo cáo tiến độ...").
     `;
 
     // 4. Gọi API của Gemini (Dùng REST API để tương thích tốt nhất với Cloudflare Workers)
@@ -64,11 +78,11 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         system_instruction: {
-          parts: [{ text: systemPrompt }]
+          parts: [{ text: "Bạn là một AI chỉ trả về JSON thuần túy, không có ký tự thừa." }]
         },
         contents: [
           {
-            parts: [{ text: `Dữ liệu thô cần xử lý:\n${rawInput}` }]
+            parts: [{ text: systemPrompt }]
           }
         ],
         generationConfig: {

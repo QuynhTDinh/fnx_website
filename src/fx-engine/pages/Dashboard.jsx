@@ -2,103 +2,76 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import usePresentationStore from '../store/usePresentationStore';
 import { generatePresentation } from '../services/aiParser';
-import { Sparkles, FileText, LayoutTemplate, ArrowRight } from 'lucide-react';
+import { Sparkles, Activity } from 'lucide-react';
+
+import StepIntention from '../components/wizard/StepIntention';
+import StepBriefAndLogic from '../components/wizard/StepBriefAndLogic';
+import StepProcessing from '../components/wizard/StepProcessing';
 
 export default function Dashboard() {
   const navigate = useNavigate();
-  const [inputText, setInputText] = useState('');
-  const [framework, setFramework] = useState('MECE');
-  const [isGenerating, setIsGenerating] = useState(false);
-  
-  const setPresentationData = usePresentationStore(state => state.setPresentationData);
+  const { currentStep, objective, audience, dynamicBrief, logicLayer, framework, setPresentationData } = usePresentationStore();
+  const [statusText, setStatusText] = useState("");
 
   const handleGenerate = async () => {
-    if (!inputText.trim()) return;
+    setStatusText("Đang phân tích cấu trúc McKinsey...");
     
-    setIsGenerating(true);
     try {
-      // Gọi API Backend thực tế (có fallback)
-      const resultJSON = await generatePresentation(inputText, framework);
+      const payload = {
+        objective,
+        audience,
+        brief: dynamicBrief, // Object chứa SCQA hoặc Data từ Layer 2
+        logicLayer,
+        framework
+      };
+      
+      const resultJSON = await generatePresentation(payload);
       setPresentationData(resultJSON);
       navigate('/fx-engine/view');
     } catch (error) {
       console.error("Failed to generate", error);
-    } finally {
-      setIsGenerating(false);
+      setStatusText("Đã xảy ra lỗi. Vui lòng thử lại.");
     }
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white p-8 font-sans">
-      <div className="max-w-4xl mx-auto">
-        <header className="mb-12">
-          <h1 className="text-3xl font-black tracking-tight flex items-center gap-3">
-            <Sparkles className="w-8 h-8 text-blue-500" />
-            FX-Engine
-          </h1>
-          <p className="text-neutral-400 mt-2 font-medium">Smart Presentation Generator</p>
+    <div className="min-h-screen bg-neutral-950 text-white p-8 font-sans pb-24">
+      <div className="max-w-6xl mx-auto">
+        <header className="mb-12 border-b border-neutral-900 pb-6 flex justify-between items-center">
+          <div>
+            <h1 className="text-3xl font-black tracking-tight flex items-center gap-3">
+              <Sparkles className="w-8 h-8 text-blue-500" />
+              FX-Engine <span className="text-neutral-600 font-light ml-2">Copilot Wizard</span>
+            </h1>
+          </div>
+          
+          {/* Progress Indicators */}
+          {statusText === "" && (
+            <div className="flex gap-2">
+              {[1, 2].map(step => (
+                <div 
+                  key={step} 
+                  className={`w-16 h-2 rounded-full transition-all duration-500 ${currentStep >= step ? 'bg-blue-500' : 'bg-neutral-800'}`}
+                />
+              ))}
+            </div>
+          )}
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2 space-y-6">
-            <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <FileText className="w-5 h-5 text-neutral-400" />
-                <h2 className="text-lg font-bold">Raw Data Brief</h2>
-              </div>
-              <textarea 
-                className="w-full h-64 bg-neutral-950 border border-neutral-800 rounded-xl p-4 text-white placeholder-neutral-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"
-                placeholder="Paste your raw content, meeting notes, or ideas here..."
-                value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
-              />
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <LayoutTemplate className="w-5 h-5 text-neutral-400" />
-                <h2 className="text-lg font-bold">Logic Framework</h2>
-              </div>
-              
-              <div className="space-y-3">
-                {['MECE', 'A3_THINKING', 'SCQA'].map((fw) => (
-                  <label 
-                    key={fw} 
-                    className={`block p-4 rounded-xl border cursor-pointer transition-all ${
-                      framework === fw 
-                        ? 'border-blue-500 bg-blue-500/10' 
-                        : 'border-neutral-800 bg-neutral-950 hover:border-neutral-700'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <input 
-                        type="radio" 
-                        name="framework" 
-                        value={fw} 
-                        checked={framework === fw}
-                        onChange={() => setFramework(fw)}
-                        className="hidden"
-                      />
-                      <div className="font-semibold">{fw.replace('_', ' ')}</div>
-                    </div>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <button 
-              onClick={handleGenerate}
-              disabled={isGenerating || !inputText.trim()}
-              className="w-full py-4 px-6 bg-white text-black font-bold rounded-xl hover:bg-neutral-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-            >
-              {isGenerating ? 'Generating...' : 'Generate Slides'}
-              {!isGenerating && <ArrowRight className="w-5 h-5" />}
-            </button>
-          </div>
-        </div>
+        {statusText !== "" ? (
+          <StepProcessing statusText={statusText} />
+        ) : (
+          <>
+            {currentStep === 1 && <StepIntention />}
+            {currentStep === 2 && <StepBriefAndLogic onGenerate={() => {
+              // Bật loading
+              setStatusText("Đang tổng hợp dữ liệu SCQA...");
+              handleGenerate();
+            }} />}
+          </>
+        )}
       </div>
     </div>
   );
 }
+

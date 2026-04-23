@@ -1,4 +1,6 @@
-export const generatePresentation = async (rawInput, framework) => {
+export const generatePresentation = async (payload) => {
+  const { objective, audience, brief, framework } = payload;
+  
   try {
     // Gọi API Backend (Cloudflare Pages Function)
     const response = await fetch('/api/generate', {
@@ -6,7 +8,7 @@ export const generatePresentation = async (rawInput, framework) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ rawInput, framework }),
+      body: JSON.stringify(payload),
     });
 
     if (response.ok) {
@@ -20,17 +22,20 @@ export const generatePresentation = async (rawInput, framework) => {
     // MOCK DATA FALLBACK (Dành cho việc dev local khi chưa có API Key)
     await new Promise(resolve => setTimeout(resolve, 1500));
 
+    // Tìm một text tiêu biểu từ brief để làm mock title
+    const mockTitle = brief.governingThought || brief.progress || brief.concept || brief.issue || Object.values(brief)[0] || 'Chưa có tiêu đề';
+    
     if (framework === 'MECE') {
       return {
         framework: 'MECE',
-        title: 'Hệ Thống Báo Cáo Chiến Lược',
+        title: 'Báo Cáo Phân Tích Đa Chiều',
         slides: [
           {
             id: 1,
             layout: 'TITLE',
             data: {
-              title: 'Chiến Lược Tăng Trưởng',
-              subtitle: 'Phân tích đa chiều dựa trên mô hình MECE (Mock)',
+              title: mockTitle,
+              subtitle: `Dành cho: ${audience} | Mục tiêu: ${objective}`,
               author: 'FNX Group'
             }
           },
@@ -38,11 +43,10 @@ export const generatePresentation = async (rawInput, framework) => {
             id: 2,
             layout: 'MECE_TREE',
             data: {
-              title: 'Các Trụ Cột Chính',
+              title: 'Phân tích (MECE)',
               nodes: [
-                { title: 'Tài Chính', details: ['Cắt giảm 20% chi phí', 'Tăng dòng tiền'] },
-                { title: 'Sản Phẩm', details: ['Ra mắt FX-Engine', 'Nâng cấp UI/UX'] },
-                { title: 'Vận Hành', details: ['Tự động hóa 80%', 'Đào tạo nhân sự'] }
+                { title: 'Khía cạnh 1', details: [Object.values(brief)[0] || 'Dữ liệu 1'] },
+                { title: 'Khía cạnh 2', details: [Object.values(brief)[1] || 'Dữ liệu 2'] }
               ]
             }
           }
@@ -58,8 +62,8 @@ export const generatePresentation = async (rawInput, framework) => {
           id: 1,
           layout: 'TITLE',
           data: {
-            title: `Báo Cáo ${framework} (Mock)`,
-            subtitle: 'Được tạo tự động từ Raw Brief',
+            title: mockTitle.substring(0, 50) + (mockTitle.length > 50 ? '...' : ''),
+            subtitle: `Dành cho: ${audience}`,
             author: 'AI Parser'
           }
         },
@@ -67,8 +71,8 @@ export const generatePresentation = async (rawInput, framework) => {
           id: 2,
           layout: 'BULLET_POINTS',
           data: {
-            title: 'Các Ý Chính',
-            items: rawInput.split('\n').filter(line => line.trim().length > 0).slice(0, 4)
+            title: 'Chi tiết Báo Cáo',
+            items: Object.values(brief).filter(text => typeof text === 'string').map(text => text.substring(0, 60))
           }
         }
       ]
