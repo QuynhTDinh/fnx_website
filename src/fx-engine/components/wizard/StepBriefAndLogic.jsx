@@ -25,61 +25,97 @@ export default function StepBriefAndLogic({ onGenerate }) {
     { id: 'STAR', name: 'Khung STAR', desc: 'Kể chuyện thực tế: Tình huống, Nhiệm vụ, Hành động, Kết quả' }
   ];
 
-  // --- LAYER 2: Functional Templates (Mẫu Ứng Dụng Thực Tế - 5 Mẫu) ---
+  // --- LAYER 2: Functional Templates (Mẫu Ứng Dụng Thực Tế - 7 Mẫu / 5 Nhóm) ---
   const layer2Groups = [
     {
-      title: "Báo Cáo & Quản Trị (Operations)",
+      title: "1. Báo Cáo & Đánh Giá (Inform & Review)",
       icon: <ActivitySquare className="w-5 h-5 text-emerald-500" />,
       items: [
         { 
-          id: 'STATUS_UPDATE', name: 'Báo Cáo Tiến Độ (Status Update)', desc: 'Họp giao ban Weekly/Monthly',
+          id: 'STATUS_UPDATE', name: 'Báo Cáo Tiến Độ (Status Update)', desc: 'Dành cho họp giao ban Weekly/Monthly',
           fields: [
-            { id: 'progress', label: '1. Tiến Độ Chung', desc: 'Tóm tắt tình hình dự án (On-track / Delayed).' },
-            { id: 'kpis', label: '2. Chỉ Số (KPIs)', desc: 'Các con số đạt được trong tuần/tháng.' },
-            { id: 'blockers', label: '3. Vấn đề (Blockers)', desc: 'Những khó khăn đang cản trở tiến độ.' },
-            { id: 'nextSteps', label: '4. Kế Hoạch Tiếp Theo', desc: 'Hành động cụ thể để đi tiếp.' }
+            { id: 'progress', label: '1. Tiến Độ Chung', desc: 'Tóm tắt dự án (On-track / Delayed).' },
+            { id: 'kpis', label: '2. Chỉ Số (KPIs)', desc: 'Các con số đạt được.' },
+            { id: 'blockers', label: '3. Rào Cản (Blockers)', desc: 'Những khó khăn đang gặp phải.' },
+            { id: 'nextSteps', label: '4. Kế Hoạch Tiếp Theo', desc: 'Hành động để đi tiếp.' }
           ]
         },
         { 
-          id: 'CRISIS_REPORT', name: 'Báo Cáo Khủng Hoảng (Post-mortem)', desc: 'Phân tích sự cố và khắc phục',
+          id: 'QBR', name: 'Đánh Giá Định Kỳ (QBR)', desc: 'Dành cho báo cáo tổng kết quý/tháng',
           fields: [
-            { id: 'incident', label: '1. Sự Cố', desc: 'Mô tả ngắn gọn sự kiện không mong muốn.' },
-            { id: 'impact', label: '2. Thiệt Hại / Tác Động', desc: 'Mức độ ảnh hưởng (Tiền, Uy tín...).' },
-            { id: 'rootCause', label: '3. Nguyên Nhân', desc: 'Tại sao lại xảy ra lỗi này?' },
-            { id: 'actionPlan', label: '4. Giải Pháp Phòng Ngừa', desc: 'Làm gì để ngăn chặn điều này lặp lại?' }
+            { id: 'highlights', label: '1. Kết Quả Nổi Bật', desc: 'Những thành tựu lớn nhất.' },
+            { id: 'variance', label: '2. Chỉ Số Chênh Lệch', desc: 'Thực tế so với Target (Tốt/Xấu).' },
+            { id: 'learnings', label: '3. Bài Học Rút Ra', desc: 'Phân tích nguyên nhân đằng sau các con số.' },
+            { id: 'nextFocus', label: '4. Trọng Tâm Kỳ Tới', desc: 'Mục tiêu của quý/tháng sau.' }
           ]
         }
       ]
     },
     {
-      title: "Chiến Lược & Đề Xuất (Strategy)",
+      title: "2. Đề Xuất & Thuyết Phục (Persuade)",
       icon: <Target className="w-5 h-5 text-orange-500" />,
       items: [
         { 
-          id: 'PITCHING', name: 'Đề Xuất Phê Duyệt / Ngân Sách', desc: 'Thuyết phục cấp trên hoặc Đối tác',
+          id: 'BUSINESS_CASE', name: 'Đề Xuất Ngân Sách / Dự Án', desc: 'Dành cho việc xin tiền, xin người',
           fields: [
-            { id: 'context', label: '1. Bối Cảnh Nhu Cầu', desc: 'Tại sao cần đề xuất này?' },
-            { id: 'benefits', label: '2. Lợi Ích & ROI', desc: 'Giá trị mang lại cho tổ chức là gì?' },
-            { id: 'costs', label: '3. Chi Phí Dự Kiến', desc: 'Cần bao nhiêu tiền, nhân sự?' },
-            { id: 'risks', label: '4. Rủi Ro', desc: 'Rủi ro lớn nhất và cách phòng ngừa?' }
+            { id: 'problem', label: '1. Bài Toán & Cơ Hội', desc: 'Tại sao cần đề xuất này ngay lúc này?' },
+            { id: 'roi', label: '2. Lợi Ích & ROI', desc: 'Tiền hoặc giá trị mang lại là bao nhiêu?' },
+            { id: 'cost', label: '3. Chi Phí Yêu Cầu', desc: 'Cần bao nhiêu tiền, nhân sự, thời gian?' },
+            { id: 'risks', label: '4. Rủi Ro', desc: 'Rủi ro lớn nhất và cách phòng ngừa.' }
           ]
         },
         { 
-          id: 'PROJECT_KICKOFF', name: 'Khởi Động Dự Án (Kick-off)', desc: 'Đồng bộ mục tiêu với team',
+          id: 'SALES_PITCH', name: 'Đề Xuất Bán Hàng (Sales Pitch)', desc: 'Dành cho B2B Sales, đi gặp đối tác',
           fields: [
-            { id: 'goal', label: '1. Mục Tiêu', desc: 'Đích đến của dự án là gì?' },
-            { id: 'scope', label: '2. Phạm Vi', desc: 'Dự án sẽ làm gì và KHÔNG làm gì?' },
-            { id: 'timeline', label: '3. Tiến Độ (Timeline)', desc: 'Các cột mốc thời gian quan trọng.' },
-            { id: 'roles', label: '4. Vai Trò (Roles)', desc: 'Ai chịu trách nhiệm việc gì?' }
+            { id: 'painPoints', label: '1. Nỗi Đau Khách Hàng', desc: 'Vấn đề mà khách hàng đang đau đầu.' },
+            { id: 'solution', label: '2. Giải Pháp Của Chúng Tôi', desc: 'Sản phẩm/dịch vụ giải quyết vấn đề đó thế nào.' },
+            { id: 'evidence', label: '3. Bằng Chứng', desc: 'Các Case Study đã thành công.' },
+            { id: 'cta', label: '4. Kêu Gọi Hành Động', desc: 'Bước tiếp theo là gì (Ký hợp đồng, Demo...)?' }
           ]
-        },
+        }
+      ]
+    },
+    {
+      title: "3. Đồng Thuận & Quyết Định (Decide)",
+      icon: <Layers className="w-5 h-5 text-purple-500" />,
+      items: [
         { 
-          id: 'INTERNAL_TRAINING', name: 'Đào Tạo & Chia Sẻ (Training)', desc: 'Lan tỏa kiến thức trong nội bộ',
+          id: 'BOD_MEETING', name: 'Họp Ban Điều Hành (SteerCo/BOD)', desc: 'Dành cho C-Level, báo cáo cấp cao',
           fields: [
-            { id: 'concept', label: '1. Khái Niệm Lõi', desc: 'Hôm nay học về cái gì?' },
-            { id: 'whyMatters', label: '2. Tại Sao Quan Trọng', desc: 'Kiến thức này giúp ích gì?' },
-            { id: 'caseStudy', label: '3. Ví Dụ Thực Tế', desc: 'Một case study thành công/thất bại.' },
-            { id: 'takeaways', label: '4. Hành Động Yêu Cầu', desc: 'Cần áp dụng điều gì ngay ngày mai?' }
+            { id: 'execSummary', label: '1. Tóm Tắt Tình Hình', desc: 'Executive Summary cực ngắn gọn.' },
+            { id: 'redFlags', label: '2. Điểm Báo Động', desc: 'Các "Red Flags" cần BOD can thiệp.' },
+            { id: 'options', label: '3. Các Lựa Chọn', desc: 'Trình bày 2-3 phương án giải quyết (Options).' },
+            { id: 'recommendation', label: '4. Đề Xuất', desc: 'Lời khuyên cuối cùng từ góc độ người trình bày.' }
+          ]
+        }
+      ]
+    },
+    {
+      title: "4. Đào Tạo & Tiêu Chuẩn (Educate)",
+      icon: <BookOpen className="w-5 h-5 text-blue-400" />,
+      items: [
+        { 
+          id: 'INTERNAL_TRAINING', name: 'Đào Tạo Nội Bộ (Training)', desc: 'Dành cho HR, Leader hướng dẫn quy trình',
+          fields: [
+            { id: 'concept', label: '1. Khái Niệm Lõi', desc: 'Hôm nay học/chia sẻ về cái gì?' },
+            { id: 'whyMatters', label: '2. Tại Sao Quan Trọng', desc: 'Ý nghĩa của kiến thức này.' },
+            { id: 'caseStudy', label: '3. Tình Huống Thực Tế', desc: 'Ví dụ áp dụng (Case Study).' },
+            { id: 'takeaways', label: '4. Hành Động Yêu Cầu', desc: 'Học viên cần làm gì ngay ngày mai.' }
+          ]
+        }
+      ]
+    },
+    {
+      title: "5. Truyền Thông & Gắn Kết (Inspire)",
+      icon: <Presentation className="w-5 h-5 text-pink-500" />,
+      items: [
+        { 
+          id: 'TOWNHALL', name: 'Họp Toàn Công Ty (Townhall)', desc: 'Dành cho BOD truyền thông nội bộ',
+          fields: [
+            { id: 'bigPicture', label: '1. Bức Tranh Lớn', desc: 'Cập nhật tầm nhìn, chiến lược công ty.' },
+            { id: 'recognition', label: '2. Vinh Danh', desc: 'Ghi nhận các cá nhân/tập thể xuất sắc.' },
+            { id: 'announcements', label: '3. Thông Báo Mới', desc: 'Thay đổi về chính sách, nhân sự.' },
+            { id: 'qa', label: '4. Tiêu Điểm Hỏi Đáp', desc: 'Những câu hỏi nóng đang được quan tâm nhất.' }
           ]
         }
       ]
