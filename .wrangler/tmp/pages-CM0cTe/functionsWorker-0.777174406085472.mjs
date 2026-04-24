@@ -6,9 +6,9 @@ async function onRequestPost(context) {
   try {
     const { request, env } = context;
     const body = await request.json();
-    const { objective, audience, brief, logicLayer, framework } = body;
-    if (!brief || !framework) {
-      return new Response(JSON.stringify({ error: "Thi\u1EBFu d\u1EEF li\u1EC7u brief ho\u1EB7c framework" }), {
+    const { objective, audience, brief, logicModel, template } = body;
+    if (!brief || !template) {
+      return new Response(JSON.stringify({ error: "Thi\u1EBFu d\u1EEF li\u1EC7u brief ho\u1EB7c template" }), {
         status: 400,
         headers: { "Content-Type": "application/json" }
       });
@@ -23,20 +23,25 @@ async function onRequestPost(context) {
     const formattedBrief = Object.entries(brief).map(([key, value]) => `- ${key.toUpperCase()}: ${value}`).join("\n      ");
     const systemPrompt = `
       B\u1EA1n l\xE0 m\u1ED9t Partner c\u1EA5p cao c\u1EE7a h\xE3ng t\u01B0 v\u1EA5n chi\u1EBFn l\u01B0\u1EE3c McKinsey & Company.
-      Nhi\u1EC7m v\u1EE5 c\u1EE7a b\u1EA1n l\xE0 x\xE2y d\u1EF1ng c\u1EA5u tr\xFAc b\xE0i thuy\u1EBFt tr\xECnh d\u1EF1a tr\xEAn d\u1EEF li\u1EC7u ng\u01B0\u1EDDi d\xF9ng cung c\u1EA5p.
+      Nhi\u1EC7m v\u1EE5 c\u1EE7a b\u1EA1n l\xE0 x\xE2y d\u1EF1ng c\u1EA5u tr\xFAc m\u1ED9t b\xE0i thuy\u1EBFt tr\xECnh chuy\xEAn nghi\u1EC7p. \u0110\u1EB6C BI\u1EC6T L\u01AFU \xDD, b\u1EA1n ph\u1EA3i k\u1EBFt h\u1EE3p gi\u1EEFa N\u1ED9i dung th\u1EF1c t\u1EBF v\xE0 Khung T\u01B0 Duy h\u1ECDc thu\u1EADt:
       
-      TH\xD4NG TIN \u0110\u1EA6U V\xC0O:
+      [TH\xD4NG TIN NG\u1EEE C\u1EA2NH]
       - Kh\xE1n gi\u1EA3 (Audience): ${audience || "Ban Gi\xE1m \u0110\u1ED1c (BOD)"}
       - M\u1EE5c ti\xEAu (Objective): ${objective || "B\xE1o c\xE1o chi\u1EBFn l\u01B0\u1EE3c"}
-      - Lo\u1EA1i h\xECnh (Layer): ${logicLayer}
-      - Framework/Template y\xEAu c\u1EA7u: ${framework}
       
-      D\u1EEE LI\u1EC6U \u0110\u01AF\u1EE2C CUNG C\u1EA4P T\u1EEA NG\u01AF\u1EDCI D\xD9NG (DYNAMIC BRIEF):
+      [LAYER 1: KHUNG T\u01AF DUY - C\xC1CH S\u1EAEP X\u1EBEP]
+      - H\xE3y \xE1p d\u1EE5ng khung logic n\xE0y \u0111\u1EC3 d\u1EABn d\u1EAFt c\xE2u chuy\u1EC7n: ${logicModel}
+      
+      [LAYER 2: M\u1EE4C \u0110\xCDCH & D\u1EEE LI\u1EC6U TH\u1EF0C T\u1EBE]
+      - Lo\u1EA1i b\xE1o c\xE1o (Template): ${template}
+      - D\u1EEF li\u1EC7u th\xF4 t\u1EEB ng\u01B0\u1EDDi d\xF9ng:
       ${formattedBrief}
+
+      Y\xCAU C\u1EA6U: D\xF9ng d\u1EEF li\u1EC7u th\xF4 \u1EDF [Layer 2], nh\xE0o n\u1EB7n v\xE0 s\u1EAFp x\u1EBFp ch\xFAng th\xE0nh c\xE1c Slide ch\u1EA1y theo \u0111\xFAng m\u1EA1ch logic c\u1EE7a [Layer 1] (${logicModel}).
 
       Y\xCAU C\u1EA6U TR\u1EA2 V\u1EC0 CH\xCDNH X\xC1C \u0110\u1ECANH D\u1EA0NG JSON SAU (kh\xF4ng gi\u1EA3i th\xEDch th\xEAm, kh\xF4ng markdown \`\`\`json):
       {
-        "framework": "${framework}",
+        "framework": "${template}",
         "title": "VI\u1EBET 1 TI\xCAU \u0110\u1EC0 NG\u1EAEN G\u1ECCN D\u01AF\u1EDAI 10 CH\u1EEE",
         "slides": [
           {
@@ -602,7 +607,7 @@ var jsonError = /* @__PURE__ */ __name(async (request, env, _ctx, middlewareCtx)
 }, "jsonError");
 var middleware_miniflare3_json_error_default = jsonError;
 
-// ../.wrangler/tmp/bundle-KIW4be/middleware-insertion-facade.js
+// ../.wrangler/tmp/bundle-r9QpuY/middleware-insertion-facade.js
 var __INTERNAL_WRANGLER_MIDDLEWARE__ = [
   middleware_ensure_req_body_drained_default,
   middleware_miniflare3_json_error_default
@@ -634,7 +639,7 @@ function __facade_invoke__(request, env, ctx, dispatch, finalMiddleware) {
 }
 __name(__facade_invoke__, "__facade_invoke__");
 
-// ../.wrangler/tmp/bundle-KIW4be/middleware-loader.entry.ts
+// ../.wrangler/tmp/bundle-r9QpuY/middleware-loader.entry.ts
 var __Facade_ScheduledController__ = class ___Facade_ScheduledController__ {
   constructor(scheduledTime, cron, noRetry) {
     this.scheduledTime = scheduledTime;

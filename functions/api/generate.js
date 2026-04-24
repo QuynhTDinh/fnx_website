@@ -3,10 +3,10 @@ export async function onRequestPost(context) {
     // 1. Nhận request từ Client
     const { request, env } = context;
     const body = await request.json();
-    const { objective, audience, brief, logicLayer, framework } = body;
+    const { objective, audience, brief, logicModel, template } = body;
 
-    if (!brief || !framework) {
-      return new Response(JSON.stringify({ error: "Thiếu dữ liệu brief hoặc framework" }), {
+    if (!brief || !template) {
+      return new Response(JSON.stringify({ error: "Thiếu dữ liệu brief hoặc template" }), {
         status: 400,
         headers: { "Content-Type": "application/json" }
       });
@@ -25,23 +25,28 @@ export async function onRequestPost(context) {
       .map(([key, value]) => `- ${key.toUpperCase()}: ${value}`)
       .join('\n      ');
 
-    // 3. Chuẩn bị Prompt cho Gemini theo chuẩn McKinsey & 3-Layer Architecture
+    // 3. Chuẩn bị Prompt cho Gemini theo cấu trúc Combinatorial
     const systemPrompt = `
       Bạn là một Partner cấp cao của hãng tư vấn chiến lược McKinsey & Company.
-      Nhiệm vụ của bạn là xây dựng cấu trúc bài thuyết trình dựa trên dữ liệu người dùng cung cấp.
+      Nhiệm vụ của bạn là xây dựng cấu trúc một bài thuyết trình chuyên nghiệp. ĐẶC BIỆT LƯU Ý, bạn phải kết hợp giữa Nội dung thực tế và Khung Tư Duy học thuật:
       
-      THÔNG TIN ĐẦU VÀO:
+      [THÔNG TIN NGỮ CẢNH]
       - Khán giả (Audience): ${audience || "Ban Giám Đốc (BOD)"}
       - Mục tiêu (Objective): ${objective || "Báo cáo chiến lược"}
-      - Loại hình (Layer): ${logicLayer}
-      - Framework/Template yêu cầu: ${framework}
       
-      DỮ LIỆU ĐƯỢC CUNG CẤP TỪ NGƯỜI DÙNG (DYNAMIC BRIEF):
+      [LAYER 1: KHUNG TƯ DUY - CÁCH SẮP XẾP]
+      - Hãy áp dụng khung logic này để dẫn dắt câu chuyện: ${logicModel}
+      
+      [LAYER 2: MỤC ĐÍCH & DỮ LIỆU THỰC TẾ]
+      - Loại báo cáo (Template): ${template}
+      - Dữ liệu thô từ người dùng:
       ${formattedBrief}
+
+      YÊU CẦU: Dùng dữ liệu thô ở [Layer 2], nhào nặn và sắp xếp chúng thành các Slide chạy theo đúng mạch logic của [Layer 1] (${logicModel}).
 
       YÊU CẦU TRẢ VỀ CHÍNH XÁC ĐỊNH DẠNG JSON SAU (không giải thích thêm, không markdown \`\`\`json):
       {
-        "framework": "${framework}",
+        "framework": "${template}",
         "title": "VIẾT 1 TIÊU ĐỀ NGẮN GỌN DƯỚI 10 CHỮ",
         "slides": [
           {

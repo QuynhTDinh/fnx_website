@@ -4,14 +4,15 @@ const usePresentationStore = create((set) => ({
   // Trạng thái của Wizard
   currentStep: 1,
   
-  // Dữ liệu Form
+  // Dữ liệu Form cơ bản
   objective: '',
   audience: '',
   
-  logicLayer: 'LAYER_1', // 'LAYER_1' (Core Frameworks) | 'LAYER_2' (Functional Templates)
-  framework: 'PYRAMID', // Mã ID của framework/template đang chọn
+  // Tổ hợp Combinatorial
+  logicModel: 'SCQA', // Layer 1 (Core Framework)
+  template: 'STATUS_UPDATE', // Layer 2 (Functional Template)
   
-  // Dynamic Brief lưu trữ dữ liệu linh hoạt theo từng Template
+  // Dynamic Brief lưu trữ dữ liệu linh hoạt theo từng Template (Layer 2)
   dynamicBrief: {}, 
   
   // Kết quả sau khi AI xử lý
@@ -24,12 +25,14 @@ const usePresentationStore = create((set) => ({
   
   updateField: (field, value) => set({ [field]: value }),
   
-  // Reset dynamic brief khi đổi template hoặc layer
-  setLogicSelection: (layer, frameworkId) => set({ 
-    logicLayer: layer, 
-    framework: frameworkId,
-    dynamicBrief: {} // Xóa trắng dữ liệu brief cũ để tránh nhầm lẫn field
+  // Cập nhật Template (Layer 2) và reset brief
+  setTemplate: (templateId) => set({ 
+    template: templateId,
+    dynamicBrief: {} // Xóa trắng dữ liệu brief cũ khi đổi template
   }),
+
+  // Cập nhật Logic Model (Layer 1)
+  setLogicModel: (modelId) => set({ logicModel: modelId }),
   
   updateDynamicBrief: (field, value) => set((state) => ({ 
     dynamicBrief: { ...state.dynamicBrief, [field]: value } 
@@ -41,8 +44,8 @@ const usePresentationStore = create((set) => ({
     currentStep: 1,
     objective: '',
     audience: '',
-    logicLayer: 'LAYER_1',
-    framework: 'PYRAMID',
+    logicModel: 'SCQA',
+    template: 'STATUS_UPDATE',
     dynamicBrief: {},
     presentationData: null
   })

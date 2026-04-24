@@ -1,5 +1,5 @@
 export const generatePresentation = async (payload) => {
-  const { objective, audience, brief, framework } = payload;
+  const { objective, audience, brief, template, logicModel } = payload;
   
   try {
     // Gọi API Backend (Cloudflare Pages Function)
@@ -25,7 +25,7 @@ export const generatePresentation = async (payload) => {
     // Tìm một text tiêu biểu từ brief để làm mock title
     const mockTitle = brief.governingThought || brief.progress || brief.concept || brief.issue || Object.values(brief)[0] || 'Chưa có tiêu đề';
     
-    if (framework === 'MECE') {
+    if (logicModel === 'MECE') {
       return {
         framework: 'MECE',
         title: 'Báo Cáo Phân Tích Đa Chiều',
@@ -55,7 +55,7 @@ export const generatePresentation = async (payload) => {
     }
 
     return {
-      framework: framework,
+      framework: template,
       title: 'Báo Cáo Mặc Định',
       slides: [
         {

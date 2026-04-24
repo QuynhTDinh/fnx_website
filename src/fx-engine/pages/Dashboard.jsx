@@ -10,19 +10,19 @@ import StepProcessing from '../components/wizard/StepProcessing';
 
 export default function Dashboard() {
   const navigate = useNavigate();
-  const { currentStep, objective, audience, dynamicBrief, logicLayer, framework, setPresentationData } = usePresentationStore();
+  const { currentStep, objective, audience, dynamicBrief, logicModel, template, setPresentationData } = usePresentationStore();
   const [statusText, setStatusText] = useState("");
 
   const handleGenerate = async () => {
-    setStatusText("Đang phân tích cấu trúc McKinsey...");
+    setStatusText(`Đang phân tích cấu trúc ${logicModel}...`);
     
     try {
       const payload = {
         objective,
         audience,
-        brief: dynamicBrief, // Object chứa SCQA hoặc Data từ Layer 2
-        logicLayer,
-        framework
+        brief: dynamicBrief, // Object chứa dữ liệu của Layer 2 (ví dụ: Tiến độ, KPI)
+        logicModel, // Lõi tư duy thế giới (ví dụ: SCQA)
+        template // Mẫu ứng dụng (ví dụ: STATUS_UPDATE)
       };
       
       const resultJSON = await generatePresentation(payload);
