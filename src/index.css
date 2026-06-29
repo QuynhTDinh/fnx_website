@@ -1,21 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-black text-white font-sans antialiased;
+    @apply bg-fnx-dark text-white font-sans antialiased;
     letter-spacing: -0.01em; 
   }
 }
 
 @layer utilities {
+  .bg-fnx-matrix {
+    background: linear-gradient(135deg, rgba(12, 25, 39, 0.95) 0%, rgba(8, 15, 18, 0.98) 100%);
+  }
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 60s linear infinite;
+  }
+  .animate-spin-slow-reverse {
+    animation: spin-reverse 60s linear infinite;
+  }
+  .animate-spin-fast {
+    animation: spin 15s linear infinite;
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
   .media-card {
-    @apply bg-surface-800 rounded-[2rem] overflow-hidden relative transform transition-transform duration-500 hover:scale-[1.02];
+    @apply bg-fnx-matrix rounded-[2rem] overflow-hidden relative transform transition-transform duration-500 hover:scale-[1.02];
   }
 
   .media-gradient {
-    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none;
+    @apply absolute inset-0 bg-gradient-to-t from-fnx-dark via-fnx-dark/50 to-transparent pointer-events-none;
+  }
+  
+  .glassmorphism {
+    @apply bg-fnx-matrix/80 backdrop-blur-xl border-b border-white/5;
   }
 }

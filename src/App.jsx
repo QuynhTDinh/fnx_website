@@ -1,51 +1,67 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Hero from './components/Hero'
+import GlobalClients from './components/GlobalClients'
 import Ecosystem from './components/Ecosystem'
 import Pillars from './components/Pillars'
 import FXDashboard from './fx-engine/pages/Dashboard'
 import RevealViewer from './fx-engine/components/RevealViewer'
-import { Sparkles } from 'lucide-react';
+import MainLayout from './components/MainLayout';
+import logoFNX from './assets/logo-fnx.png';
+
+import FnxSC from './pages/FnxSC';
+import FnxRD from './pages/FnxRD';
+import FnxM from './pages/FnxM';
+import BanXLBM from './pages/BanXLBM';
+import Frameworks from './pages/Frameworks';
+import Logs from './pages/Logs';
+import Engage from './pages/Engage';
+import PlaceholderPage from './pages/PlaceholderPage';
 
 function LandingPage() {
   return (
-    <div className="bg-black min-h-screen text-white">
-      {/* Navigation - Ultra Minimal */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-6 bg-black/80 backdrop-blur-xl">
-        <div className="max-w-[1600px] mx-auto flex justify-between items-center">
-          
-          <div className="text-2xl font-black tracking-tight text-white flex items-center">
-            FNX GROUP
-          </div>
-
-          <div className="hidden md:flex space-x-12 text-sm font-semibold text-white/80 items-center">
-            <a href="#" className="hover:text-white transition-colors">Surface</a>
-            <a href="#" className="hover:text-white transition-colors">Parts</a>
-            <a href="#" className="hover:text-white transition-colors">Lab</a>
-            <a href="#" className="hover:text-white transition-colors">Careers</a>
-          </div>
-
-        </div>
-      </nav>
-
-      <main className="pt-24 px-4 md:px-8 pb-20 max-w-[1600px] mx-auto space-y-4 md:space-y-8">
-        <Hero />
+    <div className="w-full">
+      <Hero />
+      <GlobalClients />
+      <div className="px-4 md:px-8 pb-20 max-w-[1600px] mx-auto space-y-16 md:space-y-32 pt-24">
         <Ecosystem />
         <Pillars />
-      </main>
-
-      <footer className="py-12 px-8 max-w-[1600px] mx-auto text-sm font-medium text-white/40">
-        <p>© 2026 FNX Group. Shaping Surfaces, Leading Futures.</p>
-      </footer>
+      </div>
     </div>
-  )
+  );
 }
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        {/* Main Layout Routes */}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<LandingPage />} />
+          
+          {/* Hubs & Affiliate Routes */}
+          <Route path="/hubs/sc" element={<FnxSC />} />
+          <Route path="/hubs/rd" element={<FnxRD />} />
+          <Route path="/hubs/m" element={<FnxM />} />
+          <Route path="/affiliate/xlbm" element={<BanXLBM />} />
+          
+          {/* Frameworks & Logs */}
+          <Route path="/frameworks" element={<Frameworks />} />
+          <Route path="/logs" element={<Logs />} />
+
+          {/* Placeholder Routes for Footer Dead Links */}
+          <Route path="/about" element={<PlaceholderPage title="VỀ CHÚNG TÔI" />} />
+          <Route path="/careers" element={<PlaceholderPage title="TUYỂN DỤNG" />} />
+          <Route path="/news" element={<PlaceholderPage title="TIN TỨC" />} />
+          <Route path="/privacy" element={<PlaceholderPage title="CHÍNH SÁCH BẢO MẬT" />} />
+          <Route path="/terms" element={<PlaceholderPage title="ĐIỀU KHOẢN DỊCH VỤ" />} />
+          <Route path="/security" element={<PlaceholderPage title="BẢO MẬT HỆ THỐNG" />} />
+        </Route>
+        
+        {/* System Terminal (Engage) - No Navbar/Footer */}
+        <Route path="/engage" element={<Engage />} />
+
+        {/* Existing Routes - No Navbar/Footer */}
         <Route path="/fx-engine" element={<FXDashboard />} />
         <Route path="/fx-engine/view" element={<RevealViewer />} />
       </Routes>
