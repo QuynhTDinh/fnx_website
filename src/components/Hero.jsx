@@ -45,7 +45,7 @@ export default function Hero() {
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-bold tracking-tighter text-fnx-gold-light leading-none block whitespace-nowrap"
+                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-bold tracking-tighter text-white leading-none block whitespace-nowrap"
               >
                 SHAPING FUTURE.
               </motion.h1>
