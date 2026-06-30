@@ -41,7 +41,7 @@ export default function Navbar() {
         
         {/* Right Side: Affiliate, Projects, Engage */}
         <div className="hidden md:flex space-x-6 items-center">
-           <Link to="/affiliate/xlbm" className="text-sm font-sans font-semibold hover:text-white transition-colors relative group text-white">
+           <Link to="/affiliate/xlbm" target="_blank" rel="noopener noreferrer" className="text-sm font-sans font-semibold hover:text-white transition-colors relative group text-white">
              BAN XLBM
              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-fnx-gold-light transition-all group-hover:w-full"></span>
            </Link>

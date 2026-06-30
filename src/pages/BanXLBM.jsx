@@ -18,14 +18,14 @@ export default function BanXLBM() {
             className="inline-flex items-center space-x-4 mb-8 border border-fnx-gold-dark/40 bg-fnx-gold-dark/10 px-4 py-2 rounded-full"
           >
             <span className="w-2 h-2 rounded-full bg-fnx-gold-light animate-pulse"></span>
-            <span className="text-fnx-gold-light text-xs font-sans tracking-widest uppercase">Đối Tác Chiến Lược VASI</span>
+            <span className="text-fnx-gold-light text-xs font-sans tracking-widest uppercase">Thành viên Hiệp hội VASI Việt Nam</span>
           </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-widest uppercase mb-8"
+            className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold tracking-widest uppercase mb-8 whitespace-nowrap"
           >
             BAN XỬ LÝ BỀ MẶT
           </motion.h1>
