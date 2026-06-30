@@ -18,18 +18,7 @@ import Logs from './pages/Logs';
 import Engage from './pages/Engage';
 import PlaceholderPage from './pages/PlaceholderPage';
 
-function LandingPage() {
-  return (
-    <div className="w-full">
-      <Hero />
-      <GlobalClients />
-      <div className="px-4 md:px-8 pb-20 max-w-[1600px] mx-auto space-y-16 md:space-y-32 pt-24">
-        <Ecosystem />
-        <Pillars />
-      </div>
-    </div>
-  );
-}
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -37,7 +26,7 @@ function App() {
       <Routes>
         {/* Main Layout Routes */}
         <Route element={<MainLayout />}>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<Home />} />
           
           {/* Hubs & Affiliate Routes */}
           <Route path="/hubs/sc" element={<FnxSC />} />
