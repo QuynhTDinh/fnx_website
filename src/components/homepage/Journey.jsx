@@ -4,8 +4,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 // Separate component for scattered nodes
 const ScatterNode = ({ node, scrollYProgress }) => {
   const rad = node.angle * (Math.PI / 180);
-  const targetX = Math.cos(rad) * node.distance;
-  const targetY = Math.sin(rad) * node.distance;
+  // NOTE: MUST round to avoid scientific notation (e.g. 1.2e-15) which crashes Framer Motion string parsing!
+  const targetX = Math.round(Math.cos(rad) * node.distance);
+  const targetY = Math.round(Math.sin(rad) * node.distance);
   
   // Use explicit string values with 'px' to avoid any Framer Motion interpolation bugs
   const x = useTransform(
@@ -139,17 +140,19 @@ export default function Journey() {
             >
               {scatterNodes.map((node, i) => {
                 const rad = node.angle * (Math.PI / 180);
-                const endX = 300 + Math.cos(rad) * node.distance;
-                const endY = 300 + Math.sin(rad) * node.distance;
+                const endX = Math.round(300 + Math.cos(rad) * node.distance);
+                const endY = Math.round(300 + Math.sin(rad) * node.distance);
 
                 const nextNode = scatterNodes[(i + 1) % scatterNodes.length];
                 const nextRad = nextNode.angle * (Math.PI / 180);
-                const nextX = 300 + Math.cos(nextRad) * nextNode.distance;
-                const nextY = 300 + Math.sin(nextRad) * nextNode.distance;
+                const nextX = Math.round(300 + Math.cos(nextRad) * nextNode.distance);
+                const nextY = Math.round(300 + Math.sin(nextRad) * nextNode.distance);
 
                 return (
                   <g key={i}>
+                    {/* Line to center */}
                     <line x1="300" y1="300" x2={endX} y2={endY} stroke="rgba(211,163,66,0.4)" strokeWidth="1" strokeDasharray="4 4" />
+                    {/* Line to next node forming a web */}
                     <line x1={endX} y1={endY} x2={nextX} y2={nextY} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
                   </g>
                 );
