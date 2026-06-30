@@ -1,28 +1,34 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-// Separate component to safely use hooks for each node
-const ScatterNode = ({ node, scrollYProgress, nodesOpacity }) => {
+// Separate component for scattered nodes
+const ScatterNode = ({ node, scrollYProgress }) => {
   const rad = node.angle * (Math.PI / 180);
   const targetX = Math.cos(rad) * node.distance;
   const targetY = Math.sin(rad) * node.distance;
   
-  // Animate from center (0,0) to target, hold, and collapse back
+  // Use explicit string values with 'px' to avoid any Framer Motion interpolation bugs
   const x = useTransform(
     scrollYProgress, 
     [0, 0.15, 0.3, 0.6, 0.7, 1], 
-    [0, 0, targetX, targetX, 0, 0]
+    ["0px", "0px", `${targetX}px`, `${targetX}px`, "0px", "0px"]
   );
   
   const y = useTransform(
     scrollYProgress, 
     [0, 0.15, 0.3, 0.6, 0.7, 1], 
-    [0, 0, targetY, targetY, 0, 0]
+    ["0px", "0px", `${targetY}px`, `${targetY}px`, "0px", "0px"]
+  );
+
+  const opacity = useTransform(
+    scrollYProgress, 
+    [0, 0.15, 0.25, 0.6, 0.65, 1], 
+    [0, 0, 1, 1, 0, 0]
   );
 
   return (
     <motion.div
-      style={{ x, y, opacity: nodesOpacity }}
+      style={{ x, y, opacity }}
       className="absolute flex items-center justify-center px-4 py-2 rounded-full border border-white/20 bg-black/80 backdrop-blur-md whitespace-nowrap z-30"
     >
       <div className="w-2 h-2 rounded-full bg-fnx-silver mr-2 shadow-[0_0_5px_rgba(255,255,255,0.5)]"></div>
@@ -34,40 +40,28 @@ const ScatterNode = ({ node, scrollYProgress, nodesOpacity }) => {
 export default function Journey() {
   const containerRef = useRef(null);
   
-  // Track scroll progress within this 400vh container
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
 
-  // PHASES
-  // 0.0 - 0.15: Start, single problem node
-  // 0.15 - 0.3: Explode into many nodes
-  // 0.3 - 0.6: Connect lines and hold
-  // 0.6 - 0.7: Converge into Solution
-  // 0.7 - 1.0: End state hold
-
   // Text Opacities
-  const text1Opacity = useTransform(scrollYProgress, [0, 0.1, 0.2, 0.25], [1, 1, 1, 0]);
-  const text2Opacity = useTransform(scrollYProgress, [0.25, 0.3, 0.45, 0.5], [0, 1, 1, 0]);
-  const text3Opacity = useTransform(scrollYProgress, [0.5, 0.55, 0.65, 0.7], [0, 1, 1, 0]);
-  const text4Opacity = useTransform(scrollYProgress, [0.7, 0.75, 1, 1], [0, 1, 1, 1]);
+  const text1Opacity = useTransform(scrollYProgress, [0, 0.1, 0.2, 0.25, 1], [1, 1, 1, 0, 0]);
+  const text2Opacity = useTransform(scrollYProgress, [0, 0.2, 0.3, 0.45, 0.5, 1], [0, 0, 1, 1, 0, 0]);
+  const text3Opacity = useTransform(scrollYProgress, [0, 0.45, 0.55, 0.65, 0.7, 1], [0, 0, 1, 1, 0, 0]);
+  const text4Opacity = useTransform(scrollYProgress, [0, 0.65, 0.75, 1], [0, 0, 1, 1]);
 
   // Center Node (Problem)
-  const problemScale = useTransform(scrollYProgress, [0, 0.15, 0.2], [1, 1, 0]);
-  const problemOpacity = useTransform(scrollYProgress, [0, 0.15, 0.2], [1, 1, 0]);
+  const problemScale = useTransform(scrollYProgress, [0, 0.15, 0.2, 1], [1, 1, 0, 0]);
+  const problemOpacity = useTransform(scrollYProgress, [0, 0.15, 0.2, 1], [1, 1, 0, 0]);
 
-  // Scattered Nodes
-  const nodesOpacity = useTransform(scrollYProgress, [0.15, 0.25, 0.65, 0.7], [0, 1, 1, 0]);
-  
   // Lines connecting nodes
-  const linesOpacity = useTransform(scrollYProgress, [0.35, 0.45, 0.65, 0.7], [0, 1, 1, 0]);
+  const linesOpacity = useTransform(scrollYProgress, [0, 0.35, 0.45, 0.6, 0.65, 1], [0, 0, 1, 1, 0, 0]);
 
   // Final Solution Node
-  const solutionScale = useTransform(scrollYProgress, [0.65, 0.75, 1], [0, 1, 1]);
-  const solutionOpacity = useTransform(scrollYProgress, [0.65, 0.75, 1], [0, 1, 1]);
+  const solutionScale = useTransform(scrollYProgress, [0, 0.65, 0.75, 1], [0, 0, 1, 1]);
+  const solutionOpacity = useTransform(scrollYProgress, [0, 0.65, 0.75, 1], [0, 0, 1, 1]);
 
-  // Data for the 12 scattered nodes
   const scatterNodes = [
     { label: "Material", angle: 0, distance: 220 },
     { label: "Process", angle: 30, distance: 280 },
@@ -135,7 +129,6 @@ export default function Journey() {
                 key={i} 
                 node={node} 
                 scrollYProgress={scrollYProgress} 
-                nodesOpacity={nodesOpacity} 
               />
             ))}
 
@@ -156,15 +149,12 @@ export default function Journey() {
 
                 return (
                   <g key={i}>
-                    {/* Line to center */}
                     <line x1="300" y1="300" x2={endX} y2={endY} stroke="rgba(211,163,66,0.4)" strokeWidth="1" strokeDasharray="4 4" />
-                    {/* Line to next node forming a web */}
                     <line x1={endX} y1={endY} x2={nextX} y2={nextY} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
                   </g>
                 );
               })}
               
-              {/* Center Core Hub during connections */}
               <circle cx="300" cy="300" r="30" fill="rgba(211,163,66,0.1)" stroke="#D3A342" strokeWidth="2" />
               <text x="300" y="305" fill="#D3A342" fontSize="14" fontWeight="bold" textAnchor="middle" fontFamily="sans-serif">FNX</text>
             </motion.svg>
