@@ -4,6 +4,7 @@ import Journey from '../components/homepage/Journey';
 import NetworkEcosystem from '../components/homepage/NetworkEcosystem';
 import StandardIndex from '../components/homepage/StandardIndex';
 import SuccessLoop from '../components/homepage/SuccessLoop';
+import GlobalClients from '../components/GlobalClients';
 import Ecosystem from '../components/Ecosystem';
 import Pillars from '../components/Pillars';
 
