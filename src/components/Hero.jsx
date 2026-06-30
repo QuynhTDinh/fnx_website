@@ -4,20 +4,22 @@ import { Link } from 'react-router-dom';
 export default function Hero() {
   return (
     <section className="relative w-full h-screen min-h-[700px] overflow-hidden">
-      {/* Local Background Video */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline 
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-      </video>
+      {/* Local Background Video & Overlays */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
 
-      {/* Dark Gradient Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-fnx-dark via-fnx-dark/80 to-transparent"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-fnx-dark via-transparent to-transparent"></div>
+        {/* Dark Gradient Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-fnx-dark via-fnx-dark/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-fnx-dark via-fnx-dark/20 to-transparent"></div>
+      </div>
 
       {/* Content */}
       <div className="absolute inset-0 z-10 flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-[1600px] mx-auto">

@@ -57,14 +57,14 @@ export default function Journey() {
   return (
     <section ref={containerRef} className="relative w-full h-[400vh] bg-[#05080C]">
       {/* Sticky container that stays on screen while user scrolls 400vh */}
-      <div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center">
+      <div className="sticky top-0 w-full h-screen overflow-hidden flex flex-col items-center justify-start pt-[10vh]">
         
         {/* Background Grid */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(211,163,66,0.05),transparent_70%)]"></div>
-        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(211,163,66,0.05),transparent_70%)] pointer-events-none"></div>
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
         {/* --- TEXT CONTENT --- */}
-        <div className="absolute top-[15%] left-0 right-0 z-20 px-4 pointer-events-none flex flex-col items-center text-center">
+        <div className="relative h-[20vh] w-full flex items-center justify-center z-20 px-4 pointer-events-none text-center">
           
           <motion.div style={{ opacity: text1Opacity }} className="absolute">
             <h2 className="text-3xl md:text-5xl font-sans font-bold text-white mb-4">Khách hàng nhìn thấy Vấn đề</h2>
@@ -89,7 +89,8 @@ export default function Journey() {
         </div>
 
         {/* --- VISUALS --- */}
-        <div className="relative w-[600px] h-[600px] flex items-center justify-center mt-[40vh]">
+        <div className="relative flex-1 w-full flex items-center justify-center pb-[5vh]">
+          <div className="relative w-[600px] h-[600px] flex items-center justify-center transform scale-75 md:scale-100">
           
           {/* Phase 0: Problem Node */}
           <motion.div 
@@ -169,6 +170,7 @@ export default function Journey() {
             </div>
           </motion.div>
 
+          </div>
         </div>
       </div>
     </section>
