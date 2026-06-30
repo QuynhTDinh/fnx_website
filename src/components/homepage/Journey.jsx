@@ -100,27 +100,26 @@ export default function Journey() {
             <span className="text-red-400 font-sans font-bold text-center leading-tight">Water Quality<br/>Problem</span>
           </motion.div>
 
-          {/* Phase 1 & 2: Scattered Nodes */}
+          {/* Phase 1, 2 & 3: Scattered Nodes */}
           {scatterNodes.map((node, i) => {
             const rad = node.angle * (Math.PI / 180);
+            const targetX = Math.cos(rad) * node.distance;
+            const targetY = Math.sin(rad) * node.distance;
             
-            // X and Y distance mapping from center (0) to outer edge
-            const x = useTransform(scrollYProgress, [0.15, 0.3], [0, Math.cos(rad) * node.distance]);
-            const y = useTransform(scrollYProgress, [0.15, 0.3], [0, Math.sin(rad) * node.distance]);
-
-            // For phase 3, they get pulled back to center
-            const finalX = useTransform(scrollYProgress, [0.7, 0.8], [x.get(), 0]);
-            const finalY = useTransform(scrollYProgress, [0.7, 0.8], [y.get(), 0]);
+            // X and Y distance mapping:
+            // 0 -> 0.15: Center (0)
+            // 0.15 -> 0.3: Expand to target
+            // 0.3 -> 0.7: Stay at target
+            // 0.7 -> 0.8: Collapse back to center (0)
+            // 0.8 -> 1: Stay at center
+            const x = useTransform(scrollYProgress, [0, 0.15, 0.3, 0.7, 0.8, 1], [0, 0, targetX, targetX, 0, 0]);
+            const y = useTransform(scrollYProgress, [0, 0.15, 0.3, 0.7, 0.8, 1], [0, 0, targetY, targetY, 0, 0]);
 
             return (
               <motion.div
                 key={i}
-                style={{ 
-                  x: useTransform(scrollYProgress, v => v > 0.7 ? finalX.get() : x.get()), 
-                  y: useTransform(scrollYProgress, v => v > 0.7 ? finalY.get() : y.get()), 
-                  opacity: nodesOpacity 
-                }}
-                className="absolute flex items-center justify-center px-4 py-2 rounded-full border border-white/20 bg-black/50 backdrop-blur-md"
+                style={{ x, y, opacity: nodesOpacity }}
+                className="absolute flex items-center justify-center px-4 py-2 rounded-full border border-white/20 bg-black/50 backdrop-blur-md whitespace-nowrap"
               >
                 <div className="w-2 h-2 rounded-full bg-fnx-silver mr-2"></div>
                 <span className="text-fnx-silver text-sm font-sans">{node.label}</span>

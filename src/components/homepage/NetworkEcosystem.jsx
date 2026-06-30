@@ -153,7 +153,7 @@ export default function NetworkEcosystem() {
 
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes dash {
           to {
             stroke-dashoffset: -20;
