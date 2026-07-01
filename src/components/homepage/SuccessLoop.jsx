@@ -23,7 +23,7 @@ export default function SuccessLoop() {
   ];
 
   return (
-    <section ref={containerRef} className="w-full bg-smoke-300 py-32 px-4 relative overflow-hidden flex flex-col items-center">
+    <section ref={containerRef} className="w-full bg-surface-chrome py-32 px-4 relative overflow-hidden flex flex-col items-center">
       
       {/* Headings */}
       <div className="text-center mb-24 relative z-10">
@@ -39,7 +39,7 @@ export default function SuccessLoop() {
       <div className="relative w-full max-w-[600px] aspect-square flex items-center justify-center">
         
         {/* Static Base Ring */}
-        <div className="absolute inset-0 rounded-full border border-fnx-navy/10 bg-white/50 shadow-[inset_0_0_100px_rgba(0,0,0,0.05)]"></div>
+        <div className="absolute inset-0 rounded-full border border-slate-300 bg-white/30 shadow-[inset_0_0_100px_rgba(148,163,184,0.1)]"></div>
         
         {/* Dynamic Rotating Ring */}
         <motion.div 
@@ -62,7 +62,7 @@ export default function SuccessLoop() {
             return (
               <div 
                 key={i}
-                className="absolute w-16 h-16 -ml-8 -mt-8 flex items-center justify-center rounded-full bg-white border border-fnx-gold-dark/50 shadow-[0_0_20px_rgba(200,154,61,0.2)]"
+                className="absolute w-16 h-16 -ml-8 -mt-8 flex items-center justify-center rounded-sm bg-white border border-fnx-navy/30 shadow-[0_0_15px_rgba(21,60,138,0.1)]"
                 style={{ left: `${x}%`, top: `${y}%` }}
               >
                 {/* Counter-rotate the icon so it stays upright */}
@@ -102,10 +102,10 @@ export default function SuccessLoop() {
         </div>
 
         {/* Center Core */}
-        <div className="relative z-10 w-48 h-48 rounded-full border border-fnx-gold-dark/30 bg-white/90 backdrop-blur-xl flex items-center justify-center shadow-2xl">
+        <div className="relative z-10 w-48 h-48 rounded-sm border border-fnx-navy/30 bg-white/90 backdrop-blur-xl flex items-center justify-center shadow-lg">
           <div className="text-center">
             <span className="text-gray-500 font-sans font-bold text-xs tracking-widest uppercase block mb-1">Customer</span>
-            <span className="text-fnx-gold-dark font-sans text-xl font-bold uppercase tracking-widest block">Success</span>
+            <span className="text-fnx-navy font-sans text-xl font-bold uppercase tracking-widest block">Success</span>
           </div>
         </div>
 

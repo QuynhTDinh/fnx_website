@@ -47,34 +47,34 @@ const bentoItems = {
 };
 
 const BentoCard = ({ item, className, delay = 0 }) => (
-  <Link to={item.link} className={`block relative rounded-2xl overflow-hidden group cursor-pointer border ${item.isAffiliate ? 'border-fnx-gold-dark/40 border-dashed' : 'border-black/10 hover:border-black/30'} transition-colors duration-500 ${className}`}>
+  <Link to={item.link} className={`block relative rounded-md overflow-hidden group cursor-pointer border ${item.isAffiliate ? 'border-fnx-gold-dark/50 border-dashed' : 'border-gray-200 hover:border-fnx-navy/30'} transition-colors duration-500 ${className}`}>
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay, duration: 0.8, ease: "easeOut" }}
-      className="w-full h-full bg-white/80"
+      className="w-full h-full bg-[#05080F]"
     >
       <div className="absolute inset-0 z-0">
         <img 
           src={item.bgImage} 
           alt={item.title} 
-          className="w-full h-full object-cover opacity-30 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 ease-out"
+          className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 ease-out"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/70 to-white/20 group-hover:bg-white/40 transition-colors duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#05080F] via-[#05080F]/60 to-transparent transition-colors duration-500 group-hover:via-[#05080F]/40"></div>
       </div>
       
       <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end z-20">
         <div className="flex flex-col transform group-hover:-translate-y-2 transition-transform duration-300 ease-out">
-          <h3 className={`text-3xl md:text-4xl font-heading font-bold ${item.isAffiliate ? 'text-fnx-gold-dark' : 'text-fnx-navy'} tracking-widest`}>
+          <h3 className={`text-3xl md:text-4xl font-heading font-bold ${item.isAffiliate ? 'text-fnx-gold-dark' : 'text-white'} tracking-widest`}>
             {item.title}
           </h3>
           <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">
             <div className="overflow-hidden">
-              <div className="mt-4 text-fnx-gold-dark text-xs font-sans font-bold tracking-widest mb-2 uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+              <div className="mt-4 text-fnx-gold-light text-xs font-sans font-bold tracking-widest mb-2 uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                 {item.subtitle}
               </div>
-              <p className="text-gray-700 font-medium text-sm md:text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
+              <p className="text-gray-300 font-medium text-sm md:text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
                 {item.desc}
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function Ecosystem() {
   const isInView = useInView(containerRef, { once: false, amount: 0.2 });
 
   return (
-    <section ref={containerRef} className="relative w-full py-24 bg-smoke-200 border-t border-black/5">
+    <section ref={containerRef} className="relative w-full py-24 bg-surface-lab border-t border-black/5">
       <div className="text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-heading font-bold text-fnx-navy tracking-tight uppercase">Chuỗi Giá Trị <span className="text-fnx-gold-dark">Thống Nhất</span></h2>
         <p className="text-gray-500 font-bold mt-4 text-lg font-sans">Business Ecosystem</p>
@@ -123,18 +123,18 @@ export default function Ecosystem() {
             </div>
 
             <BentoCard item={bentoItems.rd} className="h-[250px]" delay={0.2} />
-            <div className="hidden md:flex absolute left-[-23px] top-[125px] w-4 h-4 rounded-full border-2 border-fnx-gold-dark bg-white z-10 items-center justify-center">
-               <div className="w-1.5 h-1.5 bg-fnx-gold-dark rounded-full"></div>
+            <div className="hidden md:flex absolute left-[-23px] top-[125px] w-4 h-4 rounded-sm border-2 border-fnx-gold-dark bg-white z-10 items-center justify-center">
+               <div className="w-1.5 h-1.5 bg-fnx-gold-dark rounded-sm"></div>
             </div>
 
             <BentoCard item={bentoItems.sc} className="h-[250px]" delay={0.4} />
-            <div className="hidden md:flex absolute left-[-23px] top-[395px] w-4 h-4 rounded-full border-2 border-fnx-gold-dark bg-white z-10 items-center justify-center">
-               <div className="w-1.5 h-1.5 bg-fnx-gold-dark rounded-full"></div>
+            <div className="hidden md:flex absolute left-[-23px] top-[395px] w-4 h-4 rounded-sm border-2 border-fnx-gold-dark bg-white z-10 items-center justify-center">
+               <div className="w-1.5 h-1.5 bg-fnx-gold-dark rounded-sm"></div>
             </div>
 
             <BentoCard item={bentoItems.m} className="h-[250px]" delay={0.6} />
-            <div className="hidden md:flex absolute left-[-23px] top-[665px] w-4 h-4 rounded-full border-2 border-fnx-gold-dark bg-white z-10 items-center justify-center">
-               <div className="w-1.5 h-1.5 bg-fnx-gold-dark rounded-full"></div>
+            <div className="hidden md:flex absolute left-[-23px] top-[665px] w-4 h-4 rounded-sm border-2 border-fnx-gold-dark bg-white z-10 items-center justify-center">
+               <div className="w-1.5 h-1.5 bg-fnx-gold-dark rounded-sm"></div>
             </div>
 
           </div>
