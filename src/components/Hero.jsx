@@ -35,9 +35,9 @@ export default function Hero() {
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-bold tracking-tighter text-white leading-none block whitespace-nowrap"
+                className="text-6xl md:text-[6rem] lg:text-[8rem] font-heading font-bold tracking-tight text-white leading-none block whitespace-nowrap"
               >
-                SHAPING SURFACE.
+                Shaping Surface.
               </motion.h1>
             </div>
             <div className="overflow-hidden pt-2">
@@ -45,9 +45,9 @@ export default function Hero() {
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-bold tracking-tighter text-white leading-none block whitespace-nowrap"
+                className="text-6xl md:text-[6rem] lg:text-[8rem] font-heading font-bold tracking-tight text-white leading-none block whitespace-nowrap"
               >
-                SHAPING FUTURE.
+                Shaping Future.
               </motion.h1>
             </div>
           </div>
@@ -56,13 +56,12 @@ export default function Hero() {
             <motion.button 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative px-8 py-4 bg-fnx-matrix overflow-hidden"
+              className="group relative px-8 py-4 bg-fnx-navy overflow-hidden rounded-md border border-white/20"
             >
-              <div className="absolute inset-0 border border-fnx-gold-dark opacity-50 group-hover:opacity-100 transition-opacity"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-fnx-gold-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span className="relative text-white font-sans tracking-widest font-bold text-sm md:text-base flex items-center">
-                KẾT NỐI CHUỖI GIÁ TRỊ
-                <svg className="ml-3 w-5 h-5 text-fnx-gold-light group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <span className="relative text-white font-sans tracking-wide font-medium text-base flex items-center">
+                Kết nối chuỗi giá trị
+                <svg className="ml-3 w-5 h-5 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
               </span>
             </motion.button>
           </Link>

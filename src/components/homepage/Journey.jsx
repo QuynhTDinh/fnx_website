@@ -60,7 +60,7 @@ export default function Journey() {
                 transition={{ duration: 0.4 }}
                 className="absolute"
               >
-                <h2 className="text-3xl md:text-5xl font-sans font-bold text-white mb-4">Khách hàng nhìn thấy Vấn đề</h2>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Khách hàng nhìn thấy vấn đề</h2>
                 <p className="text-fnx-silver text-xl">Ví dụ: Xử lý nước thải vượt chuẩn.</p>
               </motion.div>
             )}
@@ -74,8 +74,8 @@ export default function Journey() {
                 transition={{ duration: 0.4 }}
                 className="absolute"
               >
-                <h2 className="text-3xl md:text-5xl font-sans font-bold text-white mb-4">FNX nhìn thấy Toàn bộ Hệ thống</h2>
-                <p className="text-fnx-silver text-xl">Kết nối mọi yếu tố để tìm ra Nguyên nhân gốc rễ.</p>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">FNX nhìn thấy toàn bộ hệ thống</h2>
+                <p className="text-fnx-silver text-xl">Kết nối mọi yếu tố để tìm ra nguyên nhân gốc rễ.</p>
               </motion.div>
             )}
 
@@ -88,8 +88,8 @@ export default function Journey() {
                 transition={{ duration: 0.4 }}
                 className="absolute"
               >
-                <h2 className="text-3xl md:text-5xl font-sans font-bold text-white mb-4">Tạo ra Một Giải Pháp Duy Nhất</h2>
-                <p className="text-fnx-gold-light text-xl font-bold uppercase tracking-widest mt-4">Đây chính là Solution Thinking.</p>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Tạo ra một giải pháp duy nhất</h2>
+                <p className="text-fnx-gold-light text-xl font-bold tracking-wide mt-4">Đây chính là Solution Thinking.</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -161,13 +161,13 @@ export default function Journey() {
 
                     return (
                       <g key={i}>
-                        <line x1="300" y1="300" x2={endX} y2={endY} stroke="rgba(211,163,66,0.4)" strokeWidth="1" strokeDasharray="4 4" />
+                        <line x1="300" y1="300" x2={endX} y2={endY} stroke="rgba(200,154,61,0.4)" strokeWidth="1" strokeDasharray="4 4" />
                         <line x1={endX} y1={endY} x2={nextX} y2={nextY} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
                       </g>
                     );
                   })}
-                  <circle cx="300" cy="300" r="30" fill="rgba(211,163,66,0.1)" stroke="#D3A342" strokeWidth="2" />
-                  <text x="300" y="305" fill="#D3A342" fontSize="14" fontWeight="bold" textAnchor="middle" fontFamily="sans-serif">FNX</text>
+                  <circle cx="300" cy="300" r="30" fill="rgba(200,154,61,0.1)" stroke="#C89A3D" strokeWidth="2" />
+                  <text x="300" y="305" fill="#C89A3D" fontSize="14" fontWeight="bold" textAnchor="middle" fontFamily="sans-serif">FNX</text>
                 </motion.svg>
               )}
             </AnimatePresence>
@@ -181,14 +181,14 @@ export default function Journey() {
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0, opacity: 0, transition: { duration: 0.3 } }}
                   transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.2 }}
-                  className="absolute flex flex-col items-center justify-center w-64 h-64 rounded-3xl border border-fnx-gold-light bg-[#05080C] shadow-[0_0_80px_rgba(211,163,66,0.4)] overflow-hidden z-40"
+                  className="absolute flex flex-col items-center justify-center w-64 h-64 rounded-lg border border-fnx-gold-light bg-fnx-surface shadow-[0_0_80px_rgba(200,154,61,0.3)] overflow-hidden z-40"
                 >
-                  <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(211,163,66,0.1)_50%,transparent_75%)] bg-[length:250%_250%,100%_100%] animate-[pulse_2s_ease-in-out_infinite]"></div>
+                  <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(200,154,61,0.1)_50%,transparent_75%)] bg-[length:250%_250%,100%_100%] animate-[pulse_2s_ease-in-out_infinite]"></div>
                   <div className="text-center relative z-10 p-6">
                     <svg className="w-12 h-12 text-fnx-gold-light mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                     </svg>
-                    <h3 className="text-white font-sans font-bold text-2xl uppercase tracking-widest leading-tight">GIẢI PHÁP<br/>TỔNG THỂ</h3>
+                    <h3 className="text-white font-heading font-bold text-2xl uppercase tracking-widest leading-tight">Giải pháp<br/>Tổng thể</h3>
                   </div>
                 </motion.div>
               )}

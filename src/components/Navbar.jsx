@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logoFNX from '../assets/logo-fnx.png';
+import logoFNX from '../assets/logo-fnx-1.png';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,40 +18,35 @@ export default function Navbar() {
       <div className="max-w-[1600px] mx-auto px-4 md:px-8 flex justify-between items-center">
         
         {/* Left Side: Logo & Core Hubs */}
-        <div className="flex items-center space-x-12">
+        <div className="flex items-center space-x-8 lg:space-x-12">
           <Link to="/">
             <img src={logoFNX} alt="FNX Group" className="h-8 md:h-10 w-auto object-contain" />
           </Link>
           
-          <div className="hidden md:flex space-x-8 text-sm font-sans font-semibold text-fnx-silver items-center">
-            <Link to="/hubs/sc" className="hover:text-white transition-colors relative group">
+          <div className="hidden md:flex space-x-3 text-base font-sans font-medium text-fnx-silver items-center">
+            <Link to="/hubs/sc" className="px-4 py-2 border border-white/10 hover:border-white/30 hover:bg-white/5 rounded-md hover:text-white transition-all">
               FNX-SC
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full"></span>
             </Link>
-            <Link to="/hubs/rd" className="hover:text-white transition-colors relative group">
+            <Link to="/hubs/rd" className="px-4 py-2 border border-white/10 hover:border-white/30 hover:bg-white/5 rounded-md hover:text-white transition-all">
               FNX-RD
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full"></span>
             </Link>
-            <Link to="/hubs/m" className="hover:text-white transition-colors relative group">
+            <Link to="/hubs/m" className="px-4 py-2 border border-white/10 hover:border-white/30 hover:bg-white/5 rounded-md hover:text-white transition-all">
               FNX-M
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full"></span>
             </Link>
           </div>
         </div>
         
         {/* Right Side: Affiliate, Projects, Engage */}
-        <div className="hidden md:flex space-x-6 items-center">
-           <Link to="/affiliate/xlbm" target="_blank" rel="noopener noreferrer" className="text-sm font-sans font-semibold hover:text-white transition-colors relative group text-white">
+        <div className="hidden md:flex space-x-4 items-center">
+           <Link to="/affiliate/xlbm" target="_blank" rel="noopener noreferrer" className="text-base px-4 py-2 font-sans font-medium hover:text-white transition-all border border-fnx-gold-light/20 hover:border-fnx-gold-light/50 bg-fnx-gold-light/5 text-fnx-gold-light rounded-md">
              BAN XLBM
-             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-fnx-gold-light transition-all group-hover:w-full"></span>
            </Link>
 
-           <div className="w-[1px] h-4 bg-fnx-silver/30 mx-2"></div>
-
-           <Link to="/logs" className="text-fnx-silver text-[10px] font-sans font-bold tracking-widest hover:text-white transition-colors mt-[2px]">
+           <Link to="/logs" className="text-base px-4 py-2 border border-white/10 hover:border-white/30 rounded-md text-fnx-silver font-sans font-medium hover:text-white hover:bg-white/5 transition-all">
              DỰ ÁN
            </Link>
-           <Link to="/engage" className="px-6 py-2 border border-fnx-silver/30 text-white text-sm font-sans font-bold tracking-wide hover:border-fnx-gold-light hover:text-fnx-gold-light transition-colors duration-300 ml-2">
+
+           <Link to="/engage" className="px-6 py-2 border border-white text-white text-base font-sans font-bold hover:bg-white hover:text-black transition-colors duration-300 ml-2 rounded-md">
              LIÊN HỆ
            </Link>
         </div>
