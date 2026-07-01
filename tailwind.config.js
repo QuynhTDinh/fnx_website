@@ -20,7 +20,13 @@ export default {
           },
           matrix: '#080F12',
           sand: '#EEE5B3',
-          silver: '#8F8F8F'
+          silver: '#8F8F8F',
+          smoke: {
+            100: '#F5F5F5',
+            200: '#F0F0F0',
+            300: '#EAEAEA',
+            400: '#E0E0E0',
+          }
         },
         surface: {
           800: '#141414',

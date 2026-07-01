@@ -47,10 +47,10 @@ const MagneticNode = ({ node, isActive, isDimmed, onHover, onLeave }) => {
     >
       <div className={`relative px-6 py-3 rounded-full border backdrop-blur-md transition-all duration-300 ${
         isActive 
-          ? 'bg-fnx-gold-dark/30 border-fnx-gold-light shadow-[0_0_30px_rgba(211,163,66,0.6)]' 
-          : 'bg-white/5 border-white/20 hover:bg-white/10'
+          ? 'bg-fnx-gold-dark/10 border-fnx-gold-dark shadow-[0_0_20px_rgba(200,154,61,0.3)]' 
+          : 'bg-white/80 border-fnx-navy/20 hover:bg-white shadow-sm'
       }`}>
-        <span className={`font-sans text-sm md:text-base font-semibold ${isActive ? 'text-fnx-gold-light' : 'text-white'}`}>
+        <span className={`font-sans text-sm md:text-base font-semibold ${isActive ? 'text-fnx-gold-dark' : 'text-fnx-navy'}`}>
           {node.label}
         </span>
         
@@ -58,9 +58,9 @@ const MagneticNode = ({ node, isActive, isDimmed, onHover, onLeave }) => {
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: isActive ? 1 : 0, y: isActive ? 0 : 10 }}
-          className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-48 p-4 bg-black/80 border border-fnx-gold-dark/50 rounded-lg pointer-events-none"
+          className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-48 p-4 bg-white/95 backdrop-blur-sm border border-fnx-gold-dark/50 rounded-lg pointer-events-none shadow-lg z-50"
         >
-          <p className="text-fnx-silver text-xs leading-relaxed">{node.desc}</p>
+          <p className="text-gray-700 text-xs leading-relaxed font-medium">{node.desc}</p>
         </motion.div>
       </div>
     </motion.div>
@@ -80,11 +80,11 @@ export default function NetworkEcosystem() {
   ];
 
   return (
-    <section className="relative w-full h-screen bg-[#05080C] overflow-hidden flex items-center justify-center py-24">
+    <section className="relative w-full h-screen bg-smoke-200 overflow-hidden flex items-center justify-center py-24">
       {/* Background overlay that darkens when a node is active */}
       <div 
-        className={`absolute inset-0 bg-black transition-opacity duration-700 pointer-events-none z-0 ${
-          activeNodeId ? 'opacity-80' : 'opacity-0'
+        className={`absolute inset-0 bg-smoke-400/50 transition-opacity duration-700 pointer-events-none z-0 ${
+          activeNodeId ? 'opacity-100' : 'opacity-0'
         }`}
       />
 
@@ -92,16 +92,16 @@ export default function NetworkEcosystem() {
         
         {/* Title */}
         <div className="absolute top-10 left-1/2 -translate-x-1/2 text-center z-20">
-          <h2 className="text-3xl md:text-5xl font-sans font-bold text-white mb-4">Mạng lưới Vận hành</h2>
-          <p className="text-fnx-silver text-lg uppercase tracking-widest">Connect & Connect Ecosystem</p>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold text-fnx-navy mb-4">Mạng lưới Vận hành</h2>
+          <p className="text-gray-500 font-bold text-lg uppercase tracking-widest">Connect & Connect Ecosystem</p>
         </div>
 
         {/* Central FNX Hub */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
-          <div className="relative w-40 h-40 flex items-center justify-center rounded-full border border-fnx-gold-dark/30 bg-black shadow-[0_0_50px_rgba(211,163,66,0.1)]">
+          <div className="relative w-40 h-40 flex items-center justify-center rounded-full border border-fnx-gold-dark/30 bg-white shadow-[0_0_40px_rgba(200,154,61,0.15)]">
             {/* Core Pulse */}
-            <div className={`absolute inset-0 rounded-full bg-fnx-gold-dark/20 animate-ping transition-opacity duration-300 ${activeNodeId ? 'opacity-100' : 'opacity-0'}`}></div>
-            <span className="font-tech text-4xl font-bold text-fnx-gold-light relative z-10">FNX</span>
+            <div className={`absolute inset-0 rounded-full bg-fnx-gold-dark/10 animate-ping transition-opacity duration-300 ${activeNodeId ? 'opacity-100' : 'opacity-0'}`}></div>
+            <span className="font-tech text-4xl font-bold text-fnx-gold-dark relative z-10">FNX</span>
           </div>
         </div>
 
@@ -117,7 +117,7 @@ export default function NetworkEcosystem() {
                 <line 
                   x1={`${node.x}%`} y1={`${node.y}%`} 
                   x2="50%" y2="50%" 
-                  stroke="rgba(255,255,255,0.1)" 
+                  stroke="rgba(21,60,138,0.15)" 
                   strokeWidth="2"
                   className={`transition-opacity duration-500 ${isDimmed ? 'opacity-10' : 'opacity-100'}`}
                 />
@@ -125,11 +125,11 @@ export default function NetworkEcosystem() {
                 <line 
                   x1={`${node.x}%`} y1={`${node.y}%`} 
                   x2="50%" y2="50%" 
-                  stroke="#D3A342" 
-                  strokeWidth="4"
+                  stroke="#C89A3D" 
+                  strokeWidth="3"
                   className={`transition-all duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`}
                   style={{
-                    filter: 'drop-shadow(0 0 8px rgba(211,163,66,0.8))',
+                    filter: 'drop-shadow(0 0 4px rgba(200,154,61,0.5))',
                     strokeDasharray: '10 10',
                     animation: isActive ? 'dash 1s linear infinite' : 'none'
                   }}

@@ -23,14 +23,14 @@ export default function SuccessLoop() {
   ];
 
   return (
-    <section ref={containerRef} className="w-full bg-[#05080C] py-32 px-4 relative overflow-hidden flex flex-col items-center">
+    <section ref={containerRef} className="w-full bg-smoke-300 py-32 px-4 relative overflow-hidden flex flex-col items-center">
       
       {/* Headings */}
       <div className="text-center mb-24 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-sans font-bold text-white mb-6 uppercase tracking-tight">
-          Vòng lặp <span className="text-fnx-gold-light">Thành công</span>
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-fnx-navy mb-6 uppercase tracking-tight">
+          Vòng lặp <span className="text-fnx-gold-dark">Thành công</span>
         </h2>
-        <p className="text-fnx-silver text-xl max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
           Động cơ phát triển vĩnh cửu của FNX. Thành công của khách hàng hôm nay là dữ liệu và nguồn lực để giải quyết bài toán lớn hơn vào ngày mai.
         </p>
       </div>
@@ -39,7 +39,7 @@ export default function SuccessLoop() {
       <div className="relative w-full max-w-[600px] aspect-square flex items-center justify-center">
         
         {/* Static Base Ring */}
-        <div className="absolute inset-0 rounded-full border border-white/5 bg-black/30 shadow-[inset_0_0_100px_rgba(0,0,0,0.8)]"></div>
+        <div className="absolute inset-0 rounded-full border border-fnx-navy/10 bg-white/50 shadow-[inset_0_0_100px_rgba(0,0,0,0.05)]"></div>
         
         {/* Dynamic Rotating Ring */}
         <motion.div 
@@ -48,8 +48,8 @@ export default function SuccessLoop() {
         >
           {/* Dash ring */}
           <svg className="w-full h-full" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(211,163,66,0.2)" strokeWidth="1" strokeDasharray="2 4" />
-            <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="0.5" />
+            <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(200,154,61,0.4)" strokeWidth="1" strokeDasharray="2 4" />
+            <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(21,60,138,0.1)" strokeWidth="0.5" />
           </svg>
 
           {/* Nodes placed on the ring */}
@@ -62,12 +62,12 @@ export default function SuccessLoop() {
             return (
               <div 
                 key={i}
-                className="absolute w-16 h-16 -ml-8 -mt-8 flex items-center justify-center rounded-full bg-[#0A1017] border border-fnx-gold-dark/50 shadow-[0_0_30px_rgba(211,163,66,0.2)]"
+                className="absolute w-16 h-16 -ml-8 -mt-8 flex items-center justify-center rounded-full bg-white border border-fnx-gold-dark/50 shadow-[0_0_20px_rgba(200,154,61,0.2)]"
                 style={{ left: `${x}%`, top: `${y}%` }}
               >
                 {/* Counter-rotate the icon so it stays upright */}
                 <motion.div style={{ rotate: useTransform(rotation, r => -r) }}>
-                  <svg className="w-6 h-6 text-fnx-gold-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-fnx-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={node.icon} />
                   </svg>
                 </motion.div>
@@ -95,17 +95,17 @@ export default function SuccessLoop() {
                 className={`absolute w-40 ${alignClass}`}
                 style={{ left: `${x}%`, top: `${y}%` }}
               >
-                <span className="text-white font-sans font-bold text-sm tracking-wide">{node.title}</span>
+                <span className="text-fnx-navy font-heading font-bold text-sm tracking-wide">{node.title}</span>
               </div>
             );
           })}
         </div>
 
         {/* Center Core */}
-        <div className="relative z-10 w-48 h-48 rounded-full border border-white/10 bg-black/80 backdrop-blur-xl flex items-center justify-center shadow-2xl">
+        <div className="relative z-10 w-48 h-48 rounded-full border border-fnx-gold-dark/30 bg-white/90 backdrop-blur-xl flex items-center justify-center shadow-2xl">
           <div className="text-center">
-            <span className="text-fnx-silver font-sans text-xs tracking-widest uppercase block mb-1">Customer</span>
-            <span className="text-fnx-gold-light font-sans text-xl font-bold uppercase tracking-widest block">Success</span>
+            <span className="text-gray-500 font-sans font-bold text-xs tracking-widest uppercase block mb-1">Customer</span>
+            <span className="text-fnx-gold-dark font-sans text-xl font-bold uppercase tracking-widest block">Success</span>
           </div>
         </div>
 
@@ -113,7 +113,7 @@ export default function SuccessLoop() {
 
       {/* Bottom CTA Element */}
       <div className="mt-24 relative z-10">
-        <button className="px-8 py-4 bg-fnx-gold-light hover:bg-white text-black font-tech font-bold tracking-widest uppercase transition-colors duration-300 shadow-[0_0_30px_rgba(211,163,66,0.3)]">
+        <button className="px-8 py-4 bg-fnx-gold-dark hover:bg-fnx-navy text-white font-tech font-bold tracking-widest uppercase transition-colors duration-300 shadow-lg rounded-sm">
           Khởi đầu một bài toán mới
         </button>
       </div>

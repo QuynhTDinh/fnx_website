@@ -40,13 +40,13 @@ export default function Journey() {
   });
 
   return (
-    <section ref={containerRef} className="relative w-full h-[400vh] bg-[#05080C]">
+    <section ref={containerRef} className="relative w-full h-[400vh] bg-smoke-300">
       {/* Sticky container */}
       <div className="sticky top-0 w-full h-screen overflow-hidden flex flex-col items-center justify-start pt-[10vh]">
         
         {/* Background Grid */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(211,163,66,0.05),transparent_70%)] pointer-events-none z-0"></div>
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-0" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(21,60,138,0.05),transparent_70%)] pointer-events-none z-0"></div>
+        <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-0" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
         {/* --- TEXT CONTENT --- */}
         <div className="relative h-[20vh] w-full flex items-center justify-center z-20 px-4 pointer-events-none text-center">
@@ -60,8 +60,8 @@ export default function Journey() {
                 transition={{ duration: 0.4 }}
                 className="absolute"
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Khách hàng nhìn thấy vấn đề</h2>
-                <p className="text-fnx-silver text-xl">Ví dụ: Xử lý nước thải vượt chuẩn.</p>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-fnx-navy mb-4">Khách hàng nhìn thấy vấn đề</h2>
+                <p className="text-gray-600 text-xl">Ví dụ: Xử lý nước thải vượt chuẩn.</p>
               </motion.div>
             )}
             
@@ -74,8 +74,8 @@ export default function Journey() {
                 transition={{ duration: 0.4 }}
                 className="absolute"
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">FNX nhìn thấy toàn bộ hệ thống</h2>
-                <p className="text-fnx-silver text-xl">Kết nối mọi yếu tố để tìm ra nguyên nhân gốc rễ.</p>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-fnx-navy mb-4">FNX nhìn thấy toàn bộ hệ thống</h2>
+                <p className="text-gray-600 text-xl">Kết nối mọi yếu tố để tìm ra nguyên nhân gốc rễ.</p>
               </motion.div>
             )}
 
@@ -88,8 +88,8 @@ export default function Journey() {
                 transition={{ duration: 0.4 }}
                 className="absolute"
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Tạo ra một giải pháp duy nhất</h2>
-                <p className="text-fnx-gold-light text-xl font-bold tracking-wide mt-4">Đây chính là Solution Thinking.</p>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-fnx-navy mb-4">Tạo ra một giải pháp duy nhất</h2>
+                <p className="text-fnx-gold-dark text-xl font-bold tracking-wide mt-4">Đây chính là Solution Thinking.</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -129,10 +129,10 @@ export default function Journey() {
                     animate={{ x: targetX, y: targetY, opacity: 1, scale: 1 }}
                     exit={{ x: 0, y: 0, opacity: 0, scale: 0, transition: { type: "spring", stiffness: 250, damping: 25 } }}
                     transition={{ type: "spring", stiffness: 100, damping: 15, delay: i * 0.03 }}
-                    className="absolute flex items-center justify-center px-4 py-2 rounded-full border border-white/20 bg-black/90 whitespace-nowrap z-30"
+                    className="absolute flex items-center justify-center px-4 py-2 rounded-full border border-fnx-navy/20 bg-white/80 backdrop-blur-md whitespace-nowrap z-30 shadow-sm"
                   >
-                    <div className="w-2 h-2 rounded-full bg-fnx-silver mr-2 shadow-[0_0_5px_rgba(255,255,255,0.5)]"></div>
-                    <span className="text-fnx-silver text-sm font-sans tracking-wide">{node.label}</span>
+                    <div className="w-2 h-2 rounded-full bg-fnx-navy mr-2 shadow-[0_0_5px_rgba(21,60,138,0.3)]"></div>
+                    <span className="text-fnx-navy text-sm font-sans font-medium tracking-wide">{node.label}</span>
                   </motion.div>
                 );
               })}
@@ -161,12 +161,12 @@ export default function Journey() {
 
                     return (
                       <g key={i}>
-                        <line x1="300" y1="300" x2={endX} y2={endY} stroke="rgba(200,154,61,0.4)" strokeWidth="1" strokeDasharray="4 4" />
-                        <line x1={endX} y1={endY} x2={nextX} y2={nextY} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
+                        <line x1="300" y1="300" x2={endX} y2={endY} stroke="rgba(200,154,61,0.6)" strokeWidth="1" strokeDasharray="4 4" />
+                        <line x1={endX} y1={endY} x2={nextX} y2={nextY} stroke="rgba(21,60,138,0.25)" strokeWidth="1" />
                       </g>
                     );
                   })}
-                  <circle cx="300" cy="300" r="30" fill="rgba(200,154,61,0.1)" stroke="#C89A3D" strokeWidth="2" />
+                  <circle cx="300" cy="300" r="30" fill="rgba(200,154,61,0.15)" stroke="#C89A3D" strokeWidth="2" />
                   <text x="300" y="305" fill="#C89A3D" fontSize="14" fontWeight="bold" textAnchor="middle" fontFamily="sans-serif">FNX</text>
                 </motion.svg>
               )}
@@ -181,14 +181,14 @@ export default function Journey() {
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0, opacity: 0, transition: { duration: 0.3 } }}
                   transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.2 }}
-                  className="absolute flex flex-col items-center justify-center w-64 h-64 rounded-lg border border-fnx-gold-light bg-fnx-surface shadow-[0_0_80px_rgba(200,154,61,0.3)] overflow-hidden z-40"
+                  className="absolute flex flex-col items-center justify-center w-64 h-64 rounded-lg border border-fnx-gold-dark bg-white shadow-[0_0_80px_rgba(200,154,61,0.2)] overflow-hidden z-40"
                 >
                   <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(200,154,61,0.1)_50%,transparent_75%)] bg-[length:250%_250%,100%_100%] animate-[pulse_2s_ease-in-out_infinite]"></div>
                   <div className="text-center relative z-10 p-6">
-                    <svg className="w-12 h-12 text-fnx-gold-light mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-12 h-12 text-fnx-gold-dark mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                     </svg>
-                    <h3 className="text-white font-heading font-bold text-2xl uppercase tracking-widest leading-tight">Giải pháp<br/>Tổng thể</h3>
+                    <h3 className="text-fnx-navy font-heading font-bold text-2xl uppercase tracking-widest leading-tight">Giải pháp<br/>Tổng thể</h3>
                   </div>
                 </motion.div>
               )}

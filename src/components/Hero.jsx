@@ -29,25 +29,25 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-full"
         >
-          <div className="mb-10">
+          <div className="mb-10 flex flex-col">
             <div className="overflow-hidden pb-2">
               <motion.h1 
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-[6rem] lg:text-[8rem] font-heading font-bold tracking-tight text-white leading-none block whitespace-nowrap"
+                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400 leading-none block whitespace-nowrap drop-shadow-sm"
               >
-                Shaping Surface.
+                Shaping surface
               </motion.h1>
             </div>
-            <div className="overflow-hidden pt-2">
+            <div className="overflow-hidden pt-2 ml-16 md:ml-32 lg:ml-48">
               <motion.h1 
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-[6rem] lg:text-[8rem] font-heading font-bold tracking-tight text-white leading-none block whitespace-nowrap"
+                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 leading-none block whitespace-nowrap drop-shadow-sm"
               >
-                Shaping Future.
+                Shaping future
               </motion.h1>
             </div>
           </div>
