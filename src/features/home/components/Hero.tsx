@@ -9,10 +9,10 @@ export default function Hero() {
       {/* Local Background Video & Overlays */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <iframe 
-          src="https://www.youtube.com/embed/TXfGj7CFbqs?autoplay=1&mute=1&loop=1&playlist=TXfGj7CFbqs&controls=0&showinfo=0&rel=0&playsinline=1"
-          title="YouTube video player" 
+          src="https://play.vidyard.com/aCQhutxjmcNqJ1xFQrdcNZ?autoplay=1&muted=1&loop=1&disable_controls=1&hidden_controls=1&playsinline=1"
+          title="Vidyard video player" 
           frameBorder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allow="autoplay; fullscreen; picture-in-picture" 
           referrerPolicy="strict-origin-when-cross-origin" 
           allowFullScreen
           className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
