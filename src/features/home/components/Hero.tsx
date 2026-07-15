@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Local Background Video & Overlays */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <iframe 
-          src="https://play.vidyard.com/aCQhutxjmcNqJ1xFQrdcNZ?v=3.1.1&type=inline&autoplay=1&muted=1&loop=1&hidden_controls=1&playsinline=1"
+          src="https://share.vidyard.com/watch/aCQhutxjmcNqJ1xFQrdcNZ?autoplay=1&muted=1&loop=1&hidden_controls=1"
           title="Vidyard video player" 
           frameBorder="0" 
           allow="autoplay; fullscreen; picture-in-picture" 
