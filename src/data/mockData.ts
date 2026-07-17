@@ -189,7 +189,7 @@ export const MOCK_EXPERTS: Expert[] = [
   {
     expert_id: "exp_002",
     name: "Lã Thanh Toàn",
-    role: "Chuyên gia tư vấn kỹ thuật",
+    role: "PTGĐ của FNX Group, Chủ tịch HĐQT & TGĐ của FNX-RD",
     meta_tags: {
       line_id: "FNX-RD",
       topic: "system-engineering",
@@ -203,7 +203,7 @@ export const MOCK_EXPERTS: Expert[] = [
   {
     expert_id: "exp_003",
     name: "Nguyễn Trí Kiên",
-    role: "Trưởng ban XLBM",
+    role: "Thành viên HĐQT FNX Group, Trưởng Ban XLBM, Phó chủ tịch VASI",
     meta_tags: {
       line_id: "BAN-XLBM",
       topic: "construction-maintenance",
@@ -231,7 +231,7 @@ export const MOCK_EXPERTS: Expert[] = [
   {
     expert_id: "exp_005",
     name: "Nguyễn Đặng Bình Thành",
-    role: "Chuyên gia tư vấn, thành viên HĐQT",
+    role: "Chuyên gia tư vấn & HĐQT của FNX-RD, Giảng viên Đại Học Bách Khoa Hà Nội",
     meta_tags: {
       line_id: "FNX-RD",
       topic: "machinery",
@@ -245,7 +245,7 @@ export const MOCK_EXPERTS: Expert[] = [
   {
     expert_id: "exp_006",
     name: "Tạ Hồng Đức",
-    role: "GĐ TT R&D, Thành viên HĐQT",
+    role: "Chuyên gia tư vấn & HĐQT của FNX-RD, Giảng viên Đại Học Bách Khoa Hà Nội",
     meta_tags: {
       line_id: "FNX-RD",
       topic: "chemical-engineering",
@@ -275,7 +275,7 @@ export const MOCK_EXPERTS: Expert[] = [
     name: "Đinh Thị Thúy Quỳnh",
     role: "Giám đốc Trung tâm Nhân lực số",
     meta_tags: {
-      line_id: "FNX-M",
+      line_id: "FNX-RD",
       topic: "digital-hr",
       solution_type: "operations-optimization"
     },
