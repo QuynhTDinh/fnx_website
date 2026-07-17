@@ -92,10 +92,10 @@ export default function Experts({ lineId }: ExpertsProps) {
                   <p className="text-[#2F7C78] font-bold text-xs tracking-widest uppercase mb-2">
                     {expert.meta_tags.line_id || "FNX"}
                   </p>
-                  <h3 className="text-xl md:text-2xl font-heading font-bold text-[#273444] mb-1">
+                  <h3 className="text-xl md:text-2xl font-heading font-bold text-[#273444] mb-1 whitespace-normal break-words">
                     {expert.name}
                   </h3>
-                  <p className="text-[#6B7280] text-sm font-sans line-clamp-2">
+                  <p className="text-[#6B7280] text-sm font-sans whitespace-normal break-words">
                     {expert.role}
                   </p>
                 </div>
