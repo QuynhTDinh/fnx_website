@@ -205,7 +205,7 @@ export const MOCK_EXPERTS: Expert[] = [
     name: "Nguyễn Trí Kiên",
     role: "Thành viên HĐQT FNX Group, Trưởng Ban XLBM, Phó chủ tịch VASI",
     meta_tags: {
-      line_id: "BAN-XLBM",
+      line_id: "FNX Group",
       topic: "construction-maintenance",
       solution_type: "safety-standards"
     },
@@ -261,7 +261,7 @@ export const MOCK_EXPERTS: Expert[] = [
     name: "Hồ Thủy Linh",
     role: "Chuyên gia tư vấn, thành viên HĐQT",
     meta_tags: {
-      line_id: "FNX Group",
+      line_id: "FNX-RD",
       topic: "hr",
       solution_type: "organizational-design"
     },
