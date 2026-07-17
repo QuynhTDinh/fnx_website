@@ -173,11 +173,11 @@ export interface Expert {
 
 export const MOCK_EXPERTS: Expert[] = [
   {
-    expert_id: "exp_001",
-    name: "Nguyễn Thị Kiều Quyên",
-    role: "Phó TGĐ FNX Group / GĐ FNX SC",
+    expert_id: "exp_004",
+    name: "Tạ Thị Kiều Quyên",
+    role: "Phó TGĐ FNX Group / GĐ FNX-SC",
     meta_tags: {
-      line_id: "FNX-SC",
+      line_id: "FNX Group",
       topic: "supply-chain",
       solution_type: "operation-optimization"
     },
@@ -215,11 +215,11 @@ export const MOCK_EXPERTS: Expert[] = [
     }
   },
   {
-    expert_id: "exp_004",
-    name: "Nguyễn Đức Hạnh",
-    role: "Tổng Giám đốc FNX GROUP",
+    expert_id: "exp_001",
+    name: "Phạm Hữu Thọ",
+    role: "Chủ tịch HĐQT, Tổng Giám đốc FNX Group",
     meta_tags: {
-      line_id: "FNX-GROUP",
+      line_id: "FNX Group",
       topic: "strategy",
       solution_type: "corporate-culture"
     },
@@ -261,7 +261,7 @@ export const MOCK_EXPERTS: Expert[] = [
     name: "Hồ Thủy Linh",
     role: "Chuyên gia tư vấn, thành viên HĐQT",
     meta_tags: {
-      line_id: "FNX-GROUP",
+      line_id: "FNX Group",
       topic: "hr",
       solution_type: "organizational-design"
     },

@@ -7,9 +7,9 @@ import { motion, useMotionValue, useAnimationFrame, useTransform } from 'framer-
 const logoFNX = '/assets/logo-fnx-1.png';
 
 const innerNodesData = [
-  { id: 'fnx-rd', title: 'FNX RD', desc: 'TT Nghiên cứu R&D-ĐMST', startAngle: 0, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/logo-fnx-rd.png', isInner: true },
-  { id: 'fnx-sc', title: 'FNX SC', desc: 'TT Chuỗi cung ứng', startAngle: 120, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/logo-fnx-sc.png', isInner: true },
-  { id: 'fnx-m', title: 'FNX M', desc: 'TT Sản xuất', startAngle: 240, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/FNX_M.png', isInner: true },
+  { id: 'fnx-rd', title: 'FNX-RD', desc: 'TT Nghiên cứu R&D-ĐMST', startAngle: 0, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/logo-fnx-rd.png', isInner: true },
+  { id: 'fnx-sc', title: 'FNX-SC', desc: 'TT Chuỗi cung ứng', startAngle: 120, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/logo-fnx-sc.png', isInner: true },
+  { id: 'fnx-m', title: 'FNX-M', desc: 'TT Sản xuất', startAngle: 240, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/FNX_M.png', isInner: true },
 ];
 
 const outerNodesData = [
