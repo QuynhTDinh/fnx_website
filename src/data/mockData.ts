@@ -259,7 +259,7 @@ export const MOCK_EXPERTS: Expert[] = [
   {
     expert_id: "exp_007",
     name: "Hồ Thủy Linh",
-    role: "Chuyên gia tư vấn, thành viên HĐQT",
+    role: "Thành viên HĐQT FNX-RD",
     meta_tags: {
       line_id: "FNX-RD",
       topic: "hr",
