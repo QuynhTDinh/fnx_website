@@ -10,7 +10,7 @@ const bentoItems = {
     title: "FNX GROUP",
     subtitle: "TỔNG HÀNH DINH ĐIỀU PHỐI",
     desc: "Điều phối toàn bộ chuỗi giá trị và thiết lập tiêu chuẩn cho hệ sinh thái công nghiệp.",
-    bgImage: "/images/ecosystem/fnx_core_group.jpg",
+    logo: "/assets/logo-fnx-1.png",
     link: "/"
   },
   rd: {
@@ -18,7 +18,7 @@ const bentoItems = {
     title: "FNX-RD",
     subtitle: "NGHIÊN CỨU & ĐỔI MỚI",
     desc: "Nghiên cứu, phát triển công nghệ và xây dựng giải pháp.",
-    bgImage: "/images/ecosystem/fnx_research_dev.jpg",
+    logo: "/images/partners/Logo FNX-RD.png",
     link: "/hubs/rd"
   },
   sc: {
@@ -26,7 +26,7 @@ const bentoItems = {
     title: "FNX-SC",
     subtitle: "MẠNG LƯỚI CUNG ỨNG TOÀN CẦU",
     desc: "Kết nối chuỗi cung ứng và nguồn lực toàn cầu.",
-    bgImage: "/images/ecosystem/fnx_supply_chain.jpg",
+    logo: "/images/partners/Logo FNX-SC.png",
     link: "/hubs/sc"
   },
   m: {
@@ -34,16 +34,34 @@ const bentoItems = {
     title: "FNX-M",
     subtitle: "SẢN XUẤT & TRIỂN KHAI",
     desc: "Triển khai sản xuất, vận hành và chuyển giao.",
-    bgImage: "/images/ecosystem/fnx_manufacturing.jpg",
+    logo: "/images/partners/FNX_M.png",
     link: "/hubs/m"
   },
-  vasi: {
-    id: "vasi",
-    title: "BAN XLBM",
+  vasi_main: {
+    id: "vasi_main",
+    title: "VASI",
+    subtitle: "HIỆP HỘI CNHT VIỆT NAM",
+    desc: "Hiệp hội Công nghiệp hỗ trợ Việt Nam.",
+    logo: "/images/partners/logo_vasis.png",
+    link: "#",
+    isAffiliate: true
+  },
+  vasi_xlbm: {
+    id: "vasi_xlbm",
+    title: "BAN XỬ LÝ BỀ MẶT",
     subtitle: "CHUYÊN MÔN CÔNG NGHIỆP",
-    desc: "Tư vấn chuyên môn và kết nối chuyên gia xử lý bề mặt.",
-    bgImage: "/images/ecosystem/fnx_ban_vasi.jpg",
+    desc: "Trực thuộc Hiệp hội Công nghiệp hỗ trợ Việt Nam.",
+    logo: "/images/partners/Ban XLBM.png",
     link: "/affiliate/xlbm",
+    isAffiliate: true
+  },
+  truong_hoa: {
+    id: "truong_hoa",
+    title: "TRƯỜNG HÓA - KHOA HỌC SỰ SỐNG",
+    subtitle: "ĐẠI HỌC BÁCH KHOA HÀ NỘI",
+    desc: "Nghiên cứu công nghệ hóa học & vật liệu.",
+    logo: "/images/partners/SCLC.png",
+    link: "#",
     isAffiliate: true
   },
   vien_han_lam: {
@@ -51,7 +69,7 @@ const bentoItems = {
     title: "VIỆN HÀN LÂM KHCN",
     subtitle: "NGHIÊN CỨU HỌC THUẬT",
     desc: "Nghiên cứu nền tảng và kiểm chứng khoa học.",
-    bgImage: "/images/ecosystem/fnx_research_dev.jpg",
+    logo: "/images/partners/Logo_Viện_KH&CN_Việt_Nam.JPG",
     link: "#",
     isAffiliate: true
   },
@@ -59,43 +77,44 @@ const bentoItems = {
     id: "vien_dhqghn",
     title: "VIỆN TNMT ĐHQGHN",
     subtitle: "NGHIÊN CỨU HỌC THUẬT",
-    desc: "Phát triển các giải pháp và tiêu chuẩn bảo vệ môi trường công nghiệp.",
-    bgImage: "/images/ecosystem/fnx_research_dev.jpg",
+    desc: "Phát triển tiêu chuẩn bảo vệ môi trường công nghiệp.",
+    logo: "/images/partners/Viện tài nguyên môi trường.png",
     link: "#",
     isAffiliate: true
   },
   vien_dhbkhn: {
     id: "vien_dhbkhn",
-    title: "ĐẠI HỌC BÁCH KHOA HN",
+    title: "ĐẠI HỌC BÁCH KHOA HÀ NỘI",
     subtitle: "NGHIÊN CỨU HỌC THUẬT",
-    desc: "Trường Hóa & Khoa học Sự sống - Đào tạo và chuyển giao công nghệ hóa học.",
-    bgImage: "/images/ecosystem/fnx_research_dev.jpg",
+    desc: "Đào tạo và chuyển giao công nghệ kỹ thuật.",
+    logo: "/images/partners/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg.png",
     link: "#",
     isAffiliate: true
   }
 };
 
 const BentoCard = ({ item, className, delay = 0 }: { item: any, className?: string, delay?: number }) => (
-  <Link href={item.link} className={`block relative rounded-md overflow-hidden group cursor-pointer border ${item.isAffiliate ? 'border-fnx-gold-dark/50 border-dashed' : 'border-gray-200 hover:border-fnx-navy/30'} transition-colors duration-500 ${className}`}>
+  <Link href={item.link} className={`block relative rounded-xl overflow-hidden group cursor-pointer border border-[#2A3441] hover:border-fnx-gold-dark/50 shadow-md transition-all duration-500 ${className}`}>
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay, duration: 0.8, ease: "easeOut" }}
-      className="w-full h-full bg-[#05080F]"
+      className="w-full h-full bg-[#1A2230] backdrop-blur-md"
     >
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={item.bgImage} 
-          alt={item.title} 
-          className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 ease-out"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#05080F] via-[#05080F]/60 to-transparent transition-colors duration-500 group-hover:via-[#05080F]/40"></div>
+      <div className="absolute inset-0 z-0 flex items-center justify-center p-2 md:p-4 opacity-50 group-hover:opacity-20 transition-all duration-700 ease-out overflow-hidden rounded-xl">
+        {item.logo && (
+          <img 
+            src={item.logo} 
+            alt={item.title} 
+            className={`w-auto object-contain opacity-80 ${['rd', 'sc', 'm', 'vasi_xlbm'].includes(item.id) ? 'h-full scale-[2.5] md:scale-[3] opacity-30' : 'h-[80%] max-w-[90%]'}`} 
+          />
+        )}
       </div>
       
       <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
         <div className="flex flex-col transform group-hover:-translate-y-2 transition-transform duration-300 ease-out">
-          <h3 className={`text-2xl md:text-3xl font-heading font-bold ${item.isAffiliate ? 'text-fnx-gold-dark' : 'text-white'} tracking-widest`}>
+          <h3 className="text-2xl md:text-2xl font-heading font-bold text-white tracking-widest leading-tight">
             {item.title}
           </h3>
           <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">
@@ -171,11 +190,13 @@ export default function Solutions() {
         </div>
 
         {/* BOTTOM ROW: Independent Affiliates & Academic */}
-        <div className="mt-4 md:mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
-          <BentoCard item={bentoItems.vasi} className="h-[180px]" delay={0.8} />
-          <BentoCard item={bentoItems.vien_han_lam} className="h-[180px]" delay={1.0} />
+        <div className="mt-4 md:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <BentoCard item={bentoItems.vasi_main} className="h-[180px]" delay={0.8} />
+          <BentoCard item={bentoItems.vasi_xlbm} className="h-[180px]" delay={0.9} />
+          <BentoCard item={bentoItems.truong_hoa} className="h-[180px]" delay={1.0} />
+          <BentoCard item={bentoItems.vien_han_lam} className="h-[180px]" delay={1.1} />
           <BentoCard item={bentoItems.vien_dhqghn} className="h-[180px]" delay={1.2} />
-          <BentoCard item={bentoItems.vien_dhbkhn} className="h-[180px]" delay={1.4} />
+          <BentoCard item={bentoItems.vien_dhbkhn} className="h-[180px]" delay={1.3} />
         </div>
 
       </div>

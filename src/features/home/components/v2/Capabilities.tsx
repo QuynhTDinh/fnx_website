@@ -22,13 +22,13 @@ export default function Capabilities() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="max-w-2xl">
+          <div className="flex-1 pr-8">
             <p className="text-fnx-navy uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-4 font-sans">
               Năng lực Cốt lõi
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-fnx-dark leading-tight uppercase">
-              Giải pháp <br />
-              Công nghiệp Toàn diện
+              <span className="block whitespace-nowrap">Giải pháp</span>
+              <span className="block whitespace-nowrap">Công nghiệp Toàn diện</span>
             </h2>
           </div>
           <div className="md:max-w-md">

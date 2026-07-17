@@ -2,15 +2,16 @@
 
 import React from 'react';
 
-export default function LogsPage() {
+export default function NewsPage() {
   return (
     <div className="w-full min-h-screen bg-[#0F172A] text-white pt-40 pb-24 px-4 md:px-8">
       <div className="max-w-[800px] mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 mb-6 font-heading">
-          Nhật ký Dự án
+          Tin Tức & Sự Kiện
         </h1>
         <p className="text-gray-400 text-lg mb-12">
-          Các dự án và cập nhật kỹ thuật từ FNX. Hệ thống đang trong quá trình bảo trì và cập nhật dữ liệu.
+          Cập nhật những thông tin mới nhất về hoạt động và dự án của FNX Group.
+          Nội dung đang được biên tập.
         </p>
         <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 mx-auto opacity-30"></div>
       </div>
