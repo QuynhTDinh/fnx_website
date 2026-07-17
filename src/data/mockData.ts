@@ -216,7 +216,7 @@ export const MOCK_EXPERTS: Expert[] = [
   },
   {
     expert_id: "exp_001",
-    name: "Phạm Hữu Thọ",
+    name: "Nguyễn Đức Hạnh",
     role: "Chủ tịch HĐQT, Tổng Giám đốc FNX Group",
     meta_tags: {
       line_id: "FNX Group",
