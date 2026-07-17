@@ -241,9 +241,9 @@ export default function FnxRD() {
           <p className="text-xl text-white font-medium mb-8">Mạng lưới Đơn vị Học thuật & Khách hàng Ứng dụng Giải pháp</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px] bg-white/5 border border-white/10">
             {[
-              { name: "Đại học Bách Khoa Hà Nội", logo: "/images/partners/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg.png" },
-              { name: "Viện Hàn lâm Khoa học và Công nghệ Việt Nam", logo: "/images/partners/Logo_Viện_KH&CN_Việt_Nam.JPG" },
-              { name: "Viện Tài nguyên và Môi trường", logo: "/images/partners/Viện tài nguyên môi trường.png" },
+              { name: "Đại học Bách Khoa Hà Nội", logo: "/images/partners/logo-hust.png" },
+              { name: "Viện Hàn lâm Khoa học và Công nghệ Việt Nam", logo: "/images/partners/logo-vast.jpg" },
+              { name: "Viện Tài nguyên và Môi trường", logo: "/images/partners/logo-cres.png" },
               { name: "Trường Hóa học và Khoa học Sự sống", logo: "" },
               { name: "Khách hàng Hóa chất", logo: "" },
               { name: "Khách hàng Dầu khí", logo: "" },

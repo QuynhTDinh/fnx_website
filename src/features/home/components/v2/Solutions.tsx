@@ -18,7 +18,7 @@ const bentoItems = {
     title: "FNX-RD",
     subtitle: "NGHIÊN CỨU & ĐỔI MỚI",
     desc: "Nghiên cứu, phát triển công nghệ và xây dựng giải pháp.",
-    logo: "/images/partners/Logo FNX-RD.png",
+    logo: "/images/partners/logo-fnx-rd.png",
     link: "/hubs/rd"
   },
   sc: {
@@ -26,7 +26,7 @@ const bentoItems = {
     title: "FNX-SC",
     subtitle: "MẠNG LƯỚI CUNG ỨNG TOÀN CẦU",
     desc: "Kết nối chuỗi cung ứng và nguồn lực toàn cầu.",
-    logo: "/images/partners/Logo FNX-SC.png",
+    logo: "/images/partners/logo-fnx-sc.png",
     link: "/hubs/sc"
   },
   m: {
@@ -51,7 +51,7 @@ const bentoItems = {
     title: "BAN XỬ LÝ BỀ MẶT",
     subtitle: "CHUYÊN MÔN CÔNG NGHIỆP",
     desc: "Trực thuộc Hiệp hội Công nghiệp hỗ trợ Việt Nam.",
-    logo: "/images/partners/Ban XLBM.png",
+    logo: "/images/partners/ban-xlbm.png",
     link: "/affiliate/xlbm",
     isAffiliate: true
   },
@@ -69,7 +69,7 @@ const bentoItems = {
     title: "VIỆN HÀN LÂM KHCN",
     subtitle: "NGHIÊN CỨU HỌC THUẬT",
     desc: "Nghiên cứu nền tảng và kiểm chứng khoa học.",
-    logo: "/images/partners/Logo_Viện_KH&CN_Việt_Nam.JPG",
+    logo: "/images/partners/logo-vast.jpg",
     link: "#",
     isAffiliate: true
   },
@@ -78,7 +78,7 @@ const bentoItems = {
     title: "VIỆN TNMT ĐHQGHN",
     subtitle: "NGHIÊN CỨU HỌC THUẬT",
     desc: "Phát triển tiêu chuẩn bảo vệ môi trường công nghiệp.",
-    logo: "/images/partners/Viện tài nguyên môi trường.png",
+    logo: "/images/partners/logo-cres.png",
     link: "#",
     isAffiliate: true
   },
@@ -87,7 +87,7 @@ const bentoItems = {
     title: "ĐẠI HỌC BÁCH KHOA HÀ NỘI",
     subtitle: "NGHIÊN CỨU HỌC THUẬT",
     desc: "Đào tạo và chuyển giao công nghệ kỹ thuật.",
-    logo: "/images/partners/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg.png",
+    logo: "/images/partners/logo-hust.png",
     link: "#",
     isAffiliate: true
   }

@@ -7,19 +7,19 @@ import { motion, useMotionValue, useAnimationFrame, useTransform } from 'framer-
 const logoFNX = '/assets/logo-fnx-1.png';
 
 const innerNodesData = [
-  { id: 'fnx-rd', title: 'FNX RD', desc: 'TT Nghiên cứu R&D-ĐMST', startAngle: 0, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/Logo FNX-RD.png', isInner: true },
-  { id: 'fnx-sc', title: 'FNX SC', desc: 'TT Chuỗi cung ứng', startAngle: 120, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/Logo FNX-SC.png', isInner: true },
+  { id: 'fnx-rd', title: 'FNX RD', desc: 'TT Nghiên cứu R&D-ĐMST', startAngle: 0, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/logo-fnx-rd.png', isInner: true },
+  { id: 'fnx-sc', title: 'FNX SC', desc: 'TT Chuỗi cung ứng', startAngle: 120, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/logo-fnx-sc.png', isInner: true },
   { id: 'fnx-m', title: 'FNX M', desc: 'TT Sản xuất', startAngle: 240, radiusX: 28, radiusY: 14, size: 140, image: '/images/partners/FNX_M.png', isInner: true },
 ];
 
 const outerNodesData = [
   { id: 'vasi', title: 'VASI', desc: 'Hiệp hội CNHT Việt Nam', startAngle: 0, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/logo_vasis.png', isInner: false },
-  { id: 'xlbm', title: 'BAN XLBM', desc: 'Ban Xử lý bề mặt VASI', startAngle: 51.4, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/Ban XLBM.png', isInner: false },
+  { id: 'xlbm', title: 'BAN XLBM', desc: 'Ban Xử lý bề mặt VASI', startAngle: 51.4, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/ban-xlbm.png', isInner: false },
   { id: 'chem', title: 'HÓA - KHSS', desc: 'Trường Hóa & Khoa học Sự sống', startAngle: 102.8, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/SCLC.png', isInner: false },
-  { id: 'vast', title: 'VAST', desc: 'Viện Hàn Lâm Khoa học & CN', startAngle: 154.2, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/Logo_Viện_KH&CN_Việt_Nam.JPG', isInner: false },
-  { id: 'cres', title: 'TNMT ĐHQGHN', desc: 'Viện Tài nguyên Môi trường', startAngle: 205.7, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/Viện tài nguyên môi trường.png', isInner: false },
-  { id: 'hust', title: 'HUST', desc: 'Đại Học Bách Khoa Hà Nội', startAngle: 257.1, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg.png', isInner: false },
-  { id: 'vinuni', title: 'VIN UNI', desc: 'Trường Đại học VinUni', startAngle: 308.5, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/Trường_Đại_học_VinUni_logo.png', isInner: false },
+  { id: 'vast', title: 'VAST', desc: 'Viện Hàn Lâm Khoa học & CN', startAngle: 154.2, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/logo-vast.jpg', isInner: false },
+  { id: 'cres', title: 'TNMT ĐHQGHN', desc: 'Viện Tài nguyên Môi trường', startAngle: 205.7, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/logo-cres.png', isInner: false },
+  { id: 'hust', title: 'HUST', desc: 'Đại Học Bách Khoa Hà Nội', startAngle: 257.1, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/logo-hust.png', isInner: false },
+  { id: 'vinuni', title: 'VIN UNI', desc: 'Trường Đại học VinUni', startAngle: 308.5, radiusX: 46, radiusY: 28, size: 150, image: '/images/partners/logo-vinuni.png', isInner: false },
 ];
 
 const ConnectingLine = ({ node, rotation, reverse = false }) => {
