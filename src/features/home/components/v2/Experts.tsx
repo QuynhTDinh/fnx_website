@@ -70,7 +70,7 @@ export default function Experts({ lineId }: ExpertsProps) {
           {displayedExperts.map((expert, index) => (
             <div 
               key={expert.expert_id}
-              className="min-w-[100%] sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] xl:min-w-[calc(25%-18px)] shrink-0 snap-start"
+              className="w-[100%] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] shrink-0 snap-start"
             >
               <motion.div
                 className="group relative bg-white border border-[#E5E7EB] p-8 rounded-lg cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full"
