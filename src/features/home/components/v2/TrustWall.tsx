@@ -43,13 +43,9 @@ export default function TrustWall() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="text-[#C47A4B] uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-4 font-sans flex items-center justify-center gap-2">
-            <ShieldCheck className="w-5 h-5" />
-            Bảo chứng Chất lượng
-          </p>
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-[#273444] leading-tight uppercase flex flex-col items-center">
-            <span className="block whitespace-nowrap">Đồng hành cùng</span>
-            <span className="block text-[#6B7280] whitespace-nowrap">Thương hiệu Toàn cầu</span>
+            <span className="block whitespace-nowrap">MẠNG LƯỚI ĐỐI TÁC</span>
           </h2>
         </motion.div>
       </div>

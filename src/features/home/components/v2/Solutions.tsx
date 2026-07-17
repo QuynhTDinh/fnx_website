@@ -140,8 +140,7 @@ export default function Solutions() {
   return (
     <section ref={containerRef} className="relative w-full min-h-screen flex flex-col justify-center py-12 md:py-16 bg-surface-lab border-t border-black/5">
       <div className="text-center mb-10 md:mb-12">
-        <h2 className="text-3xl md:text-5xl font-heading font-bold text-fnx-navy tracking-tight uppercase">Dòng Chảy <span className="text-fnx-gold-dark">Giá Trị</span></h2>
-        <p className="text-gray-500 font-bold mt-2 md:mt-4 text-base md:text-lg font-sans uppercase">Kiến trúc Vận hành Hệ sinh thái</p>
+        <h2 className="text-3xl md:text-5xl font-heading font-bold text-fnx-navy tracking-tight uppercase">KIẾN TRÚC <span className="text-fnx-gold-dark">HỆ SINH THÁI</span></h2>
       </div>
 
       <div className="relative w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12">

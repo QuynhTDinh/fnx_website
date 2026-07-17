@@ -11,9 +11,9 @@ export default function Footer() {
             <Link href="/">
               <Image src="/assets/logo-fnx.png" alt="FNX Group" width={100} height={32} className="h-8 w-auto mb-6 grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition-all duration-300" />
             </Link>
-            <p className="text-fnx-silver text-sm leading-relaxed max-w-xs">
-              Kiến Tạo Bề Mặt. Kiến Tạo Tương Lai.<br/>
-              Khởi nguồn từ Việt Nam.
+            <p className="text-sm text-gray-400 max-w-xs mb-6">
+              Shaping surface - Shaping Future<br/>
+              Kiến tạo bề mặt - Kiến tạo tương lai
             </p>
           </div>
           

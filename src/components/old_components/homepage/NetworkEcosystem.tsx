@@ -30,7 +30,7 @@ const ConnectingLine = ({ node, rotation, reverse = false }) => {
     const r = rotation.get();
     const currentRot = reverse ? -r : r;
     const x2 = 50 + node.radiusX * Math.cos(node.startAngle * (Math.PI / 180) + currentRot);
-    const y2 = 50 + node.radiusY * Math.sin(node.startAngle * (Math.PI / 180) + currentRot);
+    const y2 = 60 + node.radiusY * Math.sin(node.startAngle * (Math.PI / 180) + currentRot);
     
     lineRef.current.setAttribute('x2', `${x2}%`);
     lineRef.current.setAttribute('y2', `${y2}%`);
@@ -39,7 +39,7 @@ const ConnectingLine = ({ node, rotation, reverse = false }) => {
   return (
     <line 
       ref={lineRef}
-      x1="50%" y1="50%" 
+      x1="50%" y1="60%" 
       stroke="rgba(255, 255, 255, 0.15)" 
       strokeWidth="1.5" 
       strokeDasharray="4 4"
@@ -53,7 +53,7 @@ const OrbitNode = ({ node, rotation, isHovered, activeNodeId, onHover, onLeave, 
 
   // Tính toán vị trí X, Y (hình elip)
   const x = useTransform(currentRotation, r => 50 + node.radiusX * Math.cos(node.startAngle * (Math.PI / 180) + r));
-  const y = useTransform(currentRotation, r => 50 + node.radiusY * Math.sin(node.startAngle * (Math.PI / 180) + r));
+  const y = useTransform(currentRotation, r => 60 + node.radiusY * Math.sin(node.startAngle * (Math.PI / 180) + r));
 
   const leftPerc = useTransform(x, val => `${val}%`);
   const topPerc = useTransform(y, val => `${val}%`);
@@ -125,16 +125,39 @@ export default function NetworkEcosystem() {
       />
 
       <div className="absolute inset-0 max-w-[1400px] mx-auto w-full h-full pointer-events-none">
-        
         {/* Title */}
-        <div className="absolute top-16 left-1/2 -translate-x-1/2 text-center z-20 w-full max-w-2xl px-4 pointer-events-auto">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4 tracking-wide">Mạng lưới Vận hành</h2>
-          <p className="text-cyan-500/80 font-bold text-lg uppercase tracking-[0.2em] mb-4">Connect & Connect Ecosystem</p>
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-            FNX đóng vai trò là hạt nhân trung tâm, thu hút và điều phối sức mạnh của các tổ chức, viện nghiên cứu, trường đại học và hiệp hội vào một quỹ đạo giá trị duy nhất.
-          </p>
+        <div className="absolute top-16 left-1/2 -translate-x-1/2 text-center z-20 w-full max-w-4xl px-4 pointer-events-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight uppercase"
+          >
+            HỆ SINH THÁI CÔNG NGHIỆP
+          </motion.h2>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-cyan-400 font-bold tracking-[0.2em] uppercase mb-6 text-lg"
+          >
+            CONNECT & CONNECT ECOSYSTEM
+          </motion.div>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-gray-400 mx-auto text-base md:text-lg leading-relaxed"
+          >
+            Dành cho các doanh nghiệp trong ngành Hóa chất - Dầu khí và Công nghiệp hỗ trợ, 
+            FNX là hệ sinh thái kiến tạo giá trị công nghiệp, giúp chuyển hóa những bài toán 
+            thực tiễn thành năng lực cạnh tranh thông qua kết nối tri thức, công nghệ và năng lực thực thi.
+          </motion.p>
         </div>
-
+        
         {/* Connecting Lines for Inner Orbit */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
           {innerNodesData.map(node => (
@@ -143,7 +166,7 @@ export default function NetworkEcosystem() {
         </svg>
 
         {/* Central FNX Hub */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-auto">
+        <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-auto">
           <div className="relative flex items-center justify-center">
             {/* Core Pulse */}
             <div className={`absolute inset-0 rounded-full bg-fnx-gold-dark/30 animate-ping transition-opacity duration-500 scale-[2] ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
@@ -152,8 +175,8 @@ export default function NetworkEcosystem() {
         </div>
 
         {/* Orbit Lines for Visual Polish */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[56%] h-[28%] border border-white/10 rounded-[50%] pointer-events-none z-0 hidden md:block"></div>
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] h-[56%] border border-white/10 rounded-[50%] pointer-events-none z-0 hidden md:block"></div>
+        <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[56%] h-[28%] border border-white/10 rounded-[50%] pointer-events-none z-0 hidden md:block"></div>
+        <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[92%] h-[56%] border border-white/10 rounded-[50%] pointer-events-none z-0 hidden md:block"></div>
 
         {/* Inner Orbit Nodes */}
         <div className="absolute inset-0 pointer-events-auto">

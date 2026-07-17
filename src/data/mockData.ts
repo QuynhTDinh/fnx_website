@@ -2,17 +2,22 @@
 // Ngôn ngữ: Tiếng Việt, văn phong Clinical/Industrial, rõ ràng, dễ hiểu.
 
 export const MOCK_PHILOSOPHY = {
-  title: "TẦM NHÌN & TIÊU CHUẨN",
+  title: "TẦM NHÌN & SỨ MỆNH",
   manifestos: [
     {
       id: "m1",
-      statement: "Không chỉ gia công bề mặt, chúng tôi kiến tạo tương lai của ngành công nghiệp.",
-      description: "FNX tập trung giải quyết bài toán cốt lõi của ngành: sản lượng, chi phí, và tiêu chuẩn môi trường khắt khe."
+      statement: "TẦM NHÌN",
+      description: "Định hướng một Holding xanh, thông minh, kế thừa giá trị để đổi mới và phát triển bền vững."
     },
     {
       id: "m2",
-      statement: "Triết lý Connect & Connect",
-      description: "Chúng tôi không hoạt động đơn độc. FNX là trung tâm kết nối nguồn lực nghiên cứu, chuỗi cung ứng và sản xuất toàn cầu."
+      statement: "SỨ MỆNH",
+      description: "Phát triển nền công nghiệp phụ trợ Việt Nam vững mạnh bằng năng lực làm chủ công nghệ cốt lõi"
+    },
+    {
+      id: "m3",
+      statement: "TRIẾT LÝ: CONNECT & CONNECT",
+      description: "Kết sức mạnh - Nối thành công"
     }
   ]
 };
@@ -20,27 +25,33 @@ export const MOCK_PHILOSOPHY = {
 export const MOCK_CAPABILITIES = [
   {
     id: "cap-research",
-    title: "Nghiên cứu & Chuyển giao (R&D)",
+    title: "NGHIÊN CỨU & CHUYỂN GIAO",
     summary: "Phát triển công nghệ bề mặt tiên tiến, tối ưu hóa quy trình hóa chất và vật liệu mới.",
     detail: "Đội ngũ chuyên gia từ FNX-RD và các Viện Hàn lâm liên tục nghiên cứu, thử nghiệm và chuyển giao các công nghệ mạ, xử lý bề mặt thân thiện môi trường."
   },
   {
-    id: "cap-engineering",
-    title: "Tối ưu Kỹ thuật",
-    summary: "Thiết kế, chế tạo và vận hành dây chuyền sản xuất tự động hóa cao.",
-    detail: "Áp dụng kỹ thuật số hóa vào sản xuất, tối ưu hiệu năng thiết bị và giảm thiểu lãng phí trong vận hành nhà máy."
+    id: "cap-consulting",
+    title: "TƯ VẤN GIẢI PHÁP",
+    summary: "Cung cấp giải pháp tổng thể về kỹ thuật, quy trình vận hành và hệ thống quản trị sản xuất.",
+    detail: "Khảo sát chuyên sâu, đánh giá điểm nghẽn và thiết kế lộ trình chuyển đổi nhằm tối ưu hóa chi phí, năng suất và tiêu chuẩn môi trường."
+  },
+  {
+    id: "cap-deployment",
+    title: "TRIỂN KHAI DỰ ÁN",
+    summary: "Quản lý và thực thi trọn gói các dự án công nghiệp, dây chuyền và hệ thống hạ tầng.",
+    detail: "Kiểm soát nghiêm ngặt tiến độ, chất lượng và an toàn từ khâu cung ứng vật tư, thi công lắp đặt đến nghiệm thu bàn giao."
   },
   {
     id: "cap-supply",
-    title: "Chuỗi cung ứng",
+    title: "CHUỖI CUNG ỨNG",
     summary: "Đảm bảo nguồn nguyên vật liệu hóa chất ổn định, chất lượng cao trên toàn cầu.",
     detail: "Mạng lưới kết nối toàn cầu giúp FNX tự chủ nguồn nguyên liệu, kiểm soát chặt chẽ đầu vào và đầu ra của quá trình sản xuất."
   },
   {
-    id: "cap-surface",
-    title: "Công nghệ Bề mặt",
-    summary: "Giải pháp mạ bọc, anode, sơn tĩnh điện và xử lý chống ăn mòn.",
-    detail: "Năng lực lõi cốt lõi tại Ban XLBM, đáp ứng các tiêu chuẩn khắt khe nhất của ngành ô tô, hàng không và điện tử."
+    id: "cap-hr",
+    title: "PHÁT TRIỂN NHÂN LỰC CHẤT LƯỢNG CAO",
+    summary: "Phát triển nguồn nhân lực chất lượng cao đáp ứng nhu cầu công nghiệp số.",
+    detail: "Đào tạo, nâng cao năng lực vận hành và công nghệ cho hệ thống nhân sự cốt lõi của doanh nghiệp."
   }
 ];
 

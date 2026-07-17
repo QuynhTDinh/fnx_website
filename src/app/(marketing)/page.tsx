@@ -36,7 +36,7 @@ export default function Home() {
       <Solutions />
 
       {/* SECTION 07: ỨNG DỤNG CÔNG NGHIỆP (New) */}
-      <Industries />
+      {/* <Industries /> */}
 
       {/* SECTION 08: BẢO CHỨNG CHUYÊN MÔN (New) */}
       <Experts />

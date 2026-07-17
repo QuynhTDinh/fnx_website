@@ -48,10 +48,7 @@ export default function Experts({ lineId }: ExpertsProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div>
-            <p className="text-[#C47A4B] uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-4 font-sans flex items-center gap-2">
-              <Network className="w-5 h-5" />
-              Bảo chứng Chuyên môn
-            </p>
+
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-[#273444] leading-tight uppercase">
               Mạng lưới <br />
               <span className="text-[#6B7280]">Chuyên gia</span>

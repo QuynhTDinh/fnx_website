@@ -31,16 +31,10 @@ export default function Capabilities() {
               <span className="block whitespace-nowrap">Công nghiệp Toàn diện</span>
             </h2>
           </div>
-          <div className="md:max-w-md">
-            <p className="text-gray-600 font-sans leading-relaxed">
-              Từ nghiên cứu vật liệu nền tảng đến chuyển giao công nghệ và vận hành sản xuất quy mô lớn. 
-              Chúng tôi sở hữu chuỗi năng lực khép kín.
-            </p>
-          </div>
         </motion.div>
 
         {/* Capability Matrix Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-1">
           {MOCK_CAPABILITIES.map((cap, index) => (
             <motion.div
               key={cap.id}
