@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-white font-bold mb-6 tracking-widest uppercase text-sm">Hệ Sinh Thái</h4>
+            <h4 className="text-white mb-6 tracking-widest uppercase text-sm">Hệ Sinh Thái</h4>
             <ul className="space-y-4 text-fnx-silver text-sm">
               <li><Link href="/affiliate/xlbm" className="hover:text-fnx-gold-light transition-colors">Đối Tác Chiến Lược VASI</Link></li>
               <li><Link href="/hubs/sc" className="hover:text-fnx-gold-light transition-colors">Chuỗi Cung Ứng</Link></li>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 tracking-widest uppercase text-sm">Tập Đoàn</h4>
+            <h4 className="text-white mb-6 tracking-widest uppercase text-sm">Tập Đoàn</h4>
             <ul className="space-y-4 text-fnx-silver text-sm">
               <li><Link href="/about" className="hover:text-white transition-colors">Về Chúng Tôi</Link></li>
               <li><Link href="/careers" className="hover:text-white transition-colors">Tuyển Dụng</Link></li>
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 tracking-widest uppercase text-sm">Pháp Lý</h4>
+            <h4 className="text-white mb-6 tracking-widest uppercase text-sm">Pháp Lý</h4>
             <ul className="space-y-4 text-fnx-silver text-sm">
               <li><Link href="/privacy" className="hover:text-white transition-colors">Chính Sách Bảo Mật</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Điều Khoản Dịch Vụ</Link></li>

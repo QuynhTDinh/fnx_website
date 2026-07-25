@@ -28,7 +28,7 @@ export default function Industries() {
               <LayoutGrid className="w-5 h-5" />
               Giải pháp Cốt lõi
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-fnx-dark leading-tight uppercase">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl text-fnx-dark uppercase">
               Bài toán & <br />
               <span className="text-fnx-gold-dark">Giải pháp</span>
             </h2>
@@ -77,7 +77,7 @@ export default function Industries() {
                 >
                   {activeBU.solutions.map((solution) => (
                     <div key={solution.id} className="bg-white p-8 md:p-10 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                      <h3 className="text-2xl font-heading font-bold text-fnx-dark mb-8 pb-4 border-b border-gray-100">
+                      <h3 className="text-2xl text-fnx-dark mb-8 pb-4 border-b border-gray-100">
                         {solution.name}
                       </h3>
                       
@@ -85,7 +85,7 @@ export default function Industries() {
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-3">
                             <Target className="w-5 h-5 text-fnx-gold-dark" />
-                            <h4 className="text-fnx-gold-dark uppercase font-bold tracking-widest text-xs">
+                            <h4 className="text-fnx-gold-dark uppercase tracking-widest text-xs">
                               Thách thức (Pain Point)
                             </h4>
                           </div>
@@ -97,7 +97,7 @@ export default function Industries() {
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-3">
                             <ShieldCheck className="w-5 h-5 text-fnx-navy" />
-                            <h4 className="text-fnx-navy uppercase font-bold tracking-widest text-xs">
+                            <h4 className="text-fnx-navy uppercase tracking-widest text-xs">
                               Giải pháp từ FNX
                             </h4>
                           </div>

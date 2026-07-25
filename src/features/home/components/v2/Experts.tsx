@@ -40,20 +40,15 @@ export default function Experts({ lineId }: ExpertsProps) {
     <section ref={containerRef} className="relative w-full bg-[#F2F1ED] py-24 md:py-32">
       <div className="relative w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 z-10">
         
-        {/* Section Header */}
         <motion.div 
-          className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6"
+          className="mb-16 md:mb-24 flex flex-col items-center text-center gap-6"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div>
-
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-[#273444] leading-tight uppercase">
-              Mạng lưới <br />
-              <span className="text-[#6B7280]">Chuyên gia</span>
-            </h2>
-          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#273444] uppercase whitespace-nowrap">
+            <span className="text-fnx-dark uppercase">MẠNG LƯỚI</span> <span className="text-fnx-navy uppercase">CHUYÊN GIA</span>
+          </h2>
         </motion.div>
 
         {/* Expert Carousel */}
@@ -92,7 +87,7 @@ export default function Experts({ lineId }: ExpertsProps) {
                   <p className="text-[#2F7C78] font-bold text-xs tracking-widest uppercase mb-2">
                     {expert.meta_tags.line_id || "FNX"}
                   </p>
-                  <h3 className="text-xl md:text-2xl font-heading font-bold text-[#273444] mb-1 whitespace-normal break-words">
+                  <h3 className="text-xl md:text-2xl text-[#273444] mb-1 whitespace-normal break-words">
                     {expert.name}
                   </h3>
                   <p className="text-[#6B7280] text-sm font-sans whitespace-normal break-words">

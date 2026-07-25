@@ -30,7 +30,7 @@ export default function SuccessLoop() {
       
       {/* Headings */}
       <div className="text-center mb-16 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-fnx-navy mb-6 uppercase tracking-tight">
+        <h2 className="text-4xl md:text-5xl text-fnx-navy mb-6 uppercase tracking-tight">
           Vòng lặp <span className="text-fnx-gold-dark">Thành công</span>
         </h2>
         <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">

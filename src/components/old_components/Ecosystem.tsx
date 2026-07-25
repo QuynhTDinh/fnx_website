@@ -87,7 +87,7 @@ const BentoCard = ({ item, className, delay = 0 }) => (
       
       <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end z-20">
         <div className="flex flex-col transform group-hover:-translate-y-2 transition-transform duration-300 ease-out">
-          <h3 className={`text-3xl md:text-4xl font-heading font-bold ${item.isAffiliate ? 'text-fnx-gold-dark' : 'text-white'} tracking-widest`}>
+          <h3 className={`text-3xl md:text-4xl ${item.isAffiliate ?'text-fnx-gold-dark' : 'text-white'} tracking-widest`}>
             {item.title}
           </h3>
           <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">
@@ -113,7 +113,7 @@ export default function Ecosystem() {
   return (
     <section ref={containerRef} className="relative w-full min-h-screen flex flex-col justify-center py-12 md:py-16 bg-surface-lab border-t border-black/5">
       <div className="text-center mb-10 md:mb-12">
-        <h2 className="text-3xl md:text-5xl font-heading font-bold text-fnx-navy tracking-tight uppercase">Chuỗi Giá Trị <span className="text-fnx-gold-dark">Thống Nhất</span></h2>
+        <h2 className="text-3xl md:text-5xl text-fnx-navy tracking-tight uppercase">Chuỗi Giá Trị <span className="text-fnx-gold-dark">Thống Nhất</span></h2>
         <p className="text-gray-500 font-bold mt-2 md:mt-4 text-base md:text-lg font-sans">Business Ecosystem</p>
       </div>
 

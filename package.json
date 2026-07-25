@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "if [ \"$CF_PAGES\" = \"1\" ] && [ \"$BUILDING_NEXT_ON_PAGES\" != \"1\" ]; then export BUILDING_NEXT_ON_PAGES=1 && npx @cloudflare/next-on-pages@1; else next build; fi",
     "start": "next start",
     "lint": "eslint"

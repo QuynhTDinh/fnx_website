@@ -14,7 +14,7 @@ export default function StepProcessing({ statusText }) {
         </div>
       </div>
       
-      <h2 className="text-3xl font-black mt-8 mb-4">AI Đang Tổng Hợp...</h2>
+      <h2 className="text-3xl mt-8 mb-4">AI Đang Tổng Hợp...</h2>
       <p className="text-neutral-400 font-medium text-lg max-w-md text-center">
         {statusText || "Đang áp dụng chuẩn McKinsey và xây dựng bộ Slide cho bạn..."}
       </p>

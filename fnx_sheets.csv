@@ -1,0 +1,258 @@
+
+========== Sheet: Introductions
+ ==========
+Guide,Tab 1: Website Structure (WS),Tab 2: Information Excellence Standard (IES),Tab 3: Content Excellence Standard (CES),Unnamed: 4,Unnamed: 5
+Hướng dẫn vận hành chung cho team.,Khung sitemap và phạm vi các trang.,Định hình mục đích thông tin,luồng dữ liệu & thông điệp cốt lõi.,Quản lý nguồn nội dung,các thông số cốt lõi (Key Facts) & CTA.
+Bước 1: Team Marketing đọc kỹ cấu trúc sitemap tại Tab 1 (Website Structure).,WS-01,Home,Trang chủ (/),Website có những page nào? Quan hệ giữa các page? Menu điều hướng chính?,
+Bước 2: Điền thông tin chi tiết về thông điệp & mục đích tại Tab 2 (Information Excellence - IES).,WS-02,Core Hubs,FNX-SC (/hubs/sc),Xác định template riêng cho nhóm Core Hubs năng lực cốt lõi.,
+Bước 3: Hoàn thiện dữ liệu thực tế,Key Facts và Call to Action tại Tab 3 (Content Excellence - CES).,WS-03,Projects,Projects / Logs (/logs),Cấu trúc trình bày minh chứng năng lực và dự án.
+
+========== Sheet: Website Structure (WS) ==========
+ID,Phân loại trang,Tên trang / URL,Website Team cần xác định (Requirement),Expected Outcome,Trạng thái
+WS-01,Website Sitemap,Tổng thể website,Website có những page nào? Quan hệ giữa các page? Menu điều hướng chính?,Có cấu trúc website rõ ràng trước khi bắt đầu thiết kế.,Chưa bắt đầu
+WS-02,Page Template,Trang chủ (/),Xác định cấu trúc template cho trang chủ.,"Trang chủ có bao nhiêu Section, các section mô tả gì",Chưa bắt đầu
+WS-03,Navigation Structure,Toàn trang (Header/Footer),"Header, Footer, Breadcrumb, CTA, Menu trái/phải hoạt động như thế nào?",Điều hướng thống nhất trên toàn website (đúng chuẩn Left/Right Nav).,Chưa bắt đầu
+,,,,,
+,,,,,
+Cấu trúc site map hiện tại,,,,,
+,,,,Các section của Trang chủ hiện tại,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Header (Navbar),,,,Footer,
+
+========== Sheet: Information Excellence Standard ==========
+Trang áp dụng (Theo Sitemap),URL,ID Tiêu chuẩn,Yêu cầu chi tiết (Để Marketing dễ điền),Dữ liệu / Tài liệu hiện tại (Dùng để đối chiếu/kế thừa),[Marketing điền] Mô tả thông tin nâng cấp,Trạng thái duyệt
+1. Home,/,IS-01,Mục đích trang:Khách hàng vào trang chủ cần hiểu FNX làm gì trong 5s đầu? Mục tiêu kinh doanh cao nhất là gì?,"Shaping surface
+Shaping future","Shaping surface
+Shaping future",
+1. Home,/,IC-01,Core Message:Viết 1 câu headline chính trên Hero Section. Khách hàng đọc xong nhớ điều gì?,Kết nối chuỗi giá trị,Chuyển hóa các bài toán thành giải pháp thực tiễn,
+1. Home,section Network Ecosystem,,Core Message:Viết 1 câu headline chính trên Hero Section. Khách hàng đọc xong nhớ điều gì?,"HỆ SINH THÁI CÔNG NGHIỆP
+CONNECT & CONNECT ECOSYSTEM
+Dành cho các doanh nghiệp trong ngành Hóa chất - Dầu khí và Công nghiệp hỗ trợ, FNX là hệ sinh thái kiến tạo giá trị công nghiệp, giúp chuyển hóa những bài toán thực tiễn thành năng lực cạnh tranh thông qua kết nối tri thức, công nghệ và năng lực thực thi.","HỆ SINH THÁI CÔNG NGHIỆP
+CONNECT & CONNECT ECOSYSTEM
+Dành cho các doanh nghiệp trong ngành Hóa chất - Dầu khí và Công nghiệp hỗ trợ, FNX là hệ sinh thái kiến tạo giá trị công nghiệp, giúp chuyển hóa những bài toán thực tiễn thành năng lực cạnh tranh thông qua kết nối tri thức, công nghệ và năng lực thực thi.",Cần điền
+1. Home,section Why FNX,,Core Message:Viết 1 câu headline chính trên Section. Khách hàng đọc xong nhớ điều gì?,"Vượt lên trên
+Mọi Tiêu Chuẩn",Một bài toán – một đầu mối – nhiều năng lực được kết nối. ,Cần điền
+1. Home,section Capabilities,,Core Message:Viết 1 câu headline chính trên Section. Khách hàng đọc xong nhớ điều gì?,"NĂNG LỰC CỐT LÕI
+
+GIẢI PHÁP
+CÔNG NGHIỆP TOÀN DIỆN",,Cần điền
+1. Home,section Solutions,,Core Message:Viết 1 câu headline chính trên Section. Khách hàng đọc xong nhớ điều gì?,KIẾN TRÚC HỆ SINH THÁI,,Cần điền
+1. Home,section Experts,,Core Message:Viết 1 câu headline chính trên Section. Khách hàng đọc xong nhớ điều gì?,"MẠNG LƯỚI
+CHUYÊN GIA",,Cần điền
+1. Home,section Trust Wall,,Core Message:Viết 1 câu headline chính trên Section. Khách hàng đọc xong nhớ điều gì?,MẠNG LƯỚI ĐỐI TÁC,,Cần điền
+2. FNX-SC,/hubs/sc,IS-01,Mục đích giải pháp SC: Khách hàng doanh nghiệp cần nắm giá trị cốt lõi nào của Chuỗi cung ứng?,"Section Nỗi đau (Problem Insight)
+Section Hệ sinh thái Năng lực (Capability Network)
+Section Phương pháp Giải quyết (The Solution Timeline
+Section Khung Vận hành Mạng lưới (The Methodology)
+Section Bảo chứng Thực tế (Evidence & Trust Grid)
+Section Tiết lộ Trọng tâm (Engine Reveal)
+Section Kêu gọi Hành động (Call to Action)","FNX-SC là đơn vị thành viên của FNX Group
+Giúp tối ưu chuỗi cung ứng thông qua kết nối đúng nguồn lực, giảm chi phí, giảm rủi ro và nâng cao hiệu quả vận hành.
+",Cần điền
+2. FNX-SC,/hubs/sc,IC-03,"Terminology:Thuật ngữ Supply Chain nào chuẩn, thuật ngữ nào cần giải thích cho dễ hiểu?","1. Thuật ngữ Năng lực Cốt lõi (Core Capabilities)
+Mạng lưới Cung ứng (Supply Network): Hệ sinh thái kết nối các nguồn lực.
+Cung ứng Kỹ thuật (Technical Sourcing): Quá trình tìm kiếm nguồn hàng đòi hỏi yêu cầu kỹ thuật khắt khe.
+Giải pháp Bề mặt (Surface Solutions): Dịch vụ xử lý bề mặt vật liệu công nghiệp.
+Đại diện Thương mại (Commercial Rep): Trở thành đại diện phân phối hoặc bán hàng chiến lược.
+
+2. Thuật ngữ Vận hành & Hệ thống (Operations & Framework)
+Chi phí ẩn (Hidden Costs): Các khoản phí không lường trước phát sinh trong quá trình vận hành chuỗi cung ứng.
+Điểm đứt gãy chuỗi cung ứng: Sự cố làm gián đoạn dòng chảy vật tư.
+Mạng lưới điều phối trung tâm: Hệ thống quản lý tập trung một chạm (Single-point of contact).
+Khung Vận hành (Framework / Methodology): Hệ thống quy trình chuẩn mực được định nghĩa sẵn.
+Động cơ Mạng lưới (Supply Network Engine): Hàm ý FNX-SC đóng vai trò như một cỗ máy cốt lõi vận hành toàn bộ mạng lưới.
+
+3. Thuật ngữ Vật tư & Công nghiệp (Industrial Terms)
+Vật tư ME (Mechanical & Electrical): Vật tư Cơ điện.
+Hóa chất Dầu khí / Hóa chất Chuyên dụng: Nhóm vật liệu đặc thù.
+Vật tư Công nghiệp Hỗ trợ: Vật liệu phục vụ cho các ngành công nghiệp lắp ráp, sản xuất máy móc.
+Sơn & Mạ: Nhóm công nghệ xử lý bề mặt.
+FDI (Foreign Direct Investment): Khối doanh nghiệp có vốn đầu tư nước ngoài.
+
+4. Các từ khóa tiếng Anh hiển thị trực tiếp (Không dịch)
+Insight (Thấu hiểu vấn đề)
+Framework (Khung quy trình)
+Related Solutions (Giải pháp liên quan)
+In-house (Nội bộ / Tự sản xuất)","3 mảng Kinh doanh của FNX-SC:
+(1) Xử lý Bề mặt: 
+FNX-SC phụ trách toàn bộ các hoạt động thương mại liên quan đến mảng xử lý bề mặt do các thành viên của FNX-M sản xuất:
+- Mạ chuyên sâu (mạ bạc kỹ thuật, mạ chrome cứng)
+- Mạ thông dụng (Mạ Nikel - Chrome, Mạ kẽm khổ lớn, Mạ kẽm, Mạ Nikel)
+- Sơn ED
+FNX-SC là đơn vị hỗ trợ Tổ điều phối của Ban XLBM VASI trong các nội dung:
+- Phát triển khách hàng mới
+- Hỗ trợ tổ điều phối tư vấn các đơn hàng theo thế mạnh của các thành viên
+- Kết nối 
+
+(2) Đại diện thương mại:
+FNX-SC là đại diện thương mại độc quyền cho các sản phẩm khác của FNX Group sản xuất: Thanh ray trượt; Tay nâng khí nén; Topcoat (Sơn phủ chống ăn mòn)...
+Đồng thời là đại diện thương mại cho các Hãng với các sản phẩm:  Điện cực - Hanger; Phụ gia động cơ; Nước làm mát pin
+
+(3) Thương mại & Cung ứng:
+Đơn vị thương mại - cung ứng Hóa chất xây dựng & Gỗ công nghiệp (Gỗ công nghiệp cho các dự án đầu tư Xây dựng cơ bản; Hóa chất xây dựng; Các sản phẩm khác); cho ngành Hoá chất - Dầu khí và Công nghiệp Hỗ trợ (Hóa chất nguyên liệu, Hóa chất cơ bản; Hóa chất công nghệ, Hóa chất xử lý nước)
+
+",Cần điền
+3. FNX-RD,/hubs/rd,IS-01,Mục đích giải pháp RD: Làm nổi bật năng lực Nghiên cứu & Phát triển (R&D) giải quyết bài toán gì?,"1. Mở đầu (Problem Insight): Nêu bật Nỗi đau về làm chủ công nghệ (""Sở hữu công nghệ tiên tiến là chưa đủ. Năng lực làm chủ mới tạo ra lợi thế"") và sự thiếu hụt kỹ sư (""Nhân sự đã được tuyển dụng nhưng chuyên môn thực chiến lại vắng bóng"").
+2. Hệ sinh thái Năng lực (Capability Network): Giao diện tương tác 3 mảng năng lực lõi: Công nghệ (Technology), Triển khai (Engineering), và Nhân sự (Talent).
+3. Phương pháp Giải quyết (Solution Timeline): Trục thời gian 5 bước xử lý bài toán RD: Nhận diện rào cản kỹ thuật 
+→ Chẩn đoán lõi công nghệ → Thiết lập phương pháp luận → Tích hợp hệ thống → Đo lường OEE & Tối ưu.
+4. Khung Vận hành (FNX Tech Framework): Quy trình 5 bước kỹ thuật (Khám phá - Phân tích - Kết nối - Triển khai - Tối ưu).
+5. Bảo chứng Thực tế (Evidence):
+Số liệu: 48+ Dự án, 12 Ngành công nghiệp, 300+ Chuyên gia.
+Trust Grid: Mạng lưới học thuật (ĐH Bách Khoa HN, Viện Hàn lâm Khoa học, Viện Tài nguyên Môi trường...).
+6. Tiết lộ Trọng tâm (Engine Reveal): Khẳng định toàn bộ Động cơ Công nghệ (Technology Engine) này được vận hành bởi: FNX-RD.
+7. Call to Action: Khơi gợi hành động bằng câu hỏi: ""Có một bài toán kỹ thuật chưa thể giải quyết?"" 
+→ Nút Trò chuyện với Chuyên gia.",[Marketing nhập liệu],Cần điền
+3. FNX-RD,/hubs/rd,IST-02,Terminology:Thuật ngữ,"Thuật ngữ Năng lực & Khung vận hành:
+
+Công nghệ lõi (Core Technology): Công nghệ cơ bản mang tính nền tảng quyết định.
+Triển khai (Engineering): Quá trình chuyển hóa lý thuyết học thuật thành dây chuyền/sản phẩm thực tế tại nhà máy.
+Chuyên môn thực chiến: Kiến thức kỹ thuật rút ra từ thực tế nhà máy, không chỉ nằm trên giấy.
+Khung Vận hành Công nghệ (FNX Tech Framework): Phương pháp luận chuẩn hóa.
+Động cơ Công nghệ (Technology Engine): Lõi sức mạnh của toàn bộ hoạt động R&D.
+Thuật ngữ Kỹ thuật Công nghiệp & Sản phẩm:
+
+Rào cản kỹ thuật (Technical Barriers): Những điểm nghẽn về công nghệ chưa thể vượt qua.
+OEE (Overall Equipment Effectiveness): Chỉ số đo lường hiệu suất tổng thể của thiết bị (Đây là thuật ngữ cực kỳ ""đắt giá"" trong quản trị sản xuất công nghiệp).
+Vật liệu bề mặt / Sơn chống cháy / Kính điện thông minh: Các dòng sản phẩm hóa học/vật liệu ứng dụng tiêu biểu.
+Phần mềm IoT: Giải pháp chuyển đổi số và tự động hóa.
+Thuật ngữ Mạng lưới:
+
+Đơn vị Học thuật (Academic Institutions): Các trường đại học, viện nghiên cứu hàn lâm (như HUST, VAST).
+Khách hàng Ứng dụng Giải pháp: Doanh nghiệp đầu cuối mua lại công nghệ để đưa vào sản xuất.
+","1. Năng lực chuyên môn tại FNX-RD:
+1.1.  Nghiên cứu Khoa học  & Đổi mới sáng tạo
+- Nghiên cứu, phát triển hướng tới làm chủ các công nghệ cốt lõi trong nền công nghiệp hỗ trợ Việt Nam
+- Kết nối với các đơn vị thực hiện đề tài nghiên cứu ứng dụng
+- Tiếp nhận, làm chủ công nghệ được chuyển giao
+Kết nối với mạng lưới các chuyên gia, nhà nghiên cứu từ các Đơn vị: Đại học Bách Khoa Hà Nội, Trường Hóa và Khoa học Sự sống (ĐH Bách Khoa Hà Nội), Viện Hàn Lâm Khoa học Việt Nam, Viện tài Nguyên Môi trường - Đại học Quốc gia Hà Nội, Đại học Công nghiệp, ...
+1.2.  Tư vấn & Triển khai Dự án
+FNX-RD cung cấp các dịch vụ tư vấn, quản lý và triển khai dự án trong lĩnh vực Hóa chất, Dầu khí, Công nghiệp hỗ trợ và Đầu tư xây dựng, đồng hành cùng Chủ đầu tư từ giai đoạn chuẩn bị đầu tư đến tổ chức triển khai và hỗ trợ vận hành.
+- Tư vấn chuẩn bị đầu tư, tư vấn thiết kế, tư vấn đấu thầu, tư vấn tối ưu giải pháp
+- Quản lý dự án (tiến độ, chi phí, chất lượng, hợp đồng, thay đổi, rủi ro, điều phối các bên liên quan...)
+- Tổ chức triển khai các hệ thống kỹ thuật theo yêu cầu của dự án
+- Chuyển giao kết quả nghiên cứu khoa học công nghệ và thực tiễn doanh nghiệp
+ Các loại hình dự án:
+- Dự án đầu tư xây dựng mới
+- Dự án mở rộng nhà máy
+- Dự án cải tạo, nâng cấp
+- Dự án chuyển giao công nghệ
+- Dự án tối ưu sản xuất
+.....
+1.3. Nhân lực số 
+1.3.1. Phát triển Nguồn nhân lực Chất lượng cao
+- Phát triển và cung ứng nguồn Nhân lực chất lượng cao được FNX bảo chứng năng lực cho các Doanh nghiệp thuộc Nhóm ngành Hóa chất - Dầu khí và Công nghiệp hỗ trợ 
+- Tư vấn, đánh giá chất lượng nhân sự cho các doanh nghiệp thuộc Nhóm ngành Hóa chất - Dầu khí và Công nghiệp hỗ trợ 
+1.3.2. Phần mềm Quản lý Dự án
+Nhằm nâng cao hiệu quả quản lý dự án đầu tư,  FNX-RD phát triển phần mềm Quản lý dự án CO2 PIM, hỗ trợ Chủ đầu tư và Nhà thầu tập trung hóa dữ liệu, chuẩn hóa quy trình và theo dõi toàn bộ dự án trên một nền tảng thống nhất.  Giải pháp giúp kết nối các bên tham gia, nâng cao khả năng phối hợp, kiểm soát tiến độ, chất lượng, chi phí và hỗ trợ ra quyết định dựa trên dữ liệu theo thời gian thực.
+
+",Cần điền
+4. FNX-M,/hubs/m,IS-01,Mục đích giải pháp M: Khẳng định năng lực chuyên môn mảng M phục vụ đối tượng nào?,ẩn thông tin của FNX -M,,
+5. BAN XLBM,/xlbm,IS-03,Phạm vi thông tin BAN XLBM: Giới thiệu liên kết Ban xử lý bài toán mới cần phô bày/bảo mật gì?,"1. Hero Section (Mở đầu): Khẳng định danh tính ngay lập tức: ""Thành viên Hiệp hội VASI Việt Nam - BAN XỬ LÝ BỀ MẶT"" với 2 nút Call-to-Action rõ ràng: Nhận báo giá (dành cho FDI) và Đăng ký mạng lưới (dành cho Doanh nghiệp).
+2. Tầm Nhìn & Giá Trị (Hover-Expand Grid): Thông điệp ""Nâng Tầm Make In Vietnam"" đi kèm 3 giá trị cốt lõi của liên minh (Hiệu quả minh bạch - Công nghệ xanh - Gắn kết hành động).
+3. Ma Trận Lợi Ích (Interactive Toggle): Cho phép người dùng chọn vai trò của mình (Khách hàng FDI hoặc Doanh nghiệp Sản xuất). Ứng với mỗi vai trò, hệ thống sẽ lật ra 4 thẻ lợi ích tương ứng (Ví dụ: FDI thì thấy Một điểm dừng, Chuẩn OEM, còn Doanh nghiệp thì thấy Đột phá đơn hàng, Chống phá giá).
+4. Bản Đồ Năng Lực (Interactive Bento Grid): Một bản đồ ""14 Mắt Xích Sinh Thái"" chia thành 5 khối công nghệ xử lý bề mặt (Mạ, Sơn, Anode, Xử lý nhiệt, và Lõi R&D/SC). Khi đưa chuột vào, các nhà máy thành viên tương ứng sẽ hiện ra.
+5. Contact Footer (Thông tin liên hệ VASI): Khối chốt lại trang với thông tin liên hệ chính thức của Trưởng ban XLBM (Ông Nguyễn Trí Kiên), khẳng định tính pháp lý và uy tín.",[Marketing nhập liệu],Cần điền
+5. BAN XLBM,/xlbm,,Terminology:Thuật ngữ,"Thuật ngữ Kinh tế & Hệ sinh thái:
+
+VASI: Hiệp hội Doanh nghiệp Công nghiệp Hỗ trợ Việt Nam.
+Make In Vietnam: Cụm từ chiến lược nhấn mạnh năng lực tự chủ sản xuất trong nước.
+FDI (Foreign Direct Investment): Tập đoàn/Khách hàng có vốn đầu tư nước ngoài (nguồn tạo ra đơn hàng khổng lồ).
+ESG (Environmental, Social, and Governance): Chuẩn mực môi trường - xã hội - quản trị toàn cầu (Rất quan trọng với FDI).
+Chuẩn OEM: Chất lượng tương đương tiêu chuẩn của Nhà sản xuất thiết bị gốc.
+Giải Pháp Một Điểm Dừng (One-stop Solution): Một đầu mối duy nhất giải quyết toàn bộ chuỗi cung ứng.
+Chống Cạnh Tranh Phá Giá / Quy hoạch giá sàn: Các thuật ngữ về bảo vệ biên lợi nhuận của doanh nghiệp nội địa.
+Thuật ngữ Chuyên ngành Xử lý Bề mặt (Surface Treatment):
+
+Mạ Kỹ Thuật: Chrome cứng, Kẽm hợp kim, Xi mạ ABS/PC, Mạ kẽm điện phân, Ni quay, Mạ nhúng nóng.
+Sơn Điện Ly: Phủ màng điện ly E-coating (ED), Phosphating.
+Anodized (Anode): Anode cứng, màu, Chromate nhôm.
+Xử Lý Nhiệt (Heat Treatment): Thấm Carbon, Tôi cảm ứng, Lò chân không, Tôi dầu, Nhiệt luyện tôi cao tần.
+Gia công chính xác kim loại tấm: Chế tạo phôi trước khi xử lý bề mặt.",,Cần điền
+6. Projects / Logs,/logs,IS-02,"Thứ tự ưu tiên Logs: Sắp xếp dự án theo tiêu chí nào lên đầu (Mới nhất, Quy mô, hay Ngành)?",Ẩn thông tin,[Marketing nhập liệu],
+8. About FNX,/about,IS-01,"Mục đích trang About: Câu chuyện cốt lõi, tầm nhìn, sứ mệnh truyền tải cảm xúc gì?",Ẩn thông tin,[Marketing nhập liệu],
+9. Careers,/careers,IS-03,"Phạm vi tuyển dụng: Vị trí mở, văn hóa, quyền lợi ứng viên cần cung cấp thông tin gì?",Ẩn thông tin,[Marketing nhập liệu],
+10. News,/news,IST-03,Quy tắc phân loại News: Tin tức chia mấy danh mục? Quy tắc đặt tiêu đề?,Ẩn thông tin,[Marketing nhập liệu],
+11. Engage,/engage,IS-01,Mục đích trang liên hệ: Sau khi điền form khách nhận phản hồi thế nào? Trường form là gì?,Form liên hệ ,[Marketing nhập liệu],Cần điền
+
+========== Sheet: Experience Design Standard (EDS ==========
+Nhóm tiêu chuẩn (EDS),Trang áp dụng (Theo Sitemap),Section / Vùng hiển thị cụ thể,Yêu cầu thiết kế UX/UI / Quy chuẩn,Hiện trạng cũ (Đối chiếu),Trạng thái thiết kế tiêu chuẩn
+01. Visual (VC),Toàn trang (Global),Toàn bộ website,"Typography: Quy định Font Family, Heading (H1-H6), Body, Font Weight, Line Height chuẩn.","Hệ thống đang dùng nhiều loại font phân mảnh: Inter (Sans/Body), Manrope (Heading), IBM Plex Mono (Mono), Orbitron (Tech/Số đếm), Eurostile Rounded. Chưa có quy chuẩn Line Height và Font Weight đồng nhất cho từng cấp độ (H1-H6).","Orbitron cho Slogan
+Monsterrat các cỡ cho các text còn lại
+Line Height và Font Weight đồng nhất cho từng cấp độ (H1-H6) theo tiêu chuẩn worldclass"
+01. Visual (VC),Toàn trang (Global),Toàn bộ website,"Color Standard: Bảng màu Brand, Neutral, Semantic (Success/Error), màu Hover/Active.","Dùng mã Hex cứng cho màu thương hiệu (#A36426 Gold Dark, #C89A3D Gold Light, #080F12 Matrix). Hệ màu nền tảng mượn của shadcn (chuẩn OKLCH đơn sắc xám). Chưa có bộ màu Semantic (Success/Error/Warning) rõ ràng.",
+01. Visual (VC),Toàn trang (Global),Toàn bộ website,"Visual Style: Quy định kiểu Icon (Line/Solid), độ bo góc (Border Radius), Shadow cho Card.",Đang sử dụng thư viện icon lucide-react nét Line cơ bản. Border-radius chủ yếu dùng rounded-2xl hoặc biến toàn cục --radius: 0.625rem. Shadow dùng mã CSS cứng (VD: shadow-[0_0_30px_rgba(...)]),theo tiêu chuẩn worldclass
+02. Layout (LC),Toàn trang (Global),Grid System,"Layout Standard: Khung Grid 12 cột, Container Width tối đa, khoảng cách chuẩn giữa các Section.","Grid 12 hoặc Grid 4 tùy trang. Container width không đồng nhất (nơi dùng max-w-[1200px], nơi dùng max-w-[1600px]). Khoảng cách Section thường dùng py-24 hoặc py-32.",theo tiêu chuẩn worldclass
+02. Layout (LC),1. Home (/),Hero Section,"Component Hero: Bố cục chia đôi (Text trái, Visual/Graphic phải), Headline lớn, CTA nổi bật.","Background Video (Vidyard) tràn toàn màn hình, Text Slogan nằm chính giữa (""Shaping surface - Shaping future""), nút CTA nằm ở góc dưới bên trá",
+02. Layout (LC),1. Home (/),Core Hubs Overview,"Component Card Hubs: Dạng Grid 3 cột chứa Card định vị 3 mảng (SC, RD, M) kèm hiệu ứng hover.","Capabilities hiển thị dạng Grid 5 cột (chứ không phải 3 cột SC, RD, M). Mỗi cột là một thẻ có số thứ tự (01-05), hover vào sẽ làm mờ số, hiện nội dung chi tiết và chữ ""Khám phá"".",
+02. Layout (LC),2. FNX-SC (/hubs/sc),Overview & Framework,Page Pattern SC: Bố cục dạng luồng ,"Đang cấu trúc theo phễu B2B Dài (Long-form): Nỗi đau (Insight) 
+→ Năng lực 
+→ Timeline giải quyết
+→ Framework 
+→ Bảo chứng.",
+02. Layout (LC),2. FNX-RD (/hubs/rd),Overview & Framework,Page Pattern RD: Bố cục dạng luồng ,"Đang cấu trúc theo phễu B2B Dài (Long-form): Nỗi đau (Insight) 
+→ Năng lực 
+→ Timeline giải quyết
+→ Framework 
+→ Bảo chứng.",
+02. Layout (LC),6. Projects (/logs),Danh sách Logs / Case Study,Component Filter & Card: Bộ lọc danh mục phía trên + Grid card dự án hiển thị dạng Thumbnail + Title + Tag.,Đang để ẩn ,
+02. Layout (LC),11. Engage (/engage),Contact Form,"Component Form: Form nhập liệu tối ưu hóa UX (Label rõ ràng, trạng thái Focus/Error mượt, nút Submit lớn).","Bố cục 2 cột. Form hiện tại KHÔNG CÓ Label (chỉ dùng Placeholder mờ bên trong ô input). Focus viền sáng màu Cyan (focus:border-cyan-500). Chưa có trạng thái báo lỗi (Error state) mượt mà. Nút Submit to, màu xanh dương cơ bả",
+03. Interaction (IR),Toàn trang (Global),"Buttons, Links, Cards","Interaction Standard: Hiệu ứng Hover chuyển màu, Click state, Smooth Scroll, Transition khi chuyển trang.","Nút bấm (Buttons): Đang sử dụng 2 kiểu bo góc chính: Bo tròn hoàn toàn dạng viên thuốc (Pill shape) cho các nút Kêu gọi hành động (CTA) lớn, và Bo góc nhẹ (Rounded-md) cho các nút điều hướng phụ. Trạng thái Hover (khi đưa chuột vào) chủ yếu là đổi màu nền (từ Trắng sang Xanh, hoặc viền nhạt sang viền đậm) nhưng chưa có hiệu ứng đổ bóng (Drop Shadow) để tạo chiều sâu.
+
+Thẻ thông tin (Cards): Thiết kế dạng phẳng (Flat design) trên nền tối màu, có đường viền (Stroke/Border) siêu mảnh màu trắng mờ. Khi rê chuột vào, thẻ hơi phóng to nhẹ và nền sáng lên một chút.
+
+Vấn đề chung: Phong cách thiết kế giữa các trang chưa đồng nhất (Trang Chủ dùng nút viền Trắng, trang XLBM dùng nút màu Vàng Gold, trang Liên hệ lại dùng nút Xanh dương khối đặc)",theo tiêu chuẩn worldclass
+03. Interaction (IR),Toàn trang (Global),Responsive toàn trang,"Responsive Standard: Quy định hiển thị rõ ràng trên Desktop, Tablet và Mobile (Mobile-first).","Hiển thị: Trên màn hình điện thoại (Mobile), toàn bộ các khối (Grid) đang bị dàn thành 1 cột dọc duy nhất trải dài.
+Trải nghiệm (UX): Khoảng trắng (White space/Padding) giữa các đoạn văn bản và giữa các khối thông tin đang được bê nguyên từ bản Desktop (màn hình máy tính) xuống Mobile. Hậu quả là khoảng cách bị quá thừa thãi, khiến người dùng phải vuốt mỏi tay mới xem hết nội dung một trang.",theo tiêu chuẩn worldclass
+03. Interaction (IR),Toàn trang (Global),Toàn trang,"Accessibility: Độ tương phản màu sắc đạt chuẩn, cỡ chữ tối thiểu trên mobile (không dưới 14px).","Độ tương phản (Contrast): Làm khá tốt ở các Tiêu đề chính (Chữ Trắng/Bạc nổi bật trên nền Đen/Xanh đậm).
+
+Khuyết điểm (Typography): Các đoạn text phụ (Description/Caption) đang bị lạm dụng size chữ quá nhỏ (dưới 14px) kết hợp với màu xám mờ (opacity thấp). Về mặt thiết kế, điều này tạo ra hệ thống phân cấp thị giác (Visual Hierarchy) đẹp trên màn hình máy tính, nhưng lại gây ""mù chữ"" và mỏi mắt khi đọc dưới ánh sáng ngoài trời trên điện thoại. Cần quy định lại size chữ Body text tối thiểu là 14px-16px trên Mobile.",theo tiêu chuẩn worldclass
+
+========== Sheet: Màu sắc ==========
+Unnamed: 0,Chủ đạo,Token,Mã màu (Hex),Vai trò
+FNX Group,"Navy Blue
+
+
+
+
+",Primary,#1A396C,"Màu thương hiệu chính, Header, CTA"
+,,Secondary,#132949,"Menu, Footer, Card Dark"
+,,Highlight,#D3A342,"CTA nổi bật, Icon, Điểm nhấn thương hiệu"
+,,Accent Gold,#A36426,"Hover, Gradient Gold, Chi tiết kim loại"
+,,Light,#F5F8FC,Nền các Section sáng
+,,Background,#FFFFFF,Nền chính của Website
+,,Text,#132949,Tiêu đề và nội dung chính
+,,Border / Divider,#E8E8E8,"Viền, đường phân cách"
+,,Silver Highlight,#8F8F8F,"Hiệu ứng kim loại, sóng bạc, icon phụ"
+,,Dark Background,#0C1927,"Footer, Hero tối, Overlay"
+FNX-RD,Sky Blue (Innovation),Primary,#2998FF,"Màu đại diện cho đổi mới sáng tạo, nghiên cứu và phát triển; sử dụng cho Hero, CTA và nhận diện FNX-RD."
+,,Secondary,#55B8FF,"Màu hỗ trợ cho Card, Banner, Navigation và các thành phần giao diện phụ."
+,,Highlight,#8AD7FF,"Màu nhấn cho AI, Innovation, Data Visualization, biểu đồ và hiệu ứng công nghệ."
+,,Light,#EEF9FF,"Màu nền sáng cho các khu vực giới thiệu nghiên cứu, phòng Lab và công nghệ."
+,,Background,#FAFDFF và #FFFFFF,"Màu nền tạo cảm giác sạch sẽ, hiện đại và khoa học."
+,,Text,#17345D,"Màu chữ chính, đảm bảo khả năng đọc trên nền sáng và giữ tính chuyên nghiệp."
+FNX-SC,Teal (Green Technology),Primary,#009F8B,"Màu đại diện cho công nghệ xanh, ESG, Net Zero và phát triển bền vững."
+,,Secondary,#21C6A8,"Màu hỗ trợ cho Card, Banner, Navigation và các nhóm giải pháp môi trường."
+,,Highlight,#68F0D2,"Màu nhấn cho các chỉ số Carbon, Circular Economy, KPI môi trường và hiệu ứng tương tác."
+,,Light,#EFFFFA,"Màu nền sáng cho các Section, giúp giao diện thân thiện, nhẹ nhàng và hiện đại."
+,,Background,#F7FFFD và #FFFFFF,"Màu nền tạo cảm giác sạch, bền vững và chuyên nghiệp."
+,,Text,#12443D,"Màu chữ chính, đảm bảo độ tương phản và khả năng đọc trên toàn bộ giao diện."

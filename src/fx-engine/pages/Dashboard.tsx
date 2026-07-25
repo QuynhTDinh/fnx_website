@@ -42,7 +42,7 @@ export default function Dashboard() {
       <div className="max-w-6xl mx-auto">
         <header className="mb-12 border-b border-neutral-900 pb-6 flex justify-between items-center">
           <div>
-            <h1 className="text-3xl font-black tracking-tight flex items-center gap-3">
+            <h1 className="text-3xl tracking-tight flex items-center gap-3">
               <Sparkles className="w-8 h-8 text-blue-500" />
               FX-Engine <span className="text-neutral-600 font-light ml-2">Copilot Wizard</span>
             </h1>

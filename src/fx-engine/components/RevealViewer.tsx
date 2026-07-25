@@ -60,19 +60,19 @@ export default function RevealViewer() {
             <section key={slide.id}>
               {slide.layout === 'TITLE' && (
                 <div className="flex flex-col items-center justify-center h-full">
-                  <h1 className="text-6xl font-black text-white mb-6">{slide.data.title}</h1>
-                  <h3 className="text-2xl text-neutral-400 font-medium mb-8">{slide.data.subtitle}</h3>
+                  <h1 className="text-6xl text-white mb-6">{slide.data.title}</h1>
+                  <h3 className="text-2xl text-neutral-400 mb-8">{slide.data.subtitle}</h3>
                   <p className="text-sm tracking-widest text-blue-500 font-bold uppercase">{slide.data.author}</p>
                 </div>
               )}
 
               {slide.layout === 'MECE_TREE' && (
                 <div className="h-full pt-12">
-                  <h2 className="text-4xl font-bold mb-12 text-left text-blue-400">{slide.data.title}</h2>
+                  <h2 className="text-4xl mb-12 text-left text-blue-400">{slide.data.title}</h2>
                   <div className="grid grid-cols-3 gap-6">
                     {slide.data.nodes.map((node, i) => (
                       <div key={i} className="bg-neutral-900 border border-neutral-800 rounded-xl p-8 text-left h-64 shadow-2xl">
-                        <h3 className="text-2xl font-bold text-white mb-6 border-b border-neutral-800 pb-4">{node.title}</h3>
+                        <h3 className="text-2xl text-white mb-6 border-b border-neutral-800 pb-4">{node.title}</h3>
                         <ul className="space-y-3">
                           {node.details.map((detail, j) => (
                             <li key={j} className="text-neutral-400 flex items-start gap-2 text-lg">
@@ -89,7 +89,7 @@ export default function RevealViewer() {
 
               {slide.layout === 'BULLET_POINTS' && (
                 <div className="h-full pt-12 text-left">
-                  <h2 className="text-4xl font-bold mb-12 text-blue-400">{slide.data.title}</h2>
+                  <h2 className="text-4xl mb-12 text-blue-400">{slide.data.title}</h2>
                   <ul className="space-y-6">
                     {slide.data.items.map((item, i) => (
                       <li key={i} className="text-2xl text-neutral-300 flex items-start gap-4">

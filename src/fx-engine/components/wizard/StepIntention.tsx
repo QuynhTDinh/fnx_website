@@ -15,7 +15,7 @@ export default function StepIntention() {
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-black mb-3">Xác định Mục Tiêu</h2>
+        <h2 className="text-3xl mb-3">Xác định Mục Tiêu</h2>
         <p className="text-neutral-400">Hãy thiết lập bối cảnh chiến lược trước khi đi sâu vào dữ liệu.</p>
       </div>
 
@@ -26,7 +26,7 @@ export default function StepIntention() {
             <div className="p-2 bg-blue-500/10 rounded-lg">
               <Target className="w-6 h-6 text-blue-500" />
             </div>
-            <h3 className="text-xl font-bold">Mục tiêu cốt lõi</h3>
+            <h3 className="text-xl">Mục tiêu cốt lõi</h3>
           </div>
           <p className="text-sm text-neutral-400 mb-4">Bạn muốn đạt được điều gì sau bài thuyết trình này?</p>
           <textarea 
@@ -54,7 +54,7 @@ export default function StepIntention() {
             <div className="p-2 bg-purple-500/10 rounded-lg">
               <Users className="w-6 h-6 text-purple-500" />
             </div>
-            <h3 className="text-xl font-bold">Khán giả (Audience)</h3>
+            <h3 className="text-xl">Khán giả (Audience)</h3>
           </div>
           <p className="text-sm text-neutral-400 mb-4">Ai là người sẽ nghe? (Để AI điều chỉnh giọng văn)</p>
           <textarea 

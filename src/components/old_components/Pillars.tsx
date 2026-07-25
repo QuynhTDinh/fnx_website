@@ -35,7 +35,7 @@ export default function Pillars() {
 
       {/* Header */}
       <div className="relative z-20 text-center mb-16 px-4">
-        <h2 className="text-4xl md:text-6xl font-sans font-bold text-white tracking-widest mb-4">
+        <h2 className="text-4xl md:text-6xl text-white tracking-widest mb-4">
           KIẾN TRÚC HỆ SINH THÁI
         </h2>
         <p className="text-fnx-silver max-w-2xl mx-auto">Tâm điểm kết nối toàn cầu. Mạng lưới vệ tinh tối ưu hóa chuỗi giá trị công nghiệp.</p>

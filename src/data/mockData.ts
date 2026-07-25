@@ -5,14 +5,14 @@ export const MOCK_PHILOSOPHY = {
   title: "TẦM NHÌN & SỨ MỆNH",
   manifestos: [
     {
-      id: "m1",
-      statement: "TẦM NHÌN",
-      description: "Định hướng một Holding xanh, thông minh, kế thừa giá trị để đổi mới và phát triển bền vững."
-    },
-    {
       id: "m2",
       statement: "SỨ MỆNH",
       description: "Phát triển nền công nghiệp phụ trợ Việt Nam vững mạnh bằng năng lực làm chủ công nghệ cốt lõi"
+    },
+    {
+      id: "m1",
+      statement: "TẦM NHÌN",
+      description: "Định hướng một Holding xanh, thông minh, kế thừa giá trị để đổi mới và phát triển bền vững."
     },
     {
       id: "m3",
@@ -174,7 +174,7 @@ export interface Expert {
 export const MOCK_EXPERTS: Expert[] = [
   {
     expert_id: "exp_004",
-    name: "Tạ Thị Kiều Quyên",
+    name: "Nguyễn Thị Kiều Quyên",
     role: "Phó TGĐ FNX Group / GĐ FNX-SC",
     meta_tags: {
       line_id: "FNX Group",

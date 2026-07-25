@@ -44,8 +44,8 @@ export default function TrustWall() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-[#273444] leading-tight uppercase flex flex-col items-center">
-            <span className="block whitespace-nowrap">MẠNG LƯỚI ĐỐI TÁC</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#273444] uppercase flex flex-col items-center">
+            <span className="block whitespace-nowrap"><span className="text-fnx-dark uppercase">MẠNG LƯỚI</span> <span className="text-fnx-navy uppercase">ĐỐI TÁC</span></span>
           </h2>
         </motion.div>
       </div>

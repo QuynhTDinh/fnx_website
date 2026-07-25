@@ -94,35 +94,35 @@ const bentoItems = {
 };
 
 const BentoCard = ({ item, className, delay = 0 }: { item: any, className?: string, delay?: number }) => (
-  <Link href={item.link} className={`block relative rounded-xl overflow-hidden group cursor-pointer border border-[#2A3441] hover:border-fnx-gold-dark/50 shadow-md transition-all duration-500 ${className}`}>
+  <Link href={item.link} className={`block relative rounded-xl overflow-hidden group cursor-pointer border border-gray-200 hover:border-fnx-navy/30 shadow-md transition-all duration-500 ${className}`}>
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay, duration: 0.8, ease: "easeOut" }}
-      className="w-full h-full bg-[#1A2230] backdrop-blur-md"
+      className="w-full h-full bg-white group-hover:bg-[#080F12] transition-colors duration-500 backdrop-blur-md"
     >
-      <div className="absolute inset-0 z-0 flex items-center justify-center p-2 md:p-4 opacity-50 group-hover:opacity-20 transition-all duration-700 ease-out overflow-hidden rounded-xl">
+      <div className="absolute inset-0 z-0 flex items-center justify-center p-2 md:p-4 opacity-40 group-hover:opacity-70 transition-all duration-700 ease-out overflow-hidden rounded-xl">
         {item.logo && (
           <img 
             src={item.logo} 
             alt={item.title} 
-            className={`w-auto object-contain opacity-80 ${['rd', 'sc', 'm', 'vasi_xlbm'].includes(item.id) ? 'h-full scale-[2.5] md:scale-[3] opacity-30' : 'h-[80%] max-w-[90%]'}`} 
+            className={`w-auto object-contain ${['rd', 'sc', 'm', 'vasi_xlbm'].includes(item.id) ? 'h-full scale-[2.5] md:scale-[3] opacity-60' : 'h-[80%] max-w-[90%] opacity-100'}`} 
           />
         )}
       </div>
       
       <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
         <div className="flex flex-col transform group-hover:-translate-y-2 transition-transform duration-300 ease-out">
-          <h3 className="text-2xl md:text-2xl font-heading font-bold text-white tracking-widest leading-tight">
+          <h3 className="text-2xl md:text-2xl text-fnx-dark group-hover:text-white tracking-widest uppercase">
             {item.title}
           </h3>
           <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">
             <div className="overflow-hidden">
-              <div className="mt-2 text-fnx-gold-light text-[10px] md:text-xs font-sans font-bold tracking-widest mb-1 uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+              <div className="mt-2 text-fnx-navy group-hover:text-fnx-gold-light text-[10px] md:text-xs font-sans font-bold tracking-widest mb-1 uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                 {item.subtitle}
               </div>
-              <p className="text-gray-300 font-medium text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
+              <p className="text-gray-600 group-hover:text-gray-300 font-medium text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
                 {item.desc}
               </p>
             </div>
@@ -140,7 +140,7 @@ export default function Solutions() {
   return (
     <section ref={containerRef} className="relative w-full min-h-screen flex flex-col justify-center py-12 md:py-16 bg-surface-lab border-t border-black/5">
       <div className="text-center mb-10 md:mb-12">
-        <h2 className="text-3xl md:text-5xl font-heading font-bold text-fnx-navy tracking-tight uppercase">KIẾN TRÚC <span className="text-fnx-gold-dark">HỆ SINH THÁI</span></h2>
+        <h2 className="text-3xl md:text-5xl uppercase tracking-tight"><span className="text-fnx-dark">KIẾN TRÚC</span> <span className="text-fnx-navy">HỆ SINH THÁI</span></h2>
       </div>
 
       <div className="relative w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12">
@@ -188,7 +188,7 @@ export default function Solutions() {
           </div>
         </div>
 
-        {/* BOTTOM ROW: Independent Affiliates & Academic */}
+        {/* BOTTOM ROW: Independent Affiliates & Academic (Tạm ẩn)
         <div className="mt-4 md:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <BentoCard item={bentoItems.vasi_main} className="h-[180px]" delay={0.8} />
           <BentoCard item={bentoItems.vasi_xlbm} className="h-[180px]" delay={0.9} />
@@ -197,6 +197,7 @@ export default function Solutions() {
           <BentoCard item={bentoItems.vien_dhqghn} className="h-[180px]" delay={1.2} />
           <BentoCard item={bentoItems.vien_dhbkhn} className="h-[180px]" delay={1.3} />
         </div>
+        */}
 
       </div>
     </section>

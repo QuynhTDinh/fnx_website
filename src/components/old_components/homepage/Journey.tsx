@@ -63,7 +63,7 @@ export default function Journey() {
                 transition={{ duration: 0.4 }}
                 className="absolute"
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Khách hàng nhìn thấy vấn đề</h2>
+                <h2 className="text-3xl md:text-5xl text-white mb-4">Khách hàng nhìn thấy vấn đề</h2>
                 <p className="text-gray-400 text-xl">Ví dụ: Xử lý nước thải vượt chuẩn.</p>
               </motion.div>
             )}
@@ -77,7 +77,7 @@ export default function Journey() {
                 transition={{ duration: 0.4 }}
                 className="absolute"
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">FNX nhìn thấy toàn bộ hệ thống</h2>
+                <h2 className="text-3xl md:text-5xl text-white mb-4">FNX nhìn thấy toàn bộ hệ thống</h2>
                 <p className="text-gray-400 text-xl">Kết nối mọi yếu tố để tìm ra nguyên nhân gốc rễ.</p>
               </motion.div>
             )}
@@ -91,7 +91,7 @@ export default function Journey() {
                 transition={{ duration: 0.4 }}
                 className="absolute"
               >
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Tạo ra một giải pháp duy nhất</h2>
+                <h2 className="text-3xl md:text-5xl text-white mb-4">Tạo ra một giải pháp duy nhất</h2>
                 <p className="text-fnx-gold-dark text-xl font-bold tracking-wide mt-4">Đây chính là Solution Thinking.</p>
               </motion.div>
             )}
@@ -191,7 +191,7 @@ export default function Journey() {
                     <svg className="w-12 h-12 text-fnx-gold-dark mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                     </svg>
-                    <h3 className="text-white font-heading font-bold text-2xl uppercase tracking-widest leading-tight">Giải pháp<br/>Tổng thể</h3>
+                    <h3 className="text-white text-2xl uppercase tracking-widest">Giải pháp<br/>Tổng thể</h3>
                   </div>
                 </motion.div>
               )}

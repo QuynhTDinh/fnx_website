@@ -146,7 +146,7 @@ export default function StepBriefAndLogic({ onGenerate }) {
           <div className="bg-blue-900/10 border border-blue-500/20 rounded-2xl p-6">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <h3 className="text-lg font-bold text-blue-400 flex items-center gap-2">
+                <h3 className="text-lg text-blue-400 flex items-center gap-2">
                   <GitBranch className="w-5 h-5" />
                   Lõi Tư Duy Thế Giới (Layer 1)
                 </h3>
@@ -175,7 +175,7 @@ export default function StepBriefAndLogic({ onGenerate }) {
           {/* Dynamic Brief (Layer 2 Inputs) */}
           <div>
             <div className="mb-4">
-              <h2 className="text-2xl font-black mb-1">Nội Dung Chi Tiết</h2>
+              <h2 className="text-2xl mb-1">Nội Dung Chi Tiết</h2>
               <p className="text-neutral-400 text-sm">Điền thông tin thực tế theo Mẫu Ứng Dụng bạn đang chọn.</p>
             </div>
 
@@ -202,7 +202,7 @@ export default function StepBriefAndLogic({ onGenerate }) {
           <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 sticky top-6">
             <div className="flex items-center gap-2 mb-2">
               <LayoutTemplate className="w-6 h-6 text-emerald-400" />
-              <h2 className="text-2xl font-black">Mẫu Ứng Dụng (Layer 2)</h2>
+              <h2 className="text-2xl">Mẫu Ứng Dụng (Layer 2)</h2>
             </div>
             <p className="text-neutral-400 text-sm mb-6">Chọn mục đích của bài thuyết trình. Khung nhập liệu bên trái sẽ thay đổi tương ứng.</p>
 
@@ -211,7 +211,7 @@ export default function StepBriefAndLogic({ onGenerate }) {
                 <div key={idx}>
                   <div className="flex items-center gap-2 mb-3">
                     {group.icon}
-                    <h3 className="font-bold text-neutral-300">{group.title}</h3>
+                    <h3 className="text-neutral-300">{group.title}</h3>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {group.items.map(item => (

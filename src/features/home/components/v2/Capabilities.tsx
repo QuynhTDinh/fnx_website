@@ -26,9 +26,8 @@ export default function Capabilities() {
             <p className="text-fnx-navy uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-4 font-sans">
               Năng lực Cốt lõi
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-fnx-dark leading-tight uppercase">
-              <span className="block whitespace-nowrap">Giải pháp</span>
-              <span className="block whitespace-nowrap">Công nghiệp Toàn diện</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl text-fnx-dark uppercase">
+              <span className="block whitespace-nowrap"><span className="text-fnx-dark">GIẢI PHÁP CÔNG NGHIỆP</span> <span className="text-fnx-navy">TOÀN DIỆN</span></span>
             </h2>
           </div>
         </motion.div>
@@ -50,7 +49,7 @@ export default function Capabilities() {
                 <span className="text-fnx-navy/30 text-5xl font-heading font-black mb-6 block">
                   0{index + 1}
                 </span>
-                <h3 className="text-2xl font-heading font-bold text-fnx-dark uppercase leading-snug">
+                <h3 className="text-2xl text-fnx-dark uppercase">
                   {cap.title}
                 </h3>
               </div>
@@ -58,7 +57,7 @@ export default function Capabilities() {
               {/* Hover State (Progressive Disclosure) */}
               <div className={`absolute inset-0 p-8 flex flex-col justify-between text-white transition-opacity duration-500 ${hoveredId === cap.id ? 'opacity-100' : 'opacity-0'}`}>
                 <div>
-                  <h3 className="text-2xl font-heading font-bold text-white uppercase leading-snug mb-4">
+                  <h3 className="text-2xl text-white uppercase mb-4">
                     {cap.title}
                   </h3>
                   <p className="text-gray-300 font-sans text-sm leading-relaxed mb-4">

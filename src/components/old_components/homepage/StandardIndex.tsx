@@ -20,7 +20,7 @@ export default function StandardIndex() {
         
         {/* Left: Content */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 uppercase tracking-tight">
+          <h2 className="text-4xl md:text-5xl text-white mb-6 uppercase tracking-tight">
             Thước đo <br/><span className="text-fnx-gold-dark">Công nghiệp</span>
           </h2>
           <p className="text-gray-400 text-xl mb-8 leading-relaxed">
@@ -30,21 +30,21 @@ export default function StandardIndex() {
             <div className="flex items-center space-x-4 border-b border-white/10 pb-4">
               <span className="text-fnx-gold-dark font-tech text-2xl font-bold">01</span>
               <div>
-                <h4 className="text-gray-200 font-heading font-bold text-lg">Capability Measured</h4>
+                <h4 className="text-gray-200 text-lg">Capability Measured</h4>
                 <p className="text-gray-500 text-sm">Mọi năng lực đều được đo lường bằng dữ liệu thực tế.</p>
               </div>
             </div>
             <div className="flex items-center space-x-4 border-b border-white/10 pb-4">
               <span className="text-fnx-gold-dark font-tech text-2xl font-bold">02</span>
               <div>
-                <h4 className="text-gray-200 font-heading font-bold text-lg">FNX Index</h4>
+                <h4 className="text-gray-200 text-lg">FNX Index</h4>
                 <p className="text-gray-500 text-sm">Hệ quy chiếu chuẩn xác cho mức độ hoàn thiện của hệ thống.</p>
               </div>
             </div>
             <div className="flex items-center space-x-4 pb-4">
               <span className="text-fnx-gold-dark font-tech text-2xl font-bold">03</span>
               <div>
-                <h4 className="text-gray-200 font-heading font-bold text-lg">Authority Certified</h4>
+                <h4 className="text-gray-200 text-lg">Authority Certified</h4>
                 <p className="text-gray-500 text-sm">Sự bảo chứng danh giá nhất cho giải pháp.</p>
               </div>
             </div>

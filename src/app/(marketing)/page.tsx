@@ -14,7 +14,7 @@ import Pillars from '@/components/old_components/Pillars';
 
 export default function Home() {
   return (
-    <div className="w-full bg-fnx-dark min-h-screen">
+    <div className="w-full bg-fnx-light-bg text-fnx-light-text min-h-screen">
       {/* SECTION 01: HERO */}
       <Hero />
       
