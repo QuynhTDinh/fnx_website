@@ -116,7 +116,7 @@ export default function NetworkEcosystem() {
   });
 
   return (
-    <section className="relative w-full h-[120vh] min-h-[800px] bg-[#0E1629] overflow-hidden flex flex-col items-center py-24">
+    <section id="ecosystem" className="relative w-full h-[120vh] min-h-[800px] bg-[#0E1629] overflow-hidden flex flex-col items-center py-24">
       {/* Background overlay that darkens when a node is active */}
       <div 
         className={`absolute inset-0 bg-[#060913]/85 transition-opacity duration-700 pointer-events-none z-0 ${

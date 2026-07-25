@@ -54,7 +54,13 @@ export default function Hero() {
             </div>
           </div>
           
-          <Link href="/hubs/sc">
+          <div 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('ecosystem')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-block cursor-pointer"
+          >
             <motion.button 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -66,7 +72,7 @@ export default function Hero() {
                 <svg className="ml-3 w-5 h-5 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
               </span>
             </motion.button>
-          </Link>
+          </div>
         </motion.div>
       </div>
 
