@@ -427,7 +427,7 @@ export default function AboutPage() {
                   Tên gọi <strong>FNX</strong> được lấy cảm hứng từ <strong>Phoenix</strong> (Phượng Hoàng) – biểu tượng của sự tái sinh, đổi mới và khát vọng không ngừng vươn lên.
                 </p>
                 <p>
-                  Đó cũng là tinh thần mà FNX theo đuổi trong hành trình đồng hành cùng doanh nghiệp Việt Nam làm chủ công nghệ và kiến tạo những giá trị bền vững.
+                  Đó cũng là tinh thần mà FNX theo đuổi trong hành trình làm chủ công nghệ và kiến tạo những giá trị bền vững.
                 </p>
               </div>
 
@@ -502,11 +502,11 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl text-fnx-navy font-bold tracking-tight mb-2 font-sans uppercase">
                 KHÁT VỌNG
               </h2>
-              <h3 className="text-2xl md:text-3xl font-bold font-tech tracking-wide text-gray-800 mb-6 uppercase">
+              <h3 className="text-2xl md:text-3xl font-bold font-tech tracking-wide text-fnx-navy mb-6 uppercase">
                 Make in Vietnam. Made in Vietnam.
               </h3>
               
-              <div className="space-y-4 text-gray-600 font-sans leading-relaxed text-base md:text-lg">
+              <div className="space-y-4 text-gray-900 font-sans leading-relaxed text-base md:text-lg">
                 <p>
                   Chúng tôi tin rằng tương lai của ngành công nghiệp Việt Nam sẽ được xây dựng từ năng lực làm chủ công nghệ, kết nối hệ sinh thái và cùng nhau nâng cao tiêu chuẩn của toàn ngành.
                 </p>
