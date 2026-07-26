@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MOCK_EXPERTS } from '@/data/mockData';
 import { Network, User } from 'lucide-react';
@@ -13,6 +13,7 @@ export default function Experts({ lineId }: ExpertsProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, amount: 0.2 });
+  const [activeExpertId, setActiveExpertId] = useState<string | null>(null);
 
   // Filter if lineId is provided, else show all
   const displayedExperts = lineId 
@@ -46,7 +47,7 @@ export default function Experts({ lineId }: ExpertsProps) {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#273444] uppercase whitespace-nowrap">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#273444] uppercase sm:whitespace-nowrap">
             <span className="text-fnx-dark uppercase">MẠNG LƯỚI</span> <span className="text-fnx-navy uppercase">CHUYÊN GIA</span>
           </h2>
         </motion.div>
@@ -72,6 +73,7 @@ export default function Experts({ lineId }: ExpertsProps) {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.5, delay: 0.05 * index }}
+                onClick={() => setActiveExpertId(activeExpertId === expert.expert_id ? null : expert.expert_id)}
               >
                 {/* Avatar Placeholder */}
                 <div className="w-16 h-16 bg-[#F2F1ED] rounded-full flex items-center justify-center mb-6 text-[#6B7280]">
@@ -83,7 +85,7 @@ export default function Experts({ lineId }: ExpertsProps) {
                 </div>
 
                 {/* Default View: Name & Position */}
-                <div className="relative z-10 transition-opacity duration-300 group-hover:opacity-0">
+                <div className={`relative z-10 transition-opacity duration-300 ${activeExpertId === expert.expert_id ? 'opacity-0' : 'group-hover:opacity-0'}`}>
                   <p className="text-[#2F7C78] font-bold text-xs tracking-widest uppercase mb-2">
                     {expert.meta_tags.line_id || "FNX"}
                   </p>
@@ -96,7 +98,9 @@ export default function Experts({ lineId }: ExpertsProps) {
                 </div>
 
                 {/* Hover View: Expertise Reveal */}
-                <div className="absolute inset-0 bg-white/95 backdrop-blur-sm p-8 flex flex-col justify-center transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                <div className={`absolute inset-0 bg-white/95 backdrop-blur-sm p-8 flex flex-col justify-center transform transition-all duration-300 z-20 ${
+                  activeExpertId === expert.expert_id ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100'
+                }`}>
                   <div className="mb-4">
                     <p className="text-xs uppercase text-[#C47A4B] font-bold tracking-widest mb-2">Lĩnh vực chuyên môn</p>
                     <p className="text-[#273444] font-sans text-sm font-medium leading-relaxed">

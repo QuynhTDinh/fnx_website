@@ -109,7 +109,8 @@ const BentoCard = ({ item, className, delay = 0 }: { item: any, className?: stri
             alt={item.title} 
             className={`w-auto object-contain ${
               item.id === 'rd' ? 'h-[110%] scale-[1.7] md:scale-[1.9] opacity-60' 
-              : ['sc', 'm', 'vasi_xlbm'].includes(item.id) ? 'h-full scale-[2.5] md:scale-[3] opacity-60' 
+              : item.id === 'm' ? 'h-full scale-[1.25] md:scale-[1.4] opacity-60'
+              : ['sc', 'vasi_xlbm'].includes(item.id) ? 'h-full scale-[2.5] md:scale-[3] opacity-60' 
               : 'h-[80%] max-w-[90%] opacity-100'
             }`} 
           />

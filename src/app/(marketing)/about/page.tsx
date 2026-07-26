@@ -95,11 +95,11 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl text-fnx-navy font-bold tracking-tight mb-6 font-sans uppercase">
                 VÌ SAO FNX RA ĐỜI?
               </h2>
-              <div className="space-y-4 text-gray-600 font-sans leading-relaxed text-base md:text-lg">
+              <div className="space-y-4 text-gray-800 font-sans leading-relaxed text-base md:text-lg">
                 <p>
                   Ngành Hóa chất, Dầu khí và Công nghiệp hỗ trợ Việt Nam đang đứng trước nhiều cơ hội phát triển. Tuy nhiên, khoảng cách giữa nghiên cứu, sản xuất, đầu tư và thị trường vẫn còn là một thách thức lớn.
                 </p>
-                <p className="font-semibold text-gray-800">
+                <p className="font-bold text-gray-900">
                   Chúng tôi tin rằng sự phát triển bền vững chỉ có thể đạt được khi tri thức, công nghệ và năng lực thực thi được kết nối thành một hệ sinh thái thống nhất.
                 </p>
               </div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl text-fnx-navy font-bold tracking-tight mb-2 font-sans uppercase">
                 FNX LÀM GÌ?
               </h2>
-              <p className="text-gray-500 font-sans text-sm md:text-base">
+              <p className="text-gray-700 font-sans text-sm md:text-base font-medium">
                 Chúng tôi kiến tạo một hệ sinh thái để các giải pháp có thể tạo ra giá trị lâu dài.
               </p>
             </motion.div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-3 tracking-wider uppercase font-sans">
                   BUILD
                 </h3>
-                <p className="text-sm text-gray-600 font-sans leading-relaxed">
+                <p className="text-sm text-gray-800 font-sans leading-relaxed font-medium">
                   Phát triển giải pháp và công nghệ nhằm giải quyết các bài toán của ngành công nghiệp.
                 </p>
               </motion.div>
@@ -181,7 +181,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-3 tracking-wider uppercase font-sans">
                   CONNECT
                 </h3>
-                <p className="text-sm text-gray-600 font-sans leading-relaxed">
+                <p className="text-sm text-gray-800 font-sans leading-relaxed font-medium">
                   Kết nối chuyên gia, viện nghiên cứu, doanh nghiệp và đối tác để tạo nên hệ sinh thái hợp tác.
                 </p>
               </motion.div>
@@ -194,7 +194,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-3 tracking-wider uppercase font-sans">
                   ENABLE
                 </h3>
-                <p className="text-sm text-gray-600 font-sans leading-relaxed">
+                <p className="text-sm text-gray-800 font-sans leading-relaxed font-medium">
                   Đồng hành cùng doanh nghiệp trong quá trình triển khai, chuyển giao và nâng cao năng lực.
                 </p>
               </motion.div>
@@ -238,7 +238,7 @@ export default function AboutPage() {
               <span className="text-xs uppercase text-fnx-teal font-bold tracking-widest mb-6 block">
                 Kết nối để tạo ra nhiều giá trị hơn
               </span>
-              <p className="text-gray-600 font-sans leading-relaxed text-base md:text-lg">
+              <p className="text-gray-800 font-sans leading-relaxed text-base md:text-lg">
                 Chúng tôi tin rằng những giá trị bền vững được tạo ra khi các nguồn lực không hoạt động riêng lẻ, mà được kết nối để cùng giải quyết những bài toán lớn của ngành công nghiệp.
               </p>
             </motion.div>
@@ -298,7 +298,7 @@ export default function AboutPage() {
                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center hover:border-fnx-teal transition-all duration-300 group">
                       <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-fnx-teal group-hover:scale-110 transition-transform" />
                     </div>
-                    <span className="text-[10px] md:text-xs font-bold text-gray-700 mt-2 font-sans tracking-wider uppercase">Tri thức</span>
+                    <span className="text-[10px] md:text-xs font-bold text-gray-800 mt-2 font-sans tracking-wider uppercase">Tri thức</span>
                   </div>
 
                   {/* Công nghệ */}
@@ -306,7 +306,7 @@ export default function AboutPage() {
                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center hover:border-fnx-navy transition-all duration-300 group">
                       <Cpu className="w-5 h-5 md:w-6 md:h-6 text-fnx-navy group-hover:scale-110 transition-transform" />
                     </div>
-                    <span className="text-[10px] md:text-xs font-bold text-gray-700 mt-2 font-sans tracking-wider uppercase">Công nghệ</span>
+                    <span className="text-[10px] md:text-xs font-bold text-gray-800 mt-2 font-sans tracking-wider uppercase">Công nghệ</span>
                   </div>
 
                   {/* Nghiên cứu */}
@@ -314,7 +314,7 @@ export default function AboutPage() {
                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center hover:border-fnx-gold-dark transition-all duration-300 group">
                       <Microscope className="w-5 h-5 md:w-6 md:h-6 text-fnx-gold-dark group-hover:scale-110 transition-transform" />
                     </div>
-                    <span className="text-[10px] md:text-xs font-bold text-gray-700 mt-2 font-sans tracking-wider uppercase">Nghiên cứu</span>
+                    <span className="text-[10px] md:text-xs font-bold text-gray-800 mt-2 font-sans tracking-wider uppercase">Nghiên cứu</span>
                   </div>
 
                   {/* Ứng dụng */}
@@ -322,7 +322,7 @@ export default function AboutPage() {
                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center hover:border-fnx-teal transition-all duration-300 group">
                       <Rocket className="w-5 h-5 md:w-6 md:h-6 text-fnx-teal group-hover:scale-110 transition-transform" />
                     </div>
-                    <span className="text-[10px] md:text-xs font-bold text-gray-700 mt-2 font-sans tracking-wider uppercase">Ứng dụng</span>
+                    <span className="text-[10px] md:text-xs font-bold text-gray-800 mt-2 font-sans tracking-wider uppercase">Ứng dụng</span>
                   </div>
 
                 </div>
@@ -332,7 +332,7 @@ export default function AboutPage() {
                   
                   {/* Doanh nghiệp */}
                   <div className="flex flex-col items-center">
-                    <span className="text-[10px] md:text-xs font-bold text-gray-700 mb-2 font-sans tracking-wider uppercase order-last md:order-first">Doanh nghiệp</span>
+                    <span className="text-[10px] md:text-xs font-bold text-gray-800 mb-2 font-sans tracking-wider uppercase order-last md:order-first">Doanh nghiệp</span>
                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center hover:border-fnx-teal transition-all duration-300 group">
                       <Building2 className="w-5 h-5 md:w-6 md:h-6 text-fnx-teal group-hover:scale-110 transition-transform" />
                     </div>
@@ -340,7 +340,7 @@ export default function AboutPage() {
 
                   {/* Thị trường */}
                   <div className="flex flex-col items-center">
-                    <span className="text-[10px] md:text-xs font-bold text-gray-700 mb-2 font-sans tracking-wider uppercase order-last md:order-first">Thị trường</span>
+                    <span className="text-[10px] md:text-xs font-bold text-gray-800 mb-2 font-sans tracking-wider uppercase order-last md:order-first">Thị trường</span>
                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center hover:border-fnx-navy transition-all duration-300 group">
                       <Globe className="w-5 h-5 md:w-6 md:h-6 text-fnx-navy group-hover:scale-110 transition-transform" />
                     </div>
@@ -348,7 +348,7 @@ export default function AboutPage() {
 
                   {/* Đối tác */}
                   <div className="flex flex-col items-center">
-                    <span className="text-[10px] md:text-xs font-bold text-gray-700 mb-2 font-sans tracking-wider uppercase order-last md:order-first">Đối tác</span>
+                    <span className="text-[10px] md:text-xs font-bold text-gray-800 mb-2 font-sans tracking-wider uppercase order-last md:order-first">Đối tác</span>
                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center hover:border-fnx-gold-dark transition-all duration-300 group">
                       <Handshake className="w-5 h-5 md:w-6 md:h-6 text-fnx-gold-dark group-hover:scale-110 transition-transform" />
                     </div>
@@ -356,7 +356,7 @@ export default function AboutPage() {
 
                   {/* Hệ sinh thái */}
                   <div className="flex flex-col items-center">
-                    <span className="text-[10px] md:text-xs font-bold text-gray-700 mb-2 font-sans tracking-wider uppercase order-last md:order-first">Hệ sinh thái</span>
+                    <span className="text-[10px] md:text-xs font-bold text-gray-800 mb-2 font-sans tracking-wider uppercase order-last md:order-first">Hệ sinh thái</span>
                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center hover:border-fnx-teal transition-all duration-300 group">
                       <Network className="w-5 h-5 md:w-6 md:h-6 text-fnx-teal group-hover:scale-110 transition-transform" />
                     </div>
@@ -422,7 +422,7 @@ export default function AboutPage() {
                 Inspired by the Phoenix
               </span>
               
-              <div className="space-y-4 text-gray-600 font-sans leading-relaxed text-base mb-6">
+              <div className="space-y-4 text-gray-800 font-sans leading-relaxed text-base mb-6">
                 <p>
                   Tên gọi <strong>FNX</strong> được lấy cảm hứng từ <strong>Phoenix</strong> (Phượng Hoàng) – biểu tượng của sự tái sinh, đổi mới và khát vọng không ngừng vươn lên.
                 </p>
@@ -436,7 +436,7 @@ export default function AboutPage() {
                 {/* F */}
                 <div>
                   <h4 className="text-3xl font-extrabold text-fnx-gold-dark mb-2">F</h4>
-                  <ul className="text-xs space-y-1 text-gray-500 font-medium">
+                  <ul className="text-xs space-y-1 text-gray-700 font-semibold">
                     <li>• Future</li>
                     <li>• Finish</li>
                     <li>• Fire</li>
@@ -446,7 +446,7 @@ export default function AboutPage() {
                 {/* N */}
                 <div className="border-l border-r border-gray-200 px-4">
                   <h4 className="text-3xl font-extrabold text-fnx-gold-dark mb-2">N</h4>
-                  <ul className="text-xs space-y-1 text-gray-500 font-medium">
+                  <ul className="text-xs space-y-1 text-gray-700 font-semibold">
                     <li>• New</li>
                     <li>• Network</li>
                     <li>• Newborn</li>
@@ -456,7 +456,7 @@ export default function AboutPage() {
                 {/* X */}
                 <div className="pl-2">
                   <h4 className="text-3xl font-extrabold text-fnx-gold-dark mb-2">X</h4>
-                  <ul className="text-xs space-y-1 text-gray-500 font-medium">
+                  <ul className="text-xs space-y-1 text-gray-700 font-semibold">
                     <li>• Excellence</li>
                     <li>• Xtra Value</li>
                     <li>• Xponential</li>
@@ -465,7 +465,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <p className="text-sm text-gray-500 font-sans leading-relaxed italic">
+              <p className="text-sm text-gray-700 font-sans leading-relaxed italic font-medium">
                 Mỗi chữ cái đại diện cho một giá trị, nhưng khi kết hợp lại, FNX mang ý nghĩa của một tổ chức luôn đổi mới, kết nối và không ngừng kiến tạo nhằm góp phần nâng cao năng lực của ngành công nghiệp Việt Nam.
               </p>
             </motion.div>
@@ -516,20 +516,20 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            {/* CTA action right side */}
+             {/* CTA action right side */}
             <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeIn}
-              className="flex justify-end items-center self-end w-full lg:w-auto whitespace-nowrap"
+              className="flex justify-end items-center self-end w-full lg:w-auto sm:whitespace-nowrap"
             >
               <Link 
                 href="/" 
-                className="inline-flex items-center gap-3 px-8 py-4 border border-fnx-navy/40 hover:border-fnx-navy bg-transparent hover:bg-fnx-navy/5 text-fnx-navy rounded-full font-sans font-bold text-sm tracking-widest uppercase transition-all duration-300 shadow-sm"
+                className="inline-flex items-center justify-center gap-3 px-6 py-4 border border-fnx-navy/40 hover:border-fnx-navy bg-transparent hover:bg-fnx-navy/5 text-fnx-navy rounded-full font-sans font-bold text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 shadow-sm text-center w-full sm:w-auto"
               >
                 <span>KHÁM PHÁ CÁC GIẢI PHÁP CỦA FNX</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 shrink-0" />
               </Link>
             </motion.div>
             

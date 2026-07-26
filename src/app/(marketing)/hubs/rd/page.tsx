@@ -75,6 +75,7 @@ export default function FnxRD() {
                 <div 
                   key={key}
                   onMouseEnter={() => setActiveCapability(key)}
+                  onClick={() => setActiveCapability(key)}
                   className={`group p-6 md:p-8 cursor-pointer transition-all duration-500 border-l-4 rounded-xl ${activeCapability === key ? 'bg-fnx-sky border-fnx-sky text-white shadow-md' : 'border-transparent hover:bg-white/60'}`}
                 >
                   <h4 className={`text-2xl md:text-3xl transition-colors duration-300 font-bold ${activeCapability === key ? 'text-white' : 'text-gray-400 group-hover:text-fnx-sky'}`}>

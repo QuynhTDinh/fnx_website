@@ -26,8 +26,9 @@ export default function Capabilities() {
             <p className="text-fnx-navy uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-4 font-sans">
               Năng lực Cốt lõi
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl text-fnx-dark uppercase">
-              <span className="block whitespace-nowrap"><span className="text-fnx-dark">GIẢI PHÁP CÔNG NGHIỆP</span> <span className="text-fnx-navy">TOÀN DIỆN</span></span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl text-fnx-dark uppercase leading-[1.15]">
+              <span className="text-fnx-dark block md:inline">GIẢI PHÁP CÔNG NGHIỆP</span>{' '}
+              <span className="text-fnx-navy block md:inline">TOÀN DIỆN</span>
             </h2>
           </div>
         </motion.div>
@@ -40,6 +41,7 @@ export default function Capabilities() {
               className="group relative h-[400px] bg-white border border-gray-200 p-8 flex flex-col justify-between overflow-hidden cursor-pointer transition-colors duration-500 hover:bg-fnx-dark"
               onMouseEnter={() => setHoveredId(cap.id)}
               onMouseLeave={() => setHoveredId(null)}
+              onClick={() => setHoveredId(hoveredId === cap.id ? null : cap.id)}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.1 * index, ease: "easeOut" }}

@@ -91,7 +91,7 @@ const OrbitNode = ({ node, rotation, isHovered, activeNodeId, onHover, onLeave, 
       <motion.div 
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: isActive ? 1 : 0, y: isActive ? 0 : 10 }}
-        className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-48 p-3 bg-[#080C16]/95 backdrop-blur-md border border-cyan-800 rounded-lg pointer-events-none shadow-2xl flex flex-col items-center text-center"
+        className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-48 p-3 bg-[#080C16]/95 backdrop-blur-md border border-cyan-800 rounded-lg pointer-events-none shadow-2xl flex flex-col items-center text-center scale-[1.8] sm:scale-[1.33] lg:scale-100 origin-top"
       >
         <span className="text-cyan-400 font-bold text-xs tracking-wide mb-1" style={{ fontFamily: 'var(--font-tech), Orbitron, sans-serif' }}>{node.title}</span>
         <p className="text-cyan-50 text-[10px] leading-relaxed font-medium">{node.desc}</p>
@@ -158,56 +158,59 @@ export default function NetworkEcosystem() {
           </motion.p>
         </div>
         
-        {/* Connecting Lines for Inner Orbit */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
-          {innerNodesData.map(node => (
-            <ConnectingLine key={`line-${node.id}`} node={node} rotation={rotation} reverse={false} />
-          ))}
-        </svg>
+        {/* Orbit container wrapper for mobile responsiveness scaling */}
+        <div className="absolute inset-0 scale-[0.55] sm:scale-[0.75] lg:scale-100 origin-[center_60%] pointer-events-none">
+          {/* Connecting Lines for Inner Orbit */}
+          <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
+            {innerNodesData.map(node => (
+              <ConnectingLine key={`line-${node.id}`} node={node} rotation={rotation} reverse={false} />
+            ))}
+          </svg>
 
-        {/* Central FNX Hub */}
-        <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-auto">
-          <div className="relative flex items-center justify-center">
-            {/* Core Pulse */}
-            <div className={`absolute inset-0 rounded-full bg-fnx-gold-dark/30 animate-ping transition-opacity duration-500 scale-[2] ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
-            <img src={logoFNX} alt="FNX Group Logo" className="h-10 md:h-16 w-auto object-contain relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+          {/* Central FNX Hub */}
+          <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-auto">
+            <div className="relative flex items-center justify-center">
+              {/* Core Pulse */}
+              <div className={`absolute inset-0 rounded-full bg-fnx-gold-dark/30 animate-ping transition-opacity duration-500 scale-[2] ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
+              <img src={logoFNX} alt="FNX Group Logo" className="h-10 md:h-16 w-auto object-contain relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+            </div>
           </div>
-        </div>
 
-        {/* Orbit Lines for Visual Polish */}
-        <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[56%] h-[28%] border border-white/10 rounded-[50%] pointer-events-none z-0 hidden md:block"></div>
-        <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[92%] h-[56%] border border-white/10 rounded-[50%] pointer-events-none z-0 hidden md:block"></div>
+          {/* Orbit Lines for Visual Polish */}
+          <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[56%] h-[28%] border border-white/10 rounded-[50%] pointer-events-none z-0"></div>
+          <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[92%] h-[56%] border border-white/10 rounded-[50%] pointer-events-none z-0"></div>
 
-        {/* Inner Orbit Nodes */}
-        <div className="absolute inset-0 pointer-events-auto">
-          {innerNodesData.map(node => (
-            <OrbitNode
-              key={node.id}
-              node={node}
-              rotation={rotation}
-              isHovered={isHovered}
-              activeNodeId={activeNodeId}
-              onHover={(id) => { setActiveNodeId(id); setIsHovered(true); }}
-              onLeave={() => { setActiveNodeId(null); setIsHovered(false); }}
-              reverse={false}
-            />
-          ))}
-        </div>
+          {/* Inner Orbit Nodes */}
+          <div className="absolute inset-0 pointer-events-auto">
+            {innerNodesData.map(node => (
+              <OrbitNode
+                key={node.id}
+                node={node}
+                rotation={rotation}
+                isHovered={isHovered}
+                activeNodeId={activeNodeId}
+                onHover={(id) => { setActiveNodeId(id); setIsHovered(true); }}
+                onLeave={() => { setActiveNodeId(null); setIsHovered(false); }}
+                reverse={false}
+              />
+            ))}
+          </div>
 
-        {/* Outer Orbit Nodes */}
-        <div className="absolute inset-0 pointer-events-auto">
-          {outerNodesData.map(node => (
-            <OrbitNode
-              key={node.id}
-              node={node}
-              rotation={rotation}
-              isHovered={isHovered}
-              activeNodeId={activeNodeId}
-              onHover={(id) => { setActiveNodeId(id); setIsHovered(true); }}
-              onLeave={() => { setActiveNodeId(null); setIsHovered(false); }}
-              reverse={true} // Vòng ngoài quay ngược chiều
-            />
-          ))}
+          {/* Outer Orbit Nodes */}
+          <div className="absolute inset-0 pointer-events-auto">
+            {outerNodesData.map(node => (
+              <OrbitNode
+                key={node.id}
+                node={node}
+                rotation={rotation}
+                isHovered={isHovered}
+                activeNodeId={activeNodeId}
+                onHover={(id) => { setActiveNodeId(id); setIsHovered(true); }}
+                onLeave={() => { setActiveNodeId(null); setIsHovered(false); }}
+                reverse={true} // Vòng ngoài quay ngược chiều
+              />
+            ))}
+          </div>
         </div>
 
       </div>

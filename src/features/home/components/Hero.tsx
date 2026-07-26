@@ -15,7 +15,7 @@ export default function Hero() {
           allow="autoplay; fullscreen; picture-in-picture" 
           referrerPolicy="strict-origin-when-cross-origin" 
           allowFullScreen
-          className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          className="absolute top-1/2 left-1/2 hero-video-iframe -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         ></iframe>
 
         {/* Dark Gradient Overlay for Text Readability */}
@@ -37,17 +37,17 @@ export default function Hero() {
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400 pb-4 block whitespace-nowrap drop-shadow-sm"
+                className="text-4xl sm:text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400 pb-4 block whitespace-nowrap drop-shadow-sm"
               >
                 Shaping surface
               </motion.h1>
             </div>
-            <div className="overflow-hidden pt-2 pb-6 ml-16 md:ml-32 lg:ml-48">
+            <div className="overflow-hidden pt-2 pb-6 ml-6 sm:ml-20 md:ml-32 lg:ml-48">
               <motion.h1 
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 pb-4 block whitespace-nowrap drop-shadow-sm"
+                className="text-4xl sm:text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 pb-4 block whitespace-nowrap drop-shadow-sm"
               >
                 Shaping future
               </motion.h1>

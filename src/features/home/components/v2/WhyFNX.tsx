@@ -24,7 +24,7 @@ export default function WhyFNX() {
         
         {/* Section Header */}
         <motion.div 
-          className="mb-20 md:mb-32 w-full pt-12 overflow-x-auto overflow-y-hidden pb-4"
+          className="mb-20 md:mb-32 w-full pt-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -36,7 +36,7 @@ export default function WhyFNX() {
             Một bài toán – một đầu mối <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-fnx-navy to-fnx-navy/60">nhiều năng lực được kết nối.</span>
           </h2>
-          <p className="mt-8 text-xl md:text-2xl text-fnx-navy/80 font-sans leading-relaxed border-l-4 border-fnx-navy pl-6 whitespace-nowrap min-w-max">
+          <p className="mt-8 text-lg md:text-2xl text-fnx-navy/80 font-sans leading-relaxed border-l-4 border-fnx-navy pl-6">
             Kết nối chuỗi giá trị - Chuyển hóa các bài toán thành giải pháp thực tiễn
           </p>
         </motion.div>
