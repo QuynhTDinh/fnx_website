@@ -48,7 +48,7 @@ export default function EngagePage() {
                 <li className="flex items-start">
                   <ArrowRight className="w-5 h-5 text-fnx-navy mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <span className="font-bold text-gray-900">Đơn vị chủ quản:</span> <span className="text-gray-600">CÔNG TY CỔ PHẦN NGHIÊN CỨU PHÁT TRIỂN FNX</span>
+                    <span className="font-bold text-gray-900">Đơn vị chủ quản:</span> <span className="text-gray-600">CÔNG TY CỔ PHẦN ĐẦU TƯ PHÁT TRIỂN FNX</span>
                   </div>
                 </li>
                 <li className="flex items-start">

@@ -103,12 +103,14 @@ export default function Experts({ lineId }: ExpertsProps) {
                       {expert.hover_content.short_bio}
                     </p>
                   </div>
-                  <div>
-                    <p className="text-xs uppercase text-[#C47A4B] font-bold tracking-widest mb-2">Kết quả tiêu biểu</p>
-                    <p className="text-[#6B7280] font-sans text-sm leading-relaxed line-clamp-4">
-                      {expert.hover_content.top_impact}
-                    </p>
-                  </div>
+                  {expert.hover_content.top_impact && (
+                    <div>
+                      <p className="text-xs uppercase text-[#C47A4B] font-bold tracking-widest mb-2">Kết quả tiêu biểu</p>
+                      <p className="text-[#6B7280] font-sans text-sm leading-relaxed line-clamp-4">
+                        {expert.hover_content.top_impact}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             </div>

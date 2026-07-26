@@ -6,6 +6,7 @@ import { ArrowUpRight, Cpu, Microscope, Search, GitMerge, Rocket, BarChart3, Che
 
 export default function FnxRD() {
   const [activeCapability, setActiveCapability] = useState("research");
+  const [showComingSoon, setShowComingSoon] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,8 +25,8 @@ export default function FnxRD() {
     },
     digital_talent: {
       title: "Nhân lực số",
-      desc: "Phát triển/cung ứng nhân lực chất lượng cao được bảo chứng. Triển khai Phần mềm Quản lý Dự án CO2 PIM (tập trung hóa dữ liệu, chuẩn hóa quy trình thời gian thực).",
-      solutions: ["Nhân lực chất lượng cao", "Phần mềm CO2 PIM"]
+      desc: "Nơi nhận định, định hướng, nuôi dưỡng và phát triển cho nguồn nhân lực chất lượng cao với hệ sinh thái các sản phẩm số theo triết lý và tư duy cốt lõi của FNX",
+      solutions: ["CO² platform", "CO²-PIM", "CO²-CSF", "CO²-CCS"]
     }
   };
 
@@ -102,12 +103,58 @@ export default function FnxRD() {
                 
                 <div className="mt-8">
                   <span className="block text-xs uppercase tracking-widest text-white/70 font-bold mb-4 font-sans">Sản phẩm & Giải pháp</span>
-                  <div className="flex flex-wrap gap-2">
-                    {capabilities[activeCapability as keyof typeof capabilities].solutions.map(sol => (
-                      <span key={sol} className="text-sm text-fnx-sky bg-white px-4 py-2 rounded-full font-sans font-bold shadow-sm">
-                        {sol}
-                      </span>
-                    ))}
+                  <div className="flex flex-wrap gap-2 relative">
+                    {capabilities[activeCapability as keyof typeof capabilities].solutions.map(sol => {
+                      if (sol === 'CO² platform') {
+                        return (
+                          <div key={sol} className="relative z-20">
+                            <button
+                              onClick={() => {
+                                setShowComingSoon(true);
+                                setTimeout(() => setShowComingSoon(false), 4000);
+                              }}
+                              className="relative flex items-center gap-3 px-6 py-2.5 bg-[#080F12] text-white rounded-full font-sans font-bold text-sm tracking-wide shadow-2xl hover:scale-105 hover:bg-[#121A25] transition-all duration-300 border border-white/20 group cursor-pointer"
+                            >
+                              {/* Outer Glow on hover */}
+                              <span className="absolute inset-0 rounded-full border border-white/40 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></span>
+                              
+                              <span className="relative z-10">{sol}</span>
+                              
+                              {/* Modern Icon */}
+                              <svg className="w-4 h-4 text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                              </svg>
+                            </button>
+                            
+                            {/* Coming soon popup */}
+                            {showComingSoon && (
+                              <motion.div 
+                                initial={{ opacity: 0, y: 15, filter: 'blur(4px)' }}
+                                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                exit={{ opacity: 0, y: -10, filter: 'blur(4px)' }}
+                                className="absolute bottom-full left-0 mb-4 w-72 bg-[#080F12]/95 backdrop-blur-xl text-white p-5 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-white/10 z-50 overflow-hidden"
+                              >
+                                {/* Glowing top border */}
+                                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-fnx-sky to-transparent opacity-70"></div>
+                                
+                                <div className="relative z-10 flex flex-col">
+                                  <h5 className="font-bold text-base tracking-widest text-white mb-2 uppercase font-sans">Sắp Ra Mắt</h5>
+                                  <p className="text-sm text-white/80 leading-relaxed font-sans">
+                                    Nền tảng công nghệ đột phá đang trong giai đoạn hoàn thiện cuối cùng.
+                                  </p>
+                                </div>
+                              </motion.div>
+                            )}
+                          </div>
+                        );
+                      }
+                      
+                      return (
+                        <span key={sol} className="text-sm text-fnx-sky bg-white/90 px-4 py-2 rounded-full font-sans font-bold shadow-sm">
+                          {sol}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               </motion.div>

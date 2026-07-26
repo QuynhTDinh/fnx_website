@@ -173,115 +173,115 @@ export interface Expert {
 
 export const MOCK_EXPERTS: Expert[] = [
   {
-    expert_id: "exp_004",
-    name: "Nguyễn Thị Kiều Quyên",
-    role: "Phó TGĐ FNX Group / GĐ FNX-SC",
-    meta_tags: {
-      line_id: "FNX Group",
-      topic: "supply-chain",
-      solution_type: "operation-optimization"
-    },
-    hover_content: {
-      short_bio: "Quản trị vận hành chuỗi cung ứng (SCM), tối ưu hóa quy trình dịch vụ và hệ sinh thái phần mềm.",
-      top_impact: "Tối ưu hóa dòng chảy hàng hóa/dịch vụ, nâng cao chỉ số hiệu quả vận hành (OEE), giảm thiểu chi phí ẩn."
-    }
-  },
-  {
-    expert_id: "exp_002",
-    name: "Lã Thanh Toàn",
-    role: "PTGĐ của FNX Group, Chủ tịch HĐQT & TGĐ của FNX-RD",
-    meta_tags: {
-      line_id: "FNX-RD",
-      topic: "system-engineering",
-      solution_type: "automation"
-    },
-    hover_content: {
-      short_bio: "Kỹ thuật hệ thống, cơ điện tử công nghiệp và tự động hóa dây chuyền sản xuất.",
-      top_impact: "Hiện đại hóa dây chuyền sản xuất, tăng công suất đáng kể, kéo dài tuổi thọ thiết bị."
-    }
-  },
-  {
-    expert_id: "exp_003",
-    name: "Nguyễn Trí Kiên",
-    role: "Thành viên HĐQT FNX Group, Trưởng Ban XLBM, Phó chủ tịch VASI",
-    meta_tags: {
-      line_id: "FNX Group",
-      topic: "construction-maintenance",
-      solution_type: "safety-standards"
-    },
-    hover_content: {
-      short_bio: "Quản lý dự án xây lắp công nghiệp, bảo trì hệ thống hạ tầng và tiêu chuẩn an toàn (PCCC).",
-      top_impact: "Đảm bảo an toàn hạ tầng vận hành, đạt chuẩn nghiệm thu, giảm thiểu rủi ro pháp lý và kỹ thuật."
-    }
-  },
-  {
     expert_id: "exp_001",
     name: "Nguyễn Đức Hạnh",
-    role: "Chủ tịch HĐQT, Tổng Giám đốc FNX Group",
+    role: "Tổng Giám đốc FNX Group",
     meta_tags: {
       line_id: "FNX Group",
       topic: "strategy",
       solution_type: "corporate-culture"
     },
     hover_content: {
-      short_bio: "Hoạch định chiến lược nhân sự, văn hóa doanh nghiệp.",
-      top_impact: "Hoạch định chiến lược nhân sự theo mục tiêu tập đoàn đa ngành."
+      short_bio: "Hoạch định và dẫn dắt thực thi chiến lược phát triển nguồn nhân lực; Xây dựng văn hóa doanh nghiệp",
+      top_impact: ""
+    }
+  },
+  {
+    expert_id: "exp_002",
+    name: "Nguyễn Kiều Quyên",
+    role: "Phó Tổng giám đốc FNX Group | Giám đốc FNX-SC",
+    meta_tags: {
+      line_id: "FNX-SC",
+      topic: "supply-chain",
+      solution_type: "operation-optimization"
+    },
+    hover_content: {
+      short_bio: "Quản trị kế hoạch - mua sắm; Quản lý vận hành chuỗi cung ứng; Phát triển hệ thống nhà cung cấp; Kết nối doanh nghiệp công nghiệp hỗ trợ",
+      top_impact: ""
+    }
+  },
+  {
+    expert_id: "exp_003",
+    name: "Nguyễn Trí Kiên",
+    role: "Chủ tịch Hội đồng Khoa học và Công nghệ FNX-RD",
+    meta_tags: {
+      line_id: "FNX-RD",
+      topic: "construction-maintenance",
+      solution_type: "safety-standards"
+    },
+    hover_content: {
+      short_bio: "Chiến lược khoa học và công nghệ; Nghiên cứu và phát triển (R&D); Đổi mới sáng tạo; Chuyển giao và làm chủ công nghệ; Tư vấn công nghệ",
+      top_impact: ""
+    }
+  },
+  {
+    expert_id: "exp_004",
+    name: "Lã Thanh Toàn",
+    role: "Phó Tổng giám đốc FNX Group | Tổng Giám đốc FNX-RD",
+    meta_tags: {
+      line_id: "FNX-RD",
+      topic: "system-engineering",
+      solution_type: "automation"
+    },
+    hover_content: {
+      short_bio: "Tư vấn đầu tư; Quản lý nghiên cứu và phát triển; Quản trị đổi mới sáng tạo; Phát triển công nghệ công nghiệp; Quản lý dự án khoa học và công nghệ; Thương mại hóa kết quả nghiên cứu",
+      top_impact: ""
     }
   },
   {
     expert_id: "exp_005",
-    name: "Nguyễn Đặng Bình Thành",
-    role: "Chuyên gia tư vấn & HĐQT của FNX-RD, Giảng viên Đại Học Bách Khoa Hà Nội",
+    name: "Đỗ Thanh Minh",
+    role: "Giám đốc Trung tâm Tư vấn & Triển khai FNX-RD",
     meta_tags: {
       line_id: "FNX-RD",
-      topic: "machinery",
-      solution_type: "industrial-optimization"
+      topic: "consulting",
+      solution_type: "project-management"
     },
     hover_content: {
-      short_bio: "Máy và thiết bị công nghiệp hóa chất-dầu khí.",
-      top_impact: "Cải tiến, nâng cấp thiết bị và hệ thống trong sản xuất xi măng, gạch, thép, hóa chất."
+      short_bio: "Quản lý dự án đầu tư xây dựng; Tư vấn thiết kế và triển khai công trình; Quản lý hợp đồng EPC; Giám sát và điều phối thực hiện dự án",
+      top_impact: ""
     }
   },
   {
     expert_id: "exp_006",
-    name: "Tạ Hồng Đức",
-    role: "Chuyên gia tư vấn & HĐQT của FNX-RD, Giảng viên Đại Học Bách Khoa Hà Nội",
-    meta_tags: {
-      line_id: "FNX-RD",
-      topic: "chemical-engineering",
-      solution_type: "green-chemistry"
-    },
-    hover_content: {
-      short_bio: "Công nghiệp hóa chất - dầu khí.",
-      top_impact: "Nghiên cứu ứng dụng hóa học xanh, tinh chế axít phosphoric, công nghệ xử lý nước thải."
-    }
-  },
-  {
-    expert_id: "exp_007",
-    name: "Hồ Thủy Linh",
-    role: "Chuyên gia tư vấn, Thành viên HĐQT FNX-RD",
-    meta_tags: {
-      line_id: "FNX-RD",
-      topic: "hr",
-      solution_type: "organizational-design"
-    },
-    hover_content: {
-      short_bio: "Phát triển nguồn lực, HRBP, Văn hóa doanh nghiệp.",
-      top_impact: "Hoạch định nguồn lực, tuyển dụng, đào tạo, đánh giá, thiết kế tổ chức."
-    }
-  },
-  {
-    expert_id: "exp_008",
     name: "Đinh Thị Thúy Quỳnh",
-    role: "Giám đốc Trung tâm Nhân lực số",
+    role: "Giám đốc Trung tâm Nhân lực số FNX-RD",
     meta_tags: {
       line_id: "FNX-RD",
       topic: "digital-hr",
       solution_type: "operations-optimization"
     },
     hover_content: {
-      short_bio: "Vận hành DN, Sales Operations, Kiến trúc Công nghệ & AI.",
-      top_impact: "Tối ưu hóa vận hành, doanh thu 7 tỷ/3 tháng đầu tại AVADA, MDRT 2023."
+      short_bio: "Vận hành doanh nghiệp; Điều phối Kinh doanh; Số hóa & Kiến trúc Công nghệ Doanh nghiệp",
+      top_impact: ""
+    }
+  },
+  {
+    expert_id: "exp_007",
+    name: "TS. Nguyễn Đặng Bình Thành",
+    role: "Chuyên gia Nghiên cứu & Tư vấn công nghệ FNX-RD",
+    meta_tags: {
+      line_id: "FNX-RD",
+      topic: "machinery",
+      solution_type: "industrial-optimization"
+    },
+    hover_content: {
+      short_bio: "Máy và thiết bị công nghiệp hóa chất-dầu khí",
+      top_impact: ""
+    }
+  },
+  {
+    expert_id: "exp_008",
+    name: "PGS.TS. Tạ Hồng Đức",
+    role: "Giám đốc Trung tâm R&D FNX-RD",
+    meta_tags: {
+      line_id: "FNX-RD",
+      topic: "chemical-engineering",
+      solution_type: "green-chemistry"
+    },
+    hover_content: {
+      short_bio: "Máy và thiết bị công nghiệp hóa chất-dầu khí",
+      top_impact: ""
     }
   }
 ];
