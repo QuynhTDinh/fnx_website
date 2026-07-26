@@ -118,7 +118,7 @@ export default function AboutPage() {
               }}
             >
               <img 
-                src="/images/banner/banner section 2.png" 
+                src="/images/banner/banner-section-2.png" 
                 alt="Vì sao FNX ra đời" 
                 className="w-full h-full object-cover"
               />
@@ -385,7 +385,7 @@ export default function AboutPage() {
               className="lg:col-span-5 flex items-center justify-center relative cursor-pointer"
             >
               <motion.img 
-                src="/images/banner/banner section 5.png" 
+                src="/images/banner/banner-section-5.png" 
                 alt="Inspired by the Phoenix" 
                 className="w-full h-auto max-w-[450px] object-contain mix-blend-multiply transition-all duration-500"
                 onClick={triggerPhoenixGlow}
@@ -479,7 +479,7 @@ export default function AboutPage() {
         {/* Subtle background graphic using section 6 banner */}
         <div className="absolute inset-0 z-0 opacity-[0.35]">
           <img 
-            src="/images/banner/section 6.png" 
+            src="/images/banner/section-6.png" 
             alt="FNX Vision Background" 
             className="w-full h-full object-cover"
           />
