@@ -460,7 +460,7 @@ export default function AboutPage() {
                     <li>• Excellence</li>
                     <li>• Xtra Value</li>
                     <li>• Xponential</li>
-                    <li>• Xpot</li>
+                    <li>• Xport</li>
                   </ul>
                 </div>
               </div>
