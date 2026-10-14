@@ -16,6 +16,7 @@ import {
   Network 
 } from 'lucide-react';
 import Link from 'next/link';
+import Solutions from '@/features/home/components/v2/Solutions';
 
 export default function AboutPage() {
   const [phoenixGlow, setPhoenixGlow] = React.useState(false);
@@ -68,7 +69,10 @@ export default function AboutPage() {
               ABOUT FNX
             </span>
             
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.2] font-tech text-white flex flex-col">
+            <h1 
+              style={{ fontFamily: "'Orbitron', var(--font-tech-var), sans-serif" }}
+              className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.2] font-tech text-white flex flex-col"
+            >
               <span>Shaping surface</span>
               <span className="pl-12 sm:pl-20 text-gray-300/90">Shaping future</span>
             </h1>
@@ -77,7 +81,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 2: VÌ SAO FNX RA ĐỜI? */}
-      <section className="relative w-full py-20 bg-white border-b border-gray-200">
+      <section className="relative w-full py-20 md:py-24 bg-white border-b border-gray-200">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
@@ -89,7 +93,7 @@ export default function AboutPage() {
               variants={fadeIn}
               className="flex flex-col justify-center"
             >
-              <span className="text-6xl md:text-7xl font-sans font-bold text-gray-150 mb-2 leading-none block">
+              <span className="text-6xl md:text-7xl font-sans font-bold text-gray-200 mb-2 leading-none block">
                 01
               </span>
               <h2 className="text-3xl md:text-4xl text-fnx-navy font-bold tracking-tight mb-6 font-sans uppercase">
@@ -129,7 +133,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 3: FNX LÀM GÌ? */}
-      <section className="relative w-full py-20 bg-[#F8FAFC] border-b border-gray-200">
+      <section className="relative w-full py-20 md:py-24 bg-[#F8FAFC] border-b border-gray-200">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
             
@@ -217,7 +221,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 4: CONNECT & CONNECT */}
-      <section className="relative w-full py-20 bg-white border-b border-gray-200">
+      <section className="relative w-full py-20 md:py-24 bg-white border-b border-gray-200">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -229,7 +233,7 @@ export default function AboutPage() {
               variants={fadeIn}
               className="lg:col-span-5"
             >
-              <span className="text-6xl md:text-7xl font-sans font-bold text-gray-150 mb-2 leading-none block">
+              <span className="text-6xl md:text-7xl font-sans font-bold text-gray-200 mb-2 leading-none block">
                 03
               </span>
               <h2 className="text-3xl md:text-4xl text-fnx-navy font-bold tracking-tight mb-2 font-sans uppercase">
@@ -372,7 +376,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 5: CÂU CHUYỆN VỀ FNX */}
-      <section className="relative w-full py-20 bg-[#F8FAFC] border-b border-gray-200">
+      <section className="relative w-full py-20 md:py-24 bg-[#F8FAFC] border-b border-gray-200">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -412,7 +416,7 @@ export default function AboutPage() {
               variants={fadeIn}
               className="lg:col-span-7 flex flex-col justify-center"
             >
-              <span className="text-6xl md:text-7xl font-sans font-bold text-gray-150 mb-2 leading-none block">
+              <span className="text-6xl md:text-7xl font-sans font-bold text-gray-200 mb-2 leading-none block">
                 04
               </span>
               <h2 className="text-3xl md:text-4xl text-fnx-navy font-bold tracking-tight mb-2 font-sans uppercase">
@@ -474,8 +478,11 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* SECTION: KIẾN TRÚC HỆ SINH THÁI */}
+      <Solutions />
+
       {/* SECTION 6: TẦM NHÌN */}
-      <section className="relative w-full py-24 bg-white overflow-hidden">
+      <section className="relative w-full py-20 md:py-24 bg-white overflow-hidden">
         {/* Subtle background graphic using section 6 banner */}
         <div className="absolute inset-0 z-0 opacity-[0.35]">
           <img 
@@ -496,13 +503,13 @@ export default function AboutPage() {
               variants={fadeIn}
               className="max-w-3xl"
             >
-              <span className="text-6xl md:text-7xl font-sans font-bold text-gray-150 mb-2 leading-none block">
-                05
+              <span className="text-6xl md:text-7xl font-sans font-bold text-gray-200 mb-2 leading-none block">
+                06
               </span>
               <h2 className="text-3xl md:text-4xl text-fnx-navy font-bold tracking-tight mb-2 font-sans uppercase">
                 KHÁT VỌNG
               </h2>
-              <h3 className="text-2xl md:text-3xl font-bold font-tech tracking-wide text-fnx-navy mb-6 uppercase">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-tech tracking-wide text-fnx-navy mb-6 uppercase whitespace-nowrap">
                 Make in Vietnam. Made in Vietnam.
               </h3>
               

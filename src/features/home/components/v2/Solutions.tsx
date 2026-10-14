@@ -143,12 +143,24 @@ export default function Solutions() {
   const isInView = useInView(containerRef, { once: false, amount: 0.2 });
 
   return (
-    <section ref={containerRef} className="relative w-full min-h-screen flex flex-col justify-center py-12 md:py-16 bg-surface-lab border-t border-black/5">
-      <div className="text-center mb-10 md:mb-12">
-        <h2 className="text-3xl md:text-5xl uppercase tracking-tight"><span className="text-fnx-dark">KIẾN TRÚC</span> <span className="text-fnx-navy">HỆ SINH THÁI</span></h2>
+    <section ref={containerRef} className="relative w-full flex flex-col justify-center py-20 md:py-24 bg-surface-lab border-t border-b border-gray-200">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-8 w-full mb-10 md:mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="text-6xl md:text-7xl font-sans font-bold text-gray-200 mb-2 leading-none block">
+            05
+          </span>
+          <h2 className="text-3xl md:text-4xl text-fnx-navy font-bold tracking-tight font-sans uppercase">
+            HỆ SINH THÁI FNX GROUP
+          </h2>
+        </motion.div>
       </div>
 
-      <div className="relative w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12">
+      <div className="relative w-full max-w-[1200px] mx-auto px-6 md:px-8">
         
         {/* TOP ROW: Core Ecosystem */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">

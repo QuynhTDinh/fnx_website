@@ -38,17 +38,19 @@ export default function Hero() {
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400 pb-4 block whitespace-nowrap drop-shadow-sm"
+                style={{ fontFamily: "'Orbitron', var(--font-tech-var), sans-serif" }}
+                className="text-3xl sm:text-5xl md:text-[4.25rem] lg:text-[5.25rem] xl:text-[6.5rem] font-tech font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400 pb-4 block whitespace-nowrap drop-shadow-sm pr-4"
               >
                 Shaping surface
               </motion.h1>
             </div>
-            <div className="overflow-hidden pt-2 pb-6 ml-16 md:ml-32 lg:ml-48">
+            <div className="overflow-hidden pt-2 pb-6 ml-4 sm:ml-10 md:ml-16 lg:ml-24 xl:ml-32">
               <motion.h1 
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl md:text-[6rem] lg:text-[8rem] font-tech font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 pb-4 block whitespace-nowrap drop-shadow-sm"
+                style={{ fontFamily: "'Orbitron', var(--font-tech-var), sans-serif" }}
+                className="text-3xl sm:text-5xl md:text-[4.25rem] lg:text-[5.25rem] xl:text-[6.5rem] font-tech font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 pb-4 block whitespace-nowrap drop-shadow-sm pr-4"
               >
                 Shaping future
               </motion.h1>

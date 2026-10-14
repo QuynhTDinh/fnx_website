@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-
+import SiteHeader from '@/components/layout/SiteHeader';
+import SiteFooter from '@/components/layout/SiteFooter';
+import ThemeWrapper from '@/components/layout/ThemeWrapper';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 export default function MarketingLayout({
@@ -10,13 +10,15 @@ export default function MarketingLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-fnx-dark min-h-screen text-white flex flex-col">
-      <Navbar />
-      <Breadcrumbs />
-      <main className="flex-grow">
-        {children}
-      </main>
-      <Footer />
-    </div>
+    <ThemeWrapper>
+      <div className="bg-[#0C1927] min-h-screen text-white flex flex-col font-sans selection:bg-[#1A396C] selection:text-white">
+        <SiteHeader transparentOnTop={true} />
+        <Breadcrumbs />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <SiteFooter />
+      </div>
+    </ThemeWrapper>
   );
 }

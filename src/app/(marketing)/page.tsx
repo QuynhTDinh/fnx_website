@@ -1,53 +1,55 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Hero from '@/features/home/components/Hero';
-import Journey from '@/components/old_components/homepage/Journey';
 import NetworkEcosystem from '@/components/old_components/homepage/NetworkEcosystem';
-import StandardIndex from '@/components/old_components/homepage/StandardIndex';
-import SuccessLoop from '@/components/old_components/homepage/SuccessLoop';
-import TrustWall from "@/features/home/components/v2/TrustWall";
-import WhyFNX from "@/features/home/components/v2/WhyFNX";
-import Capabilities from "@/features/home/components/v2/Capabilities";
-import Solutions from "@/features/home/components/v2/Solutions";
-import Industries from "@/features/home/components/v2/Industries";
-import Experts from "@/features/home/components/v2/Experts";
-import Pillars from '@/components/old_components/Pillars';
+import WhyFNX from '@/features/home/components/v2/WhyFNX';
+import ChallengesSection from '@/features/home/components/ChallengesSection';
+import AudienceSolutionsSection from '@/features/home/components/AudienceSolutionsSection';
+import PartnershipSection from '@/features/home/components/PartnershipSection';
+import TrustWall from '@/features/home/components/v2/TrustWall';
+
+export const metadata: Metadata = {
+  title: "FNX Group – Hệ sinh thái công nghiệp | Shaping surface, Shaping future",
+  description: "FNX Group kết nối nghiên cứu, công nghệ, sản xuất và chuỗi cung ứng, mang lại giải pháp công nghiệp cho doanh nghiệp.",
+  openGraph: {
+    title: "FNX Group – Hệ sinh thái công nghiệp | Shaping surface, Shaping future",
+    description: "FNX Group kết nối nghiên cứu, công nghệ, sản xuất và chuỗi cung ứng, mang lại giải pháp công nghiệp cho doanh nghiệp.",
+    images: ["/fnx-og-1200x630.png"],
+  },
+};
 
 export default function Home() {
   return (
-    <div className="w-full bg-fnx-light-bg text-fnx-light-text min-h-screen">
-      {/* SECTION 01: HERO */}
+    <div className="w-full bg-white text-gray-900 min-h-screen">
+      {/* S1: HERO — Video Vidyard & Slogan Orbitron, Nút CTA /engage */}
       <Hero />
       
-      {/* SECTION 02: HÀNH TRÌNH BÀI TOÁN (Ẩn để đưa về Why FNX) */}
-      {/* <Journey /> */}
-
-      {/* SECTION 03: HỆ SINH THÁI NETWORK */}
+      {/* S2: HỆ SINH THÁI CÔNG NGHIỆP — Sơ đồ 11 Logo 2 Quỹ đạo */}
       <NetworkEcosystem />
 
-      {/* SECTION 04: TIÊU CHUẨN -> NÂNG CẤP THÀNH WHY FNX */}
-      {/* <StandardIndex /> */}
+      {/* S3: TẦM NHÌN & SỨ MỆNH — 01 Sứ Mệnh, 02 Tầm Nhìn, 03 Triết Lý */}
       <WhyFNX />
 
-      {/* SECTION 04.5: NĂNG LỰC CỐT LÕI (New) */}
-      <Capabilities />
+      {/* S4: NHỮNG BÀI TOÁN CHÚNG TÔI HƯỚNG TỚI — Box Navy-800, 6 ô thách thức (không icon) */}
+      <ChallengesSection />
 
-      {/* SECTION 06: DÒNG CHẢY GIÁ TRỊ (Nâng cấp từ Ecosystem) */}
-      {/* <Ecosystem /> */}
-      <Solutions />
+      {/* S5: SẢN PHẨM & DỊCH VỤ — 5 Thẻ Khách Hàng định vị trực tiếp anchor sang RD/SC */}
+      <AudienceSolutionsSection />
 
-      {/* SECTION 07: ỨNG DỤNG CÔNG NGHIỆP (New) */}
-      {/* <Industries /> */}
+      {/* S6: KẾT NỐI HỢP TÁC — Box sáng 7/12 & 5/12 với CTA /engage?topic=hop-tac */}
+      <PartnershipSection />
 
-      {/* SECTION 08: BẢO CHỨNG CHUYÊN MÔN (New) */}
-      <Experts />
-
-      {/* SECTION 05: VÒNG LẶP THÀNH CÔNG (Tạm ẩn cho Version 1.0) */}
-      {/* <SuccessLoop /> */}
-
-      {/* SECTION ĐỐI TÁC KHÁCH HÀNG (Nâng cấp thành Trust Wall) */}
-      {/* <GlobalClients /> */}
+      {/* S7: MẠNG LƯỚI ĐỐI TÁC — Marquee 17 Logo & 9 Tên Doanh Nghiệp */}
       <TrustWall />
 
+      {/* SECTION CŨ TẮT THEO flags.ts (KHÔNG XÓA CODE THEO SPEC 01 & 02) */}
+      {/* <Journey /> */}
+      {/* <StandardIndex /> */}
+      {/* <Capabilities /> */}
+      {/* <Solutions /> */}
+      {/* <Industries /> */}
+      {/* <Experts /> */}
+      {/* <SuccessLoop /> */}
     </div>
   );
 }

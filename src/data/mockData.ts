@@ -5,17 +5,20 @@ export const MOCK_PHILOSOPHY = {
   title: "TẦM NHÌN & SỨ MỆNH",
   manifestos: [
     {
-      id: "m2",
-      statement: "SỨ MỆNH",
-      description: "Phát triển nền công nghiệp phụ trợ Việt Nam vững mạnh bằng năng lực làm chủ công nghệ cốt lõi"
-    },
-    {
       id: "m1",
+      number: "01",
       statement: "TẦM NHÌN",
       description: "Định hướng một Holding xanh, thông minh, kế thừa giá trị để đổi mới và phát triển bền vững."
     },
     {
+      id: "m2",
+      number: "02",
+      statement: "SỨ MỆNH",
+      description: "Phát triển nền công nghiệp phụ trợ Việt Nam vững mạnh bằng năng lực làm chủ công nghệ cốt lõi."
+    },
+    {
       id: "m3",
+      number: "03",
       statement: "TRIẾT LÝ: CONNECT & CONNECT",
       description: "Kết sức mạnh - Nối thành công"
     }
@@ -289,7 +292,7 @@ export const MOCK_EXPERTS: Expert[] = [
 export const MOCK_PARTNERS = [
   { id: "p-1", name: "Viettel", logo: "/images/partners/viettel-seeklogo.svg" },
   { id: "p-2", name: "Petrovietnam", logo: "/images/partners/PVCFC.png" },
-  { id: "p-3", name: "VAST", logo: "/images/partners/Logo_Viện_KH&CN_Việt_Nam.JPG" },
+  { id: "p-3", name: "VAST", logo: "/images/partners/logo-vast.jpg" },
   { id: "p-4", name: "GELEX", logo: "/images/partners/Logo_GELEX_Group.png" },
   { id: "p-5", name: "DFC", logo: "" },
   { id: "p-6", name: "Hitachi Energy", logo: "/images/partners/Hitachi-Energy-Logo-Vector.svg-.png" },
@@ -298,7 +301,7 @@ export const MOCK_PARTNERS = [
   { id: "p-9", name: "CECO", logo: "/images/partners/CECO.jpg.png" },
   { id: "p-10", name: "Vietstar Meiden", logo: "" },
   { id: "p-11", name: "VS Group", logo: "" },
-  { id: "p-12", name: "HUST", logo: "/images/partners/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg.png" },
+  { id: "p-12", name: "HUST", logo: "/images/partners/logo-hust.png" },
   { id: "p-13", name: "GPS", logo: "/images/partners/GPS.png" },
   { id: "p-14", name: "Viglacera", logo: "/images/partners/logo-viglacera.jpg" },
   { id: "p-15", name: "LS Electric", logo: "" },

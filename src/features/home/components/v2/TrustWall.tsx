@@ -62,10 +62,11 @@ export default function TrustWall() {
           {[...row1, ...row1].map((partner, index) => (
             <div 
               key={`r1-${partner.id}-${index}`}
+              aria-hidden={index >= row1.length}
               className="flex items-center justify-center px-12 md:px-24 opacity-30 hover:opacity-100 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:scale-105"
             >
               {partner.logo ? (
-                <img src={partner.logo} alt={partner.name} className="h-16 md:h-20 object-contain" />
+                <img src={partner.logo} alt={index < row1.length ? partner.name : ""} className="h-16 md:h-20 object-contain" />
               ) : (
                 <span className="font-heading font-black text-4xl md:text-6xl tracking-widest text-[#273444] whitespace-nowrap">
                   {partner.name.toUpperCase()}
@@ -80,10 +81,11 @@ export default function TrustWall() {
           {[...row2, ...row2].map((partner, index) => (
             <div 
               key={`r2-${partner.id}-${index}`}
+              aria-hidden={index >= row2.length}
               className="flex items-center justify-center px-12 md:px-24 opacity-30 hover:opacity-100 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:scale-105"
             >
               {partner.logo ? (
-                <img src={partner.logo} alt={partner.name} className="h-16 md:h-20 object-contain" />
+                <img src={partner.logo} alt={index < row2.length ? partner.name : ""} className="h-16 md:h-20 object-contain" />
               ) : (
                 <span className="font-heading font-black text-4xl md:text-6xl tracking-widest text-[#273444] whitespace-nowrap">
                   {partner.name.toUpperCase()}

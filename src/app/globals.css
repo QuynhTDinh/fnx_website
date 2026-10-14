@@ -64,13 +64,81 @@
   --color-smoke-200: #F0F0F0;
   --color-smoke-300: #EAEAEA;
   --color-smoke-400: #E0E0E0;
+  --color-gray-150: #E5E7EB;
   --color-surface-800: #141414;
   --color-surface-900: #0A0A0A;
-  --font-sans: var(--font-sans, 'Montserrat'), sans-serif;
-  --font-heading: var(--font-sans, 'Montserrat'), sans-serif;
+  --color-fnx-navy-500: #1A396C;
+  --color-fnx-navy-700: #132949;
+  --color-fnx-navy-800: #0C1927;
+  --color-fnx-navy-900: #080F12;
+  --color-fnx-gold-700: #A36426;
+  --color-fnx-gold-500: #D3A342;
+  --color-fnx-gold-300: #EEB583;
+  --color-fnx-silver: #8F8F8F;
+  --color-fnx-primary: var(--theme-primary);
+  --color-fnx-secondary: var(--theme-secondary);
+  --color-fnx-accent: var(--theme-accent);
+  --color-fnx-bg-tint: var(--theme-bg-tint);
+  --color-fnx-text-strong: var(--theme-text-strong);
+  --color-fnx-btn-primary: var(--theme-btn-primary);
+  --color-fnx-btn-hover: var(--theme-btn-hover);
+  --font-sans: 'Montserrat', var(--font-sans-var), sans-serif;
+  --font-heading: 'Montserrat', var(--font-sans-var), sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
-  --font-tech: var(--font-tech-var, 'Orbitron'), sans-serif;
+  --font-tech: 'Orbitron', var(--font-tech-var), sans-serif;
   --font-eurostile: "Eurostile Rounded", EurostileRounded, Eurostile, Michroma, sans-serif;
+}
+
+.font-tech {
+  font-family: 'Orbitron', var(--font-tech-var), sans-serif !important;
+}
+
+.font-sans {
+  font-family: 'Montserrat', var(--font-sans-var), sans-serif !important;
+}
+
+.font-heading {
+  font-family: 'Montserrat', var(--font-sans-var), sans-serif !important;
+}
+
+:root, [data-theme='group'] {
+  --theme-primary: #1A396C;
+  --theme-secondary: #132949;
+  --theme-accent: #CAE2FA;
+  --theme-bg-tint: #FFFFFF;
+  --theme-text-strong: #0C1927;
+  --theme-btn-primary: #1A396C;
+  --theme-btn-hover: #132949;
+}
+
+[data-theme='rd'] {
+  --theme-primary: #0196D0;
+  --theme-secondary: #51C0F8;
+  --theme-accent: #A7DEFD;
+  --theme-bg-tint: #F7FBFE;
+  --theme-text-strong: #06234B;
+  --theme-btn-primary: #0478B3;
+  --theme-btn-hover: #036190;
+}
+
+[data-theme='sc'] {
+  --theme-primary: #00928F;
+  --theme-secondary: #3ECDBA;
+  --theme-accent: #73E2D1;
+  --theme-bg-tint: #F6FDFC;
+  --theme-text-strong: #013938;
+  --theme-btn-primary: #00756F;
+  --theme-btn-hover: #005A55;
+}
+
+[data-theme='m'] {
+  --theme-primary: #D5A23F;
+  --theme-secondary: #F0B568;
+  --theme-accent: #A5651E;
+  --theme-bg-tint: #FEF9F3;
+  --theme-text-strong: #05234B;
+  --theme-btn-primary: #D5A23F;
+  --theme-btn-hover: #B88528;
 }
 
 :root {
@@ -145,7 +213,7 @@
 
 @media (min-width: 1024px) {
   :root {
-    --site-zoom: 0.8;
+    --site-zoom: 1;
   }
 }
 
@@ -155,10 +223,39 @@
   }
   body {
     @apply bg-background text-foreground;
-    zoom: var(--site-zoom);
   }
   html {
     @apply font-sans;
+    font-size: 16.5px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @media (min-width: 640px) {
+    html {
+      font-size: 17px;
+    }
+  }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 17.5px;
+    }
+  }
+  @media (min-width: 1440px) {
+    html {
+      font-size: 18px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  [id] {
+    scroll-margin-top: 88px;
+  }
+  .shadow-soft {
+    box-shadow: 0 8px 24px rgba(12, 25, 39, 0.08);
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -252,5 +349,9 @@
   }
   .media-gradient {
     @apply absolute inset-0 bg-gradient-to-t from-fnx-dark via-fnx-dark/50 to-transparent pointer-events-none;
+  }
+  .flash-highlight {
+    box-shadow: 0 0 0 3px var(--theme-primary, #0478B3) !important;
+    transition: box-shadow 0.2s ease-in-out;
   }
 }
