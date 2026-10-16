@@ -3,6 +3,7 @@ import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
 import ThemeWrapper from '@/components/layout/ThemeWrapper';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import FloatingContactWidget from '@/components/layout/FloatingContactWidget';
 
 export default function MarketingLayout({
   children,
@@ -18,6 +19,7 @@ export default function MarketingLayout({
           {children}
         </main>
         <SiteFooter />
+        <FloatingContactWidget />
       </div>
     </ThemeWrapper>
   );

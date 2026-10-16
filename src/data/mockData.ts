@@ -7,19 +7,28 @@ export const MOCK_PHILOSOPHY = {
     {
       id: "m1",
       number: "01",
-      statement: "TẦM NHÌN",
-      description: "Định hướng một Holding xanh, thông minh, kế thừa giá trị để đổi mới và phát triển bền vững."
+      icon: "compass",
+      title: "TẦM NHÌN",
+      header: "Sustainable – Intelligent – Succession",
+      statement: "SUSTAINABLE – INTELLIGENT – SUCCESSION",
+      description: "Trở thành một Holding xanh, thông minh, kế thừa giá trị để đổi mới và phát triển bền vững."
     },
     {
       id: "m2",
       number: "02",
-      statement: "SỨ MỆNH",
+      icon: "target",
+      title: "SỨ MỆNH",
+      header: "Made - Make Việt Nam",
+      statement: "MADE - MAKE VIỆT NAM",
       description: "Phát triển nền công nghiệp phụ trợ Việt Nam vững mạnh bằng năng lực làm chủ công nghệ cốt lõi."
     },
     {
       id: "m3",
       number: "03",
-      statement: "TRIẾT LÝ: CONNECT & CONNECT",
+      icon: "network",
+      title: "TRIẾT LÝ",
+      header: "Connect & Connect",
+      statement: "CONNECT & CONNECT",
       description: "Kết sức mạnh - Nối thành công"
     }
   ]

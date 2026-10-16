@@ -10,11 +10,18 @@ export interface CatalogItem {
   thumbnail?: string;
 }
 
+export interface CatalogSubgroup {
+  id: string;
+  title: string;
+  items: CatalogItem[];
+}
+
 export interface CatalogGroup {
   id: string;
   number: string;
   title: string;
-  items: CatalogItem[];
+  items?: CatalogItem[];
+  subgroups?: CatalogSubgroup[];
 }
 
 export interface UnitContent {

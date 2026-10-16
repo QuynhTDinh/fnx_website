@@ -2,7 +2,14 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { Compass, Target, Network, type LucideIcon } from 'lucide-react';
 import { MOCK_PHILOSOPHY } from '@/data/mockData';
+
+const MANIFESTO_ICONS: Record<string, LucideIcon> = {
+  compass: Compass,
+  target: Target,
+  network: Network,
+};
 
 export default function WhyFNX() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,37 +52,53 @@ export default function WhyFNX() {
           </p>
         </motion.div>
 
-        {/* 3 Mục Manifesto trên cùng 1 Hàng (Desktop 3 Cột, giữ nguyên 100% design cũ) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {MOCK_PHILOSOPHY.manifestos.map((item, index) => (
-            <motion.div 
-              key={item.id}
-              className="flex flex-col border-l border-gray-200 pl-6 md:pl-8 lg:pl-10"
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-              transition={{ duration: 0.7, delay: 0.15 * index, ease: "easeOut" }}
-            >
-              {/* Visual Anchor: Vòng tròn kỹ thuật & Số thứ tự đứng cạnh nhau, không chồng đè */}
-              <div className="flex items-center gap-3.5 mb-5">
-                <div className="w-11 h-11 rounded-full border border-fnx-navy/25 bg-fnx-navy/5 flex items-center justify-center shrink-0">
-                  <div className="w-2.5 h-2.5 rounded-full bg-fnx-navy" />
+        {/* Các khối Manifesto sắp xếp so le từ trên xuống dưới (Alternating Zig-Zag Layout) */}
+        <div className="flex flex-col gap-16 md:gap-24 lg:gap-28">
+          {MOCK_PHILOSOPHY.manifestos.map((item, index) => {
+            const Icon = (item.icon && MANIFESTO_ICONS[item.icon]) || (index === 0 ? Compass : index === 1 ? Target : Network);
+            const isReverse = index % 2 !== 0;
+
+            return (
+              <motion.div 
+                key={item.id}
+                className={`flex flex-col ${isReverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-14 lg:gap-20 group`}
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                transition={{ duration: 0.8, delay: 0.15 + (index * 0.15), ease: "easeOut" }}
+              >
+                {/* Visual Anchor: Khối Icon đại diện */}
+                <div className="w-full md:w-44 lg:w-52 flex justify-start md:justify-center shrink-0">
+                  <div className="relative flex items-center justify-center">
+                    {/* Vòng tròn công nghệ mờ phía sau tạo chiều sâu kỹ thuật */}
+                    <div className="absolute w-24 h-24 md:w-32 md:h-32 rounded-full border border-fnx-navy/10 bg-fnx-navy/[0.02] pointer-events-none transition-transform duration-700 group-hover:scale-110" />
+                    
+                    {/* Badge Icon chính */}
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white border border-fnx-navy/20 shadow-sm flex items-center justify-center text-fnx-navy relative z-10 transition-all duration-500 group-hover:bg-fnx-navy group-hover:text-white group-hover:shadow-lg group-hover:shadow-fnx-navy/20">
+                      <Icon className="w-8 h-8 md:w-9 md:h-9 stroke-[1.5]" />
+                    </div>
+                  </div>
                 </div>
-                <span className="text-4xl lg:text-5xl font-mono font-black text-[#1A396C]/35 tracking-tight select-none">
-                  0{index + 1}
-                </span>
-              </div>
 
-              {/* Statement Title (H3 ALL CAPS như design cũ) */}
-              <h3 className="text-xl md:text-2xl lg:text-3xl mb-3 text-fnx-dark uppercase font-bold tracking-tight">
-                {item.statement}
-              </h3>
+                {/* Statement Content: Khối nội dung 3 tầng */}
+                <div className="w-full md:flex-1 border-l-2 border-fnx-navy/20 pl-6 md:pl-10 transition-colors duration-300 group-hover:border-fnx-navy">
+                  {/* Tầng 1: Title / Eyebrow Tag */}
+                  <span className="text-xs md:text-sm font-bold uppercase tracking-[0.25em] text-fnx-navy mb-2 block font-mono">
+                    {item.title}
+                  </span>
 
-              {/* Description */}
-              <p className="text-base text-gray-600 font-sans leading-relaxed">
-                {item.description}
-              </p>
-            </motion.div>
-          ))}
+                  {/* Tầng 2: Header / Key Motto (H3 ALL CAPS, giữ trên 1 dòng trên màn hình desktop/laptop) */}
+                  <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-[1.75rem] xl:text-3xl mb-3 text-fnx-dark uppercase font-bold tracking-tight leading-tight md:whitespace-nowrap">
+                    {item.header}
+                  </h3>
+
+                  {/* Tầng 3: Description */}
+                  <p className="text-base md:text-lg text-gray-600 font-sans max-w-3xl leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
       </div>

@@ -68,8 +68,8 @@ export const siteConfig: SiteConfig = {
     fullName: 'CÔNG TY CỔ PHẦN ĐẦU TƯ PHÁT TRIỂN FNX',
     shortName: 'FNX Group',
     address: '173B Trường Chinh, Thanh Xuân, Hà Nội',
-    addressMapUrl: 'https://maps.google.com/?q=173B+Trường+Chinh,+Thanh+Xuân,+Hà+Nội',
-    addressEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.818816999015!2d105.82775797587027!3d21.000096688768057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8406568297%3A0xc3c544d6db87541e!2zMTczQiBUcsaw4budbmcgQ2hpbmgsIEtoxrDGoW5nIE1haSwgVGhhbmggWHXDom4sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1710000000000!5m2!1svi!2s',
+    addressMapUrl: 'https://maps.app.goo.gl/R4UwoqB9h18WuRCS9?g_st=ic',
+    addressEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.818816999015!2d105.82775797587027!3d21.000096688768057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad007262def9%3A0xc1747dc9424fd249!2zQ8O0bmcgdHkgQ1AgxJHhuqd1IHTGsCBwaMOhdCB0cmnhu4NuIEZOWCBHcm91cA!5e0!3m2!1svi!2s!4v1713200000000!5m2!1svi!2s',
     email: 'info@fnx.vn',
     hotlineDisplay: '0898 291 618',
     hotlineTel: '+84898291618',
@@ -96,6 +96,7 @@ export const siteConfig: SiteConfig = {
       items: [
         { name: 'Nghiên cứu công nghệ lõi', href: '/hubs/rd#nghien-cuu-doi-moi' },
         { name: 'Dự án nghiên cứu & thực nghiệm', href: '/hubs/rd#nghien-cuu-doi-moi' },
+        { name: 'Chuyển giao công nghệ', href: '/hubs/rd#nghien-cuu-doi-moi' },
       ],
     },
     {
@@ -105,18 +106,16 @@ export const siteConfig: SiteConfig = {
       items: [
         { name: 'Quản lý & Triển khai dự án', href: '/hubs/rd#xay-dung-co-ban' },
         { name: 'Tư vấn đầu tư & Quản lý dự án', href: '/hubs/rd#xay-dung-co-ban' },
-        { name: 'Cung ứng dự án', href: '/hubs/rd#xay-dung-co-ban' },
-        { name: 'Kính điện thông minh & Sơn chống cháy', href: '/hubs/rd#xay-dung-co-ban' },
+        { name: 'Cung ứng dự án', href: '/hubs/sc#cung-ung-du-an' },
       ],
     },
     {
       num: '03',
       title: 'Sản phẩm & Giải pháp công nghiệp',
-      href: '/hubs/rd#nghien-cuu-doi-moi',
+      href: '/hubs/sc#xu-ly-be-mat',
       items: [
-        { name: 'Chuyển giao công nghệ', href: '/hubs/rd#nghien-cuu-doi-moi' },
         { name: 'Xử lý bề mặt', href: '/hubs/sc#xu-ly-be-mat' },
-        { name: 'Hóa chất & Nguyên vật liệu', href: '/hubs/sc#chuoi-cung-ung' },
+        { name: 'Hóa chất & Nguyên vật liệu', href: '/hubs/sc#hoa-chat-nguyen-vat-lieu' },
         { name: 'Đại diện thương mại', href: '/hubs/sc#dai-dien-thuong-mai' },
       ],
     },

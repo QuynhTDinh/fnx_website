@@ -22,7 +22,7 @@ import {
   Settings,
   LucideIcon,
 } from 'lucide-react';
-import { CatalogGroup } from '@/content/units/rd';
+import { CatalogGroup, CatalogItem, CatalogSubgroup } from '@/content/units/rd';
 import { getExpertsByGroup } from '@/content/experts';
 
 const ICON_MAP: Record<string, LucideIcon> = {
@@ -93,7 +93,10 @@ export function UnitAccordion({
 
       let targetGroup = groups.find((g) => g.id === hash);
       if (!targetGroup) {
-        targetGroup = groups.find((g) => g.items.some((it) => it.id === hash));
+        targetGroup = groups.find((g) =>
+          g.items?.some((it) => it.id === hash) ||
+          g.subgroups?.some((sub) => sub.id === hash || sub.items.some((it) => it.id === hash))
+        );
       }
 
       if (targetGroup) {
@@ -190,56 +193,79 @@ export function UnitAccordion({
                   className="overflow-hidden border-t border-[#DCE3EC]"
                 >
                   <div className="divide-y divide-gray-100">
-                    {group.items.map((item) => {
-                      const IconComponent = item.iconName ? (ICON_MAP[item.iconName] || Search) : Search;
+                    {(() => {
+                      const renderItem = (item: CatalogItem) => {
+                        const IconComponent = item.iconName ? (ICON_MAP[item.iconName] || Search) : Search;
 
-                      return (
-                        <div
-                          key={item.id}
-                          id={item.id}
-                          className="min-h-[58px] py-4.5 px-6 flex flex-col md:flex-row md:items-center gap-3 md:gap-6 hover:bg-gray-50/70 transition-colors"
-                        >
-                          {/* Visual: Icon (variant === 'icon') hoặc Thumbnail (variant === 'thumbnail') */}
-                          {variant === 'thumbnail' ? (
-                            <div className="shrink-0 w-14 h-10 rounded overflow-hidden bg-[#E6F4F2] border border-[#00756F]/20 flex items-center justify-center">
-                              {item.thumbnail ? (
-                                <Image
-                                  src={item.thumbnail}
-                                  alt={item.name}
-                                  width={56}
-                                  height={40}
-                                  className="w-full h-full object-cover"
-                                />
-                              ) : (
-                                <Package className="w-5 h-5 text-[#00756F]/70" />
-                              )}
+                        return (
+                          <div
+                            key={item.id}
+                            id={item.id}
+                            className="min-h-[58px] py-4.5 px-6 flex flex-col md:flex-row md:items-center gap-3 md:gap-6 hover:bg-gray-50/70 transition-colors"
+                          >
+                            {/* Visual: Icon (variant === 'icon') hoặc Thumbnail (variant === 'thumbnail') */}
+                            {variant === 'thumbnail' ? (
+                              <div className="shrink-0 w-14 h-10 rounded overflow-hidden bg-[#E6F4F2] border border-[#00756F]/20 flex items-center justify-center">
+                                {item.thumbnail ? (
+                                  <Image
+                                    src={item.thumbnail}
+                                    alt={item.name}
+                                    width={56}
+                                    height={40}
+                                    className="w-full h-full object-cover"
+                                  />
+                                ) : (
+                                  <Package className="w-5 h-5 text-[#00756F]/70" />
+                                )}
+                              </div>
+                            ) : (
+                              /* Icon 24px */
+                              <div
+                                style={{ color: themeColor }}
+                                className="shrink-0 w-9 h-9 rounded-full bg-blue-50/60 flex items-center justify-center"
+                              >
+                                <IconComponent className="w-4.5 h-4.5 md:w-5 md:h-5" />
+                              </div>
+                            )}
+
+                            {/* Tên dịch vụ / sản phẩm */}
+                            <div className={`${nameWidth} shrink-0`}>
+                              <span className="text-base md:text-[17px] font-semibold text-gray-900 leading-snug break-words">
+                                {item.name}
+                              </span>
                             </div>
-                          ) : (
-                            /* Icon 24px */
-                            <div
-                              style={{ color: themeColor }}
-                              className="shrink-0 w-9 h-9 rounded-full bg-blue-50/60 flex items-center justify-center"
-                            >
-                              <IconComponent className="w-4.5 h-4.5 md:w-5 md:h-5" />
+
+                            {/* Mô tả một dòng (phần còn lại) */}
+                            <div className="flex-grow">
+                              <p className="text-sm md:text-[15.5px] text-gray-600 leading-relaxed break-words">
+                                {item.desc}
+                              </p>
                             </div>
-                          )}
-
-                          {/* Tên dịch vụ / sản phẩm */}
-                          <div className={`${nameWidth} shrink-0`}>
-                            <span className="text-base md:text-[17px] font-semibold text-gray-900 leading-snug break-words">
-                              {item.name}
-                            </span>
                           </div>
+                        );
+                      };
 
-                          {/* Mô tả một dòng (phần còn lại) */}
-                          <div className="flex-grow">
-                            <p className="text-sm md:text-[15.5px] text-gray-600 leading-relaxed break-words">
-                              {item.desc}
-                            </p>
+                      if (group.subgroups && group.subgroups.length > 0) {
+                        return group.subgroups.map((subgroup, subIdx) => (
+                          <div key={subgroup.id || `sub-${subIdx}`} id={subgroup.id} className="w-full">
+                            <div className="bg-[#F8FAFC] px-6 py-2.5 border-b border-t first:border-t-0 border-[#E2E8F0] flex items-center gap-2.5">
+                              <div
+                                style={{ backgroundColor: themeColor }}
+                                className="w-1.5 h-3.5 rounded-xs shrink-0"
+                              />
+                              <span className="text-xs uppercase tracking-wider font-bold text-gray-800 font-sans">
+                                {subgroup.title}
+                              </span>
+                            </div>
+                            <div className="divide-y divide-gray-100">
+                              {subgroup.items.map(renderItem)}
+                            </div>
                           </div>
-                        </div>
-                      );
-                    })}
+                        ));
+                      }
+
+                      return group.items?.map(renderItem);
+                    })()}
                   </div>
 
                   {/* Dòng chuyên gia liên kết theo nhóm */}
