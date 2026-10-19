@@ -18,8 +18,8 @@ export const MOCK_PHILOSOPHY = {
       number: "02",
       icon: "target",
       title: "SỨ MỆNH",
-      header: "Made - Make Việt Nam",
-      statement: "MADE - MAKE VIỆT NAM",
+      header: "Made - Make Viet Nam",
+      statement: "MADE - MAKE VIET NAM",
       description: "Phát triển nền công nghiệp phụ trợ Việt Nam vững mạnh bằng năng lực làm chủ công nghệ cốt lõi."
     },
     {

@@ -191,7 +191,7 @@ export const scContent: UnitContentSc = {
               },
               {
                 id: 'sc-12',
-                name: 'Hóa chất xây dựng ASIA STAR',
+                name: 'Hóa chất xây dựng',
                 desc: 'Chống thấm, vữa – keo chuyên dụng, tăng cứng sàn bê tông công nghiệp, vữa không co ngót',
                 thumbnail: '',
               },

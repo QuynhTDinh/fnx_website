@@ -151,12 +151,6 @@ export const rdContent: UnitContent = {
             desc: 'Cung ứng hóa chất xây dựng, gạch ốp lát – thiết bị vệ sinh và các vật tư khác đạt tiêu chuẩn kỹ thuật cho dự án',
             iconName: 'PackageCheck',
           },
-          {
-            id: 'rd-07',
-            name: 'Kính điện thông minh & Sơn chống cháy',
-            desc: 'Tư vấn và triển khai giải pháp kính điện thông minh, sơn chống cháy cho dự án xây dựng',
-            iconName: 'ShieldAlert',
-          },
         ],
       },
       {

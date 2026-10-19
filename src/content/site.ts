@@ -65,7 +65,7 @@ export interface NavProductColumn {
 
 export const siteConfig: SiteConfig = {
   company: {
-    fullName: 'CÔNG TY CỔ PHẦN ĐẦU TƯ PHÁT TRIỂN FNX',
+    fullName: 'CÔNG TY CỔ PHẦN ĐẦU TƯ PHÁT TRIỂN FNX GROUP',
     shortName: 'FNX Group',
     address: '173B Trường Chinh, Thanh Xuân, Hà Nội',
     addressMapUrl: 'https://maps.app.goo.gl/R4UwoqB9h18WuRCS9?g_st=ic',
